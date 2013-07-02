@@ -1,0 +1,11 @@
+{
+	"title": "Cognitive Behavior Therapy Associates, LLC.",
+	"template": "index.hbs",
+	"intro": {
+		"heading": "Welcome to CBTA LLC.",
+		"content": "Our goal is to help patients navigate challenges in their lives to get from where they are to where they want to be. To make that happen, we have one of the best therapists in house who put patients as their first priority.",
+		"button1": "Learn more",
+		"button2": "Contact us"
+	},
+	"address": "300 TradeCenter, Woburn MA"
+}
