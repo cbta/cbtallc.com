@@ -1,11 +1,8 @@
 {{> head}}
 	<body>
-		<h1>{{title}}</h1>
-		{{#if markdown}}
-		{{{markdown}}}
+		<h1>{{content.title}}</h1>
+		{{#if content.markdown}}
+		{{{content.markdown}}}
 		{{/if}}
-
-		{{#if content}}
-		{{{content}}}
-		{{/if}}
+		{{debug therapists}}
 {{> footer}}
