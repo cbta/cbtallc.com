@@ -10,6 +10,17 @@ module.exports = function (grunt) {
 		marked = require('marked'),
 		moment = require('moment');
 
+
+	/* convert new line characters to html linebreaks
+	 * inspired by nl2br function from php.js
+	 * https://github.com/kvz/phpjs/blob/master/functions/strings/nl2br.js
+	 * @param {String} str
+	 * @return {String}
+	*/
+	var nl2br = function(str) {
+		return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br>');
+	}
+
 	// parse JSON and markdown content
 	var parseContent = function(filepath) {
 		var ext = path.extname(filepath),
@@ -29,13 +40,13 @@ module.exports = function (grunt) {
 			// parse markdown files
 			// with some inspiration from https://github.com/ChrisWren/grunt-pages/blob/master/tasks/index.js
 		} else if (ext === '.md') {
-			var fileString = grunt.file.read(filepath);
+			var fileContent = grunt.file.read(filepath);
 
 			// set options for marked
 			marked.setOptions(options.markdown);
 
 			try {
-				var sections = fileString.split('---');
+				var sections = fileContent.split('---');
 				// YAML frontmatter is the part in between the 2 '---'
 				content = jsYAML.safeLoad(sections[1]);
 
@@ -54,10 +65,28 @@ module.exports = function (grunt) {
 				grunt.fail.fatal(e + ' .Failed to parse markdown data from ' + filepath);
 			}
 		}
+
+		// add support for date using moment.js http://momentjs.com/
+		if (content) {
+			if(!content.date) {
+				content.date = fs.statSync(filepath).ctime;
+			}
+			// if date isn't already a moment type, convert it to momentjs
+			if (!moment.isMoment(content.date)) {
+				var mDate = moment(content.date);
+				// check if the string is a valid date format http://momentjs.com/docs/#/parsing/string/
+				if (mDate.isValid()) {
+					content.date = mDate;
+				} else {
+					grunt.log.writeln('The date used in ' + filepath + ' is not supported.');
+				}
+			}
+		}
 		return content;
 	};
 
 	// inspired from grunt.file.recurse function https://github.com/gruntjs/grunt/blob/master/lib/grunt/file.js
+	// this is not being used in current version
 	var getDataRecurse = function(rootdir, data, subdir) {
 		var abspath = subdir ? path.join(rootdir, subdir) : rootdir;
 		fs.readdirSync(abspath).forEach(function(filename){
@@ -81,23 +110,14 @@ module.exports = function (grunt) {
 				smartypants: true
 			}
 		});
-		var data = {};
-		var json = {};
 
 		// global config
 		var config = grunt.file.readJSON(options.config)
 
 		grunt.verbose.writeflags(options, 'Options');
-		console.log(this.data.src);
 
-		// getDataRecurse(this.data.src, data);
-
-		json.contents = data;
-		json.config = config;
-
-		grunt.file.write(this.data.dest, JSON.stringify(json));
-
-		var json2 = {};
+		// Content Tree
+		var contentTree = {};
 		this.files.forEach(function (f) {
 			f.src.filter(function (filepath) {
 				// Warn on and remove invalid source files (if nonull was set).
@@ -109,62 +129,30 @@ module.exports = function (grunt) {
 				}
 			})
 			.forEach(function (filepath) {
-				var dirname = path.dirname(filepath),
+				var content = parseContent(filepath),
+					dirname = path.dirname(filepath),
 					directories = dirname.split(path.sep),
 					basename = path.basename(filepath);
-				console.log(directories);
-				var	content = parseContent(filepath);
-				var i = 0;
-				var current = json2;
-				while (i < directories.length) {
-					if (!current[directories[i]]){
-						current = current[directories[i]] = {};
+
+				// start at the top of the content tree
+				var currentDir = contentTree;
+
+				// iterate through the directory path
+				for (var obj in directories) {
+					// if the directory doesn't exist yet, create an empty object in the content tree
+					if (!currentDir[directories[obj]]) {
+						currentDir = currentDir[directories[obj]] = {};
+					// if the directory already exists, move into a deeper level
 					} else {
-						current = current[directories[i]];
+						currentDir = currentDir[directories[obj]];
 					}
-					i++;
 				}
-				current[basename] = content;
+				// once the deepest directory level is reached, put new content on the Content Tree
+				currentDir[basename] = content;
 
 			});
-				// // add support for date using moment.js http://momentjs.com/
-				// if (files[buildpath].date) {
-				// 	// if date isn't already a moment type, convert it to momentjs
-				// 	if (!moment.isMoment(files[buildpath].date)) {
-				// 		var mDate = moment(files[buildpath].date);
-				// 		// check if the string is a valid date format http://momentjs.com/docs/#/parsing/string/
-				// 		if (mDate.isValid()) {
-				// 			files[buildpath].date = mDate;
-				// 		} else {
-				// 			grunt.log.writeln('The date used in ' + filepath + ' is not supported.');
-				// 		}
-				// 	}
-				// } else {
-				// 	files[buildpath].date = fs.statSync(filepath).ctime;
-				// }
-			console.log(json2);
-			console.log(json2.contents.therapists);
+
+			grunt.file.write(f.dest, JSON.stringify(contentTree));
 		});
-
-
 	});
-
-	// convert new line characters to html linebreaks
-	// @param {String} str
-	// @return {String}
-
-	// inspired by nl2br function from php.js
-	// https://github.com/kvz/phpjs/blob/master/functions/strings/nl2br.js
-
-	/*
-	function nl2br (str, is_xhtml) {
-		var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br ' + '/>' : '<br>';
-
-		return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
-	}
-	*/
-
-	function nl2br(str) {
-		return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br>');
-	}
 };
