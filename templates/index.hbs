@@ -1,8 +1,38 @@
 {{> head}}
-	<body>
-		<h1>{{content.title}}</h1>
-		{{#if content.markdown}}
-		{{{content.markdown}}}
-		{{/if}}
-		{{debug therapists}}
+		<div class="wrapper content-wrap">
+			<div id="content">
+				<div class="intro">
+					<h1>{{content.intro.heading}}</h1>
+					<div class="intro-content">
+						<p>{{content.intro.content}}</p>
+						<a class="button" href="#">{{content.intro.button1}}</a>
+						<a class="button" href="#">{{content.intro.button2}}</a>
+					</div><!-- .intro-content -->
+					<div class="intro-video"></div>
+
+				</div><!-- .intro -->
+				<div class="therapists">
+					<div class="therapist-stubs">
+						{{#each therapists}}
+						<div class="stub" id="{{id}}-stub" data-therapist="{{id}}" title="{{title}}">
+							<a href="#{{id}}">
+								<img class="image" src="{{image}}" alt="{{title}}"/>
+								<h3 class="title">{{title}}</h3>
+							</a>
+						</div><!-- .therapist-stub -->
+						{{/each}}
+					</div><!-- .stubs -->
+
+					<div class="therapist-viewers">
+						{{#each therapists}}
+						<div class="viewer" id="{{metadata.id}}-viewer">
+							<a class="close-button">x</a>
+							<h1>{{full-title}}</h1>
+							<div class="bio">{{{nl2br bio}}}</div>
+						</div><!-- .therapist-viewer -->
+						{{/each}}
+					</div><!-- .viewers -->
+				</div><!-- .therapists -->
+			</div><!-- #content -->
+		</div><!-- .content-wrap -->
 {{> footer}}
