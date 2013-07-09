@@ -152,7 +152,7 @@ module.exports = function (grunt) {
 
 			});
 
-			grunt.file.write(f.dest, JSON.stringify(contentTree));
+			grunt.file.write(f.dest, JSON.stringify(contentTree, null, '\t'));
 		});
 	});
 };
