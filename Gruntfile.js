@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 					middleware: function(connect, options) {
 						return [
 							// serve files in /dist as if they were in the root.
-							connect.static(__dirname + '/<%= config.buildPath %>'),
+							connect.static(__dirname + '/build/www'),
 							// but serve everything else from the root
 							connect.static(__dirname)
 						];
@@ -119,6 +119,14 @@ module.exports = function(grunt) {
 			templates: {
 				files: ['templates/**/*.{hbs,html}'],
 				tasks: ['handlebars_html:dev']
+			},
+			images: {
+				files: ['contents/**/*.{jpg,png}'],
+				tasks: ['copy']
+			},
+			grunt: {
+				files: ['tasks/*', 'Gruntfile.js'],
+				tasks: ['process']
 			}
 		}
 	});
@@ -162,13 +170,15 @@ module.exports = function(grunt) {
 		});
 	});
 
-
-
-	grunt.registerTask('dev', [
+	grunt.registerTask('process', 'Process content files, render html and compile css', [
 		'import_contents',
 		'copy',
 		'handlebars_html:dev',
-		'compass:dev',
+		'compass:dev'
+	]);
+
+	grunt.registerTask('dev', [
+		'process',
 		'connect:dev',
 		'watch'
 	]);
