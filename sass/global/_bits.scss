@@ -1,0 +1,55 @@
+/* Imports */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700italic|Arimo:400,400italic,700|Sintony:400,700|Droid+Sans+Mono);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* Fonts */
+$header-font: "Roboto Condensed", sans-serif;
+$text-font: "Arimo", "Helvetica", sans-serif;
+$feature-font: "Sintony", "Helvetica", sans-serif;
+$monospace: "Droid Sans Mono", monospace;
+
+/* Screen sizes */
+$baby-bear:  320px;
+$mama-bear:  600ox;
+$papa-bear:  1000px;
+
+/* Colors */
+$background-color: #eee;
+$orange: #ff8000;
+$coal: #171717;
+$gray: #d2d2d2;
+$dark-gray: #aaa;
+$light-gray: #8e8e8e;
+$red: red;
+$blue: blue;
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+	font-family: 'FontAwesome', sans-serif;
+	margin-right: 0.3em;
+}
+
+@mixin at-least($device-width) {
+	@media screen and (min-width: $device-width) {
+		@content
+	}
+}
+
+@mixin at-most($device-width) {
+	@media screen and (max-width: $device-width - 1) {
+		@content
+	}
+}
+
+%clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+%button {
+	padding: 0.5em;
+	border-radius: 4px;
+}

@@ -1,0 +1,501 @@
+@import "compass/css3";
+@import "_bits";
+@import "_global";
+@import "_layout";
+
+/* page header */
+
+.header {
+	@extend %clearfix;
+	margin: 1em 0 2em;
+	.site-title {
+		font-family: $feature-font;
+		font-size: 3em;
+		font-weight: 700;
+		float: left;
+		margin: 0;
+		text-align: center;
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.site-description {
+		clear: left;
+		font-family: $header-font;
+		font-size: 1em;
+		font-style: italic;
+		float: left;
+		margin: -0.3em 0 1em;
+		text-align: center;
+
+	}
+	.author {
+		font-family: $feature-font;
+		font-variant: small-caps;
+		text-transform: lowercase;
+		text-rendering: auto;
+		text-align: center;
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
+}
+
+body.article-detail > header h1 {
+	font-size: 2.5em;
+	font-style: italic;
+	font-weight: 400;
+	margin-bottom: -0.2em;
+}
+
+body.article-detail > header {
+	margin-bottom: 3em;
+}
+
+/* nav */
+.main-nav {
+	text-align: center;
+	.main-menu {
+		@extend %clearfix;
+		display: inline-block;
+		li {
+			border-right: 1px solid $dark-gray;
+			float: left;
+			list-style: none;
+			padding: 0.5em 1em;
+			&:last-child {
+				border: none;
+			}
+		}
+		a {
+			font-size: 1.2em;
+			text-decoration: none;
+			&:hover {
+				span {
+					border-bottom: 1px dotted $dark-gray;
+				}
+			}
+		}
+	}
+}
+
+.content-wrap {
+	margin: 2em auto 1em;
+}
+
+.intro {
+	@extend %clearfix;
+	border-top: 1px dotted $dark-gray;
+	margin-bottom: 2em;
+	padding-top: 1em;
+	.intro-content {
+		@extend %clearfix;
+		float: left;
+		width: 50%;
+	}
+	.intro-video {
+		width: 40%;
+		height: 300px;
+		float: right;
+		background-color: $blue;
+	}
+	.button {
+		@extend %button;
+		background-color: $red;
+		float: left;
+	}
+}
+
+// therapists
+.therapists {
+	border-top: 1px solid $gray;
+	padding-top: 1em;
+}
+
+.therapist-viewers {
+	@extend %clearfix;
+	.viewer {
+		background-color: $dark-gray;
+		border-radius: 4px;
+		display: none;
+		padding: 3em 2em 1em;
+		position: relative;
+		&.on {
+			display: block;
+		}
+		.close-button {
+			cursor: pointer;
+			font-family: $monospace;
+			padding: 0.5em 0.8em;
+			position: absolute;
+			top: 0;
+			right: 0.3em;
+		}
+	}
+}
+.therapist-stubs {
+	@extend %clearfix;
+	.stub {
+		border-right: 1px solid $gray;
+		float: left;
+		position: relative;
+		width: 20%;
+		margin: 1em 0;
+		padding: 0 1em;
+		&:last-child {
+			border-right: none;
+		}
+		&.current:after {
+			content: '\25B2'; // black up-pointing triangle ▼
+			color: $dark-gray;
+			bottom: -1em;
+			// fall back for browser with no calc function, it will just be a little off (0.5em)
+			left: 50%;
+			left: calc(50% - 0.5em);
+			font-size: 2em;
+			line-height: 1;
+			position: absolute;
+		}
+		a {
+			text-decoration: none;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+			height: auto;
+			max-width: 150px;
+			@include filter(grayscale(100%));
+			&:hover {
+				@include filter(sepia(100%));
+			}
+		}
+		h3 {
+			font-size: 1.2em;
+			margin: 0.5em 0;
+		}
+	}
+}
+
+.page-nav {
+	@extend %clearfix;
+	text-align: center;
+	margin-top: 3em;
+	a {
+		font-family: $feature-font;
+		font-size: 1em;
+		font-weight: 700;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:hover {
+			border-bottom: 1px dotted $dark-gray;
+		}
+		&.prev {
+			float: left;
+		}
+		&.next {
+			float: right;
+		}
+	}
+}
+
+/* page footer */
+
+footer {
+	margin: 1em 0 1em;
+	border-top: 1px dashed $gray;
+	font-size: 1.4rem;
+	.about {
+		padding: 3em 3em 1em;
+		text-align: center;
+		.about-stub {
+			display: inline-block;
+			width: 40%;
+		}
+		img {
+			border-radius: 50%;
+			margin: -1em 1em 0 0;
+			float: left;
+			width: 10rem;
+			height: 10rem;
+			&:hover {
+				@include filter(sepia(100%));
+			}
+		}
+	}
+	.links {
+		text-align: center;
+		a {
+			font-weight: 700;
+			margin-left: 2em;
+			text-decoration: none;
+			&:hover {
+				border-bottom: 1px dotted $dark-gray;
+			}
+		}
+	}
+	.copy {
+		color: $light-gray;
+		margin-top: 4em;
+		text-align: center;
+	}
+	#contact {
+		display: none;
+	}
+}
+
+/* article */
+
+.article {
+	margin: 3em 0 4em;
+}
+
+.article header {
+	border-top: 1px dashed $gray;
+	h2 {
+		font-family: $feature-font;
+		font-size: 2em;
+		font-weight: 700;
+		margin: 0.7em 0;
+			a {
+			text-decoration: none;
+		}
+		text-align: center;
+	}
+	.date {
+		text-align: center;
+		font-size: 1.2em;
+		margin: -0.7em 0 0;
+		span {
+			background-color: $background-color;
+			padding: 0 1em;
+		}
+	}
+}
+.article.intro .content {
+	.more {
+		text-decoration: underline;
+		font-weight: 700;
+	}
+}
+
+.article .content img {
+	display: block;
+	// width: 100%;
+}
+
+.more, .date {
+	font-family: $feature-font;
+	font-variant: small-caps;
+	text-transform: lowercase;
+	font-weight: 400;
+	text-rendering: auto;
+	letter-spacing: 1px;
+}
+
+.content p {
+	font-size: 1.2em;
+}
+/* archive */
+
+.archive {
+	width: 32em;
+	margin: 5em auto 6em;
+	padding-left: 2em;
+}
+
+.archive h2 {
+	font-size: 3em;
+	margin: 0;
+	margin-left: 6.1em;
+	margin-bottom: 0.5em;
+	font-style: italic;
+}
+
+.archive a, .archive span {
+	display: block;
+	float: left;
+	border-bottom: 1px solid $gray;
+	margin-bottom: -1px;
+	text-decoration: none;
+}
+
+.archive a.last, .archive span.last {
+	border: 0;
+	margin-bottom: 0;
+}
+
+.archive a {
+	width: 21em;
+	text-indent: 1em;
+	white-space: nowrap;
+}
+
+.archive .year-label,
+.archive .month-label{
+	width: 4em;
+	font-family: $feature-font;
+	font-variant: small-caps;
+	text-transform: lowercase;
+	font-weight: 400;
+	text-rendering: auto;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.archive .month-label {
+	width: 7em;
+}
+
+.archive ul {
+	list-style: none;
+	margin: 0;
+}
+
+.archive ul li {
+	margin: 0;
+}
+
+/* code styling */
+
+code {
+	font-family: $monospace;
+	font-size: 0.85em;
+	color: #000;
+}
+
+pre code {
+	display: block;
+	line-height: 1.1;
+}
+
+p code {
+	padding: 0.1em 0.3em 0.2em;
+	border-radius: 0.3em;
+	position: relative;
+	top: -0.15em;
+	background: #444;
+	color: #fff;
+	white-space: nowrap;
+}
+
+/* syntax hl stuff */
+
+code.lang-markdown {
+	color: #424242;
+}
+
+code.lang-markdown .header,
+code.lang-markdown .strong {
+	font-weight: bold;
+}
+
+code.lang-markdown .emphasis {
+	font-style: italic;
+}
+
+code.lang-markdown .horizontal_rule,
+code.lang-markdown .link_label,
+code.lang-markdown .code,
+code.lang-markdown .header,
+code.lang-markdown .link_url {
+	color: #555;
+}
+
+code.lang-markdown .blockquote,
+code.lang-markdown .bullet {
+	color: #bbb;
+}
+
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+.tomorrow-comment, pre .comment, pre .title {
+	color: #8e908c;
+}
+
+.tomorrow-red, pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
+	color: #c82829;
+}
+
+.tomorrow-orange, pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+	color: #f5871f;
+}
+
+.tomorrow-yellow, pre .class, pre .ruby .class .title, pre .css .rules .attribute {
+	color: #eab700;
+}
+
+.tomorrow-green, pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+	color: #718c00;
+}
+
+.tomorrow-aqua, pre .css .hexcolor {
+	color: #3e999f;
+}
+
+.tomorrow-blue, pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
+	color: #4271ae;
+}
+
+.tomorrow-purple, pre .keyword, pre .javascript .function {
+	color: #8959a8;
+}
+
+/* media queries */
+
+@media (min-width: 1600px) {
+	body { font-size: 26px; }
+}
+
+@media (max-width: 900px) {
+	body { font-size: 18px; }
+}
+
+@media (max-width: 690px) {
+	.header {
+		margin: 1em 0;
+	}
+	.header h1 {
+		font-size: 1.4em;
+		margin-bottom: 0.6em;
+	}
+	.header .description {
+		font-size: 1em;
+	}
+	.article {
+		margin: 1em 0 2.5em;
+	}
+	.archive {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.archive * {
+		float: none !important;
+		line-height: 1.6 !important;
+		width: auto !important;
+		height: auto !important;
+		text-align: left !important;
+		border: 0 !important;
+		margin: 0 !important;
+	}
+	footer .nav {
+		margin: 1em 0;
+	}
+	footer .about {
+		padding: 0;
+		font-size: 0.9em;
+		padding-top: 1.6em;
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		-ms-column-count: 1;
+		column-count: 1;
+	}
+	footer .about p {
+		margin-bottom: 1em;
+	}
+}
+
