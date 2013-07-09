@@ -44,6 +44,19 @@ $legacy-support-for-ie7: false !default; // Override default set in Compass' Sup
 @import "compass/typography/vertical_rhythm";
 
 
+
+/* ===================
+   Author Normalize
+   =================== */
+
+* {
+    @include box-sizing(border-box);
+}
+
+html {
+    font-size: 62.5%;
+}
+
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
