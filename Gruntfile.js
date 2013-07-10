@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	grunt.initConfig({
-		config: grunt.file.readJSON('config.json'),
+		config: grunt.file.readJSON('config-dev.json'),
 		compass: {
 			options: {
 				cssDir: '<%= config.buildPath %>/css',
