@@ -5,14 +5,18 @@
 'use strict';
 
 module.exports = function (grunt) {
-	var config = grunt.file.readJSON('./config.json');
+	var _ = grunt.util._;
+	var config = grunt.file.readJSON('./config.json'),
+		config_dev = grunt.file.readJSON('./config-dev.json');
+
+		// config_dev will overwrite config
+		config_dev = _.extend(config, config_dev);
+
 	var fs = require('fs'),
 		path = require('path'),
 		Handlebars = require('handlebars');
 
 	grunt.registerMultiTask('handlebars_html', 'write templates to html', function () {
-		var _ = grunt.util._;
-
 		var options = this.options({
 			partialDir: 'app/templates/partials',
 			helperDir: 'app/templates/helpers'
@@ -75,7 +79,8 @@ module.exports = function (grunt) {
 						if (templates[content.template]) {
 							// expose env and config to content
 							content.env = env;
-							content.config = config;
+							// use config_dev if in dev environment
+							content.config = (env === 'dev') ? config_dev : config;
 
 							// pass in the whole collections to make other sibling contents available
 							collections.content = content;

@@ -1,6 +1,4 @@
 {
-	"name": "CBTA LLC",
-	"url": "localhost",
-	"livereload": 35729,
-	"buildPath": "build/www"
+	"site-name": "CBTA LLC",
+	"url": "http://cbtallc.com"
 }
