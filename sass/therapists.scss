@@ -42,7 +42,7 @@
 			content: '\25B2'; // black up-pointing triangle ▼
 			color: $dark-gray;
 			bottom: -1em;
-			// fall back for browser with no calc function, it will just be a little off (0.5em)
+			// fall back for browser with no calc function, it will just be a little off (by 0.5em)
 			left: 50%;
 			left: calc(50% - 0.5em);
 			font-size: 2em;
