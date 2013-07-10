@@ -1,0 +1,71 @@
+// Therapists
+
+.therapists {
+	padding-top: 1em;
+}
+
+.therapist-viewers {
+	@extend %clearfix;
+	.viewer {
+		background-color: $dark-gray;
+		border-radius: 4px;
+		display: none;
+		padding: 3em 2em 1em;
+		position: relative;
+		&.on {
+			display: block;
+		}
+		.close-button {
+			cursor: pointer;
+			font-family: $monospace;
+			padding: 0.5em 0.8em;
+			position: absolute;
+			top: 0;
+			right: 0.3em;
+		}
+	}
+}
+
+.therapist-stubs {
+	@extend %clearfix;
+	.stub {
+		border-right: 1px solid $gray;
+		float: left;
+		position: relative;
+		width: 20%;
+		margin: 1em 0;
+		padding: 0 1em;
+		&:last-child {
+			border-right: none;
+		}
+		&.current:after {
+			content: '\25B2'; // black up-pointing triangle ▼
+			color: $dark-gray;
+			bottom: -1em;
+			// fall back for browser with no calc function, it will just be a little off (0.5em)
+			left: 50%;
+			left: calc(50% - 0.5em);
+			font-size: 2em;
+			line-height: 1;
+			position: absolute;
+		}
+		a {
+			text-decoration: none;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+			height: auto;
+			max-width: 150px;
+			// @include filter(grayscale(100%));
+			// &:hover {
+			// 	@include filter(sepia(100%));
+			// }
+		}
+		h3 {
+			font-size: 1.2em;
+			margin: 0.5em 0;
+		}
+	}
+}

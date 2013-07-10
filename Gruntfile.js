@@ -114,7 +114,7 @@ module.exports = function(grunt) {
 			},
 			contents: {
 				files: ['contents/**/*.{json,md}'],
-				tasks: ['import_contents']
+				tasks: ['process']
 			},
 			templates: {
 				files: ['templates/**/*.{hbs,html}'],
