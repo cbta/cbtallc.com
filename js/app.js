@@ -31,6 +31,13 @@ define(function (require) {
 			}, 'slow');
 		});
 
+		$(".therapist-viewers .close-button").click(function(e){
+			e.preventDefault();
+			// Close all viewer, remove current states
+			$(".therapist-stubs .stub").removeClass("current");
+			$(".therapist-viewers .viewer").removeClass("on");
+		})
+
 		// initialize full calendar
 		$('.calendar').fullCalendar({
 			header: {
