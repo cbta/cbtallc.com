@@ -7,20 +7,39 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		config: grunt.file.readJSON('config-dev.json'),
-		compass: {
-			options: {
-				cssDir: '<%= config.buildPath %>/css',
-				sassDir: 'sass'
-			},
+		// compass: {
+		// 	options: {
+		// 		cssDir: '<%= config.buildPath %>/css',
+		// 		sassDir: 'sass'
+		// 	},
+		// 	dev: {
+		// 		options: {
+		// 			outputStyle: 'expanded',
+		// 			// debugInfo: true
+		// 		}
+		// 	},
+		// 	prod: {
+		// 		options: {
+		// 			outputStyle: 'compressed'
+		// 		}
+		// 	}
+		// },
+		sass: {
 			dev: {
 				options: {
-					outputStyle: 'expanded',
-					// debugInfo: true
+					style: 'expanded',
+					sourcemap: true
+				},
+				files: {
+					'<%= config.buildPath %>/css/main.css': 'sass/main.scss'
 				}
 			},
 			prod: {
 				options: {
-					outputStyle: 'compressed'
+					style: 'compressed'
+				},
+				files: {
+					'<%= config.buildPath %>/css/main.css': 'sass/main.scss'
 				}
 			}
 		},
@@ -111,7 +130,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: ['sass/**/*.scss'],
-				tasks: ['compass:dev']
+				tasks: ['sass:dev']
 			},
 			contents: {
 				files: ['contents/**/*.{json,md}', 'config*.json'],
@@ -175,7 +194,7 @@ module.exports = function(grunt) {
 		'import_contents',
 		'copy',
 		'handlebars_html:dev',
-		'compass:dev'
+		'sass:dev'
 	]);
 
 	grunt.registerTask('dev', [
@@ -188,7 +207,7 @@ module.exports = function(grunt) {
 		'import_contents',
 		'copy',
 		'handlebars_html:prod',
-		'compass:prod',
+		'sass:prod',
 		'requirejs:prod',
 		'fix_sourcemaps:prod'
 	]);
