@@ -1,0 +1,52 @@
+.main-header {
+	@extend %clearfix;
+	background-color: $dark-jean;
+	.wrapper {
+		@extend %clearfix;
+	}
+	h1 {
+		color: $red;
+		float: left;
+		font-family: $feature-font;
+		font-size: 4em;
+		line-height: 1;
+	}
+}
+
+.main-nav {
+	float: right;
+}
+.main-menu {
+	@extend %clearfix;
+	list-style: none;
+	margin: 0;
+	li {
+		float: left;
+		&:hover {
+			// background-color: $very-dark-jean;
+			// cursor: pointer;
+			a {
+				color: $green;
+			}
+		}
+		a {
+			color: $white;
+			display: block;
+			font-family: $feature-font;
+			font-size: 2em;
+			height: 10rem; // equal height of the h1 (4em + 2*(0.75 * 4))
+			padding: 1.8em 1em 0 1em;
+			text-align: center;
+			text-decoration: none;
+		}
+		span[class^="fontawesome"] {
+			font-size: 1.1em;
+			margin-right: 0.6em;
+			position: relative;
+			text-align: center;
+			&:before {
+				margin: 0;
+			}
+		}
+	}
+}

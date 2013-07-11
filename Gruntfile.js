@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					outputStyle: 'expanded',
-					debugInfo: true
+					// debugInfo: true
 				}
 			},
 			prod: {
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
 				tasks: ['compass:dev']
 			},
 			contents: {
-				files: ['contents/**/*.{json,md}'],
+				files: ['contents/**/*.{json,md}', 'config*.json'],
 				tasks: ['process']
 			},
 			templates: {
