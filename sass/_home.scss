@@ -1,0 +1,122 @@
+.home {
+	.intro {
+		@extend %clearfix;
+		margin-bottom: 3em;
+		h1 {
+			color: $dark-jean;
+			font-family: $feature-font;
+			font-size: 4em;
+		}
+	}
+	p {
+		color: $very-dark-jean;
+		font-size: 2em;
+		line-height: 1.4;
+	}
+	.button {
+		background-color: $green;
+		border-bottom: 4px solid $dark-green;
+		border-radius: 2px;
+		color: $white;
+		display: block;
+		float: left;
+		font-size: 2em;
+		margin-right: 1em;
+		padding: 0.5em 1em;
+		text-decoration: none;
+		&:hover {
+			background-color: $dark-green;
+		}
+	}
+}
+.section-title {
+	@extend .wrapper;
+	color: $red;
+	font-family: $feature-font;
+	font-size: 3em;
+	margin: 0.5em auto;
+
+}
+// Therapists
+.therapists {
+	background-color: $dark-jean; // concrete
+	margin: 2em 0;
+	padding-top: 1em;
+	.section-title {
+		text-align: center;
+	}
+}
+.therapist-viewers {
+	@extend %clearfix;
+	.viewer {
+		background-color: $very-dark-jean;
+		border-radius: 4px;
+		color: $white;
+		display: none;
+		padding: 2em;
+		position: relative;
+		&.on {
+			display: block;
+		}
+		.close-button {
+			color: $white;
+			cursor: pointer;
+			font-family: $monospace;
+			font-size: 2em;
+			padding: 0.5em 0.8em;
+			position: absolute;
+			top: 0;
+			right: 0.3em;
+			&:hover {
+				color: $red;
+			}
+		}
+		h1 {
+			color: $red;
+			font-family: $feature-font;
+			margin-top: 0;
+		}
+		.bio {
+			font-size: 1.5em;
+			line-height: 1.4;
+		}
+	}
+}
+.therapist-stubs {
+	@extend %clearfix;
+	.stub {
+		float: left;
+		position: relative;
+		width: 33.33333%;
+		margin: 1em 0;
+		padding: 0 1em;
+		&.current {
+			img {
+				border-color: $green;
+			}
+		}
+		a {
+			@extend %clearfix;
+			text-decoration: none;
+		}
+		img {
+			background-color: $background-color;
+			border: 5px solid $dark-jean;
+			border-radius: 50%;
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+			height: auto;
+			max-width: 150px;
+			&:hover {
+				border-color: $green; //midnight blue
+			}
+		}
+		h3 {
+			color: $white;
+			font-size: 1.5em;
+			margin: 0.5em 0;
+			text-align: center;
+		}
+	}
+}

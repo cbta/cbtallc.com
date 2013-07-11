@@ -1,40 +1,39 @@
 {{> header}}
-	<div class="body">
-		<div class="wrapper content-wrap">
-			<div id="content">
-				<div class="intro">
-					<h1>{{content.intro.heading}}</h1>
-					<div class="intro-content">
-						<p>{{content.intro.content}}</p>
-						<a class="button" href="{{content.intro.button1.link}}">{{content.intro.button1.title}}</a>
-						<a class="button" href="#">{{content.intro.button2.title}}</a>
-					</div><!-- .intro-content -->
-					<div class="intro-video"></div>
-
-				</div><!-- .intro -->
-				<div class="therapists">
-					<div class="therapist-stubs">
-						{{#each therapists}}
-						<div class="stub" id="{{id}}-stub" data-therapist="{{id}}" title="{{title}}">
-							<a href="#{{id}}">
-								<img class="image" src="{{image}}" alt="{{title}}"/>
-								<h3 class="title">{{title}}</h3>
-							</a>
-						</div><!-- .therapist-stub -->
-						{{/each}}
-					</div><!-- .stubs -->
-
-					<div class="therapist-viewers">
-						{{#each therapists}}
-						<div class="viewer" id="{{id}}-viewer">
-							<a class="close-button">x</a>
-							<h1>{{full-title}}</h1>
-							<div class="bio">{{{nl2br bio}}}</div>
-						</div><!-- .therapist-viewer -->
-						{{/each}}
-					</div><!-- .viewers -->
-				</div><!-- .therapists -->
-			</div><!-- #content -->
-		</div><!-- .content-wrap -->
+	<div class="body home">
+		<section class="intro">
+			<div class="wrapper">
+				<h1>{{content.intro.heading}}</h1>
+				<div class="intro-content">
+					<p>{{content.intro.content}}</p>
+					<a class="button" href="{{content.intro.button1.link}}">{{content.intro.button1.title}}</a>
+					<a class="button" href="#">{{content.intro.button2.title}}</a>
+				</div><!-- .intro-content -->
+				<div class="intro-video"></div>
+			</div><!-- .wrapper -->
+		</section><!-- .intro -->
+		<section class="therapists">
+		<h1 class="section-title">Our Therapists</h1>
+			<div class="wrapper">
+				<div class="therapist-viewers">
+					{{#each therapists}}
+					<div class="viewer" id="{{id}}-viewer">
+						<a class="close-button">x</a>
+						<h1>{{full-title}}</h1>
+						<div class="bio">{{{nl2br bio}}}</div>
+					</div><!-- .viewer -->
+					{{/each}}
+				</div><!-- .therapist-viewers -->
+				<div class="therapist-stubs">
+					{{#each therapists}}
+					<div class="stub" id="{{id}}-stub" data-therapist="{{id}}" title="{{title}}">
+						<a href="#{{id}}">
+							<img class="image" src="{{image}}" alt="{{title}}"/>
+							<h3 class="title">{{title}}</h3>
+						</a>
+					</div><!-- .stub -->
+					{{/each}}
+				</div><!-- .therapist-stubs -->
+			</div><!-- .wrapper -->
+		</section><!-- .therapists -->
 	</div><!-- .body -->
 {{> footer}}
