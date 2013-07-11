@@ -29,14 +29,6 @@
 		}
 	}
 }
-.section-title {
-	@extend .wrapper;
-	color: $red;
-	font-family: $feature-font;
-	font-size: 3em;
-	margin: 0.5em auto;
-
-}
 // Therapists
 .therapists {
 	background-color: $dark-jean; // concrete

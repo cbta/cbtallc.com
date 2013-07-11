@@ -1,5 +1,6 @@
-// Normalize
-@import "global/_normalize";
+// Vendor Dependencies
+@import "../components/bourbon/_bourbon";
+@import "../components/normalize.scss/_normalize";
 
 // Authored Dependencies
 @import "global/_bits";
