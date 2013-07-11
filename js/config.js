@@ -20,5 +20,8 @@ require.config({
 		gcal: {
 			deps: ['fullcalendar']
 		}
-	}
+	},
+
+	// Remove these modules from the final build.
+	stubModules: ['text', 'json']
 });
