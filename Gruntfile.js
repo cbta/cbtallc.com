@@ -137,7 +137,7 @@ module.exports = function(grunt) {
 				tasks: ['process']
 			},
 			templates: {
-				files: ['templates/**/*.{hbs,html}'],
+				files: ['templates/**/*.{hbs,html,js}'],
 				tasks: ['handlebars_html:dev']
 			},
 			images: {

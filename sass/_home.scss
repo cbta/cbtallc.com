@@ -14,19 +14,12 @@
 		line-height: 1.4;
 	}
 	.button {
-		background-color: $green;
-		border-bottom: 4px solid $dark-green;
-		border-radius: 2px;
-		color: $white;
+		@extend %button;
 		display: block;
 		float: left;
 		font-size: 2em;
 		margin-right: 1em;
-		padding: 0.5em 1em;
 		text-decoration: none;
-		&:hover {
-			background-color: $dark-green;
-		}
 	}
 }
 // Therapists
@@ -109,6 +102,83 @@
 			font-size: 1.5em;
 			margin: 0.5em 0;
 			text-align: center;
+		}
+	}
+}
+
+// Treatments
+.therapies {
+}
+
+.contact {
+	@extend %clearfix;
+	background-color: $dark-jean;
+	form {
+		width: 50%;
+		float: left;
+	}
+	label {
+		color: $white;
+		display: block;
+		font-family: $feature-font;
+		font-size: 1.8em;
+		margin-bottom: 0.5em;
+	}
+	input,
+	textarea {
+		font-size: 2em;
+		&:focus {
+			outline: $green auto 5px;
+		}
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+		height: 2em;
+	}
+	.field {
+		@extend %clearfix;
+		margin-bottom: 1em;
+
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			padding: 0.5em;
+			width: 85%;
+		}
+		.tel {
+			width: 85%;
+		}
+		input[type="tel"] {
+			display: inline;
+			float: left;
+			text-align: center;
+			width: 22%;
+			&:nth-of-type(3) {
+				width: 32%;
+			}
+		}
+		.symbol {
+			color: $white;
+			display: inline-block;
+			float: left;
+			margin: 0 2%;
+			font-size: 3em;
+			width: 4%;
+		}
+		&.submit {
+			padding-right: 15%; // flush with other fields
+		}
+		input[type="submit"] {
+			@extend %button;
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			float: right;
+			text-transform: uppercase;
+		}
+		&.hidden {
+			display: none;
 		}
 	}
 }
