@@ -4,6 +4,8 @@ define(function (require) {
 		config = require('json!config.json');
 
 	require('gcal');
+	require('form');
+	require('validate');
 
 	// DOM Manipulation
 	$(document).ready( function() {
@@ -37,6 +39,32 @@ define(function (require) {
 			$(".therapist-stubs .stub").removeClass("current");
 			$(".therapist-viewers .viewer").removeClass("on");
 		})
+
+		// FORMS
+		$("#contact-form").validate({
+			ignore: "input[type='hidden']",
+			messages: {
+				Field3: "Please specify your name.",
+				Field4: {
+					required: "We need your email address to contact you."
+				},
+				Field7: "Please tell us what your message is about."
+			},
+			submitHandler: function(form) {
+				console.log('Submitting..');
+				$(form).ajaxSubmit({
+					url: 'https://tringuyen.wufoo.com/api/v3/forms/m7x4z5/entries.json',
+					dataType: 'json',
+					success: function(responseText, statusText, xhr, form) {
+						console.log(responseText);
+						console.log(statusText);
+						console.log(xhr);
+						console.log(form);
+					}
+				});
+			}
+		});
+
 
 		// initialize full calendar
 		$('.calendar').fullCalendar({

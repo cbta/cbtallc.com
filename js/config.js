@@ -7,9 +7,11 @@ require.config({
 		text: 'components/requirejs-plugins/lib/text',
 		json: 'components/requirejs-plugins/src/json',
 		handlebars: 'components/handlebars/handlebars',
-		jquery: 'components/jquery/jquery.min',
+		jquery: 'components/jquery/jquery',
 		fullcalendar: 'components/fullcalendar/fullcalendar.min',
-		gcal: 'components/fullcalendar/gcal'
+		gcal: 'components/fullcalendar/gcal',
+		validate: 'components/jquery.validation/jquery.validate',
+		form: 'components/jquery-form/jquery.form'
 	},
 
 	// load non-amd dependencies
@@ -19,6 +21,12 @@ require.config({
 		},
 		gcal: {
 			deps: ['fullcalendar']
+		},
+		validate: {
+			deps: ['jquery']
+		},
+		form: {
+			deps: ['jquery']
 		}
 	},
 
