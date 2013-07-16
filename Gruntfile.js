@@ -7,23 +7,6 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		config: grunt.file.readJSON('config-dev.json'),
-		// compass: {
-		// 	options: {
-		// 		cssDir: '<%= config.buildPath %>/css',
-		// 		sassDir: 'sass'
-		// 	},
-		// 	dev: {
-		// 		options: {
-		// 			outputStyle: 'expanded',
-		// 			// debugInfo: true
-		// 		}
-		// 	},
-		// 	prod: {
-		// 		options: {
-		// 			outputStyle: 'compressed'
-		// 		}
-		// 	}
-		// },
 		sass: {
 			dev: {
 				options: {
@@ -67,7 +50,8 @@ module.exports = function(grunt) {
 		copy: {
 			build: {
 				files: [
-					{expand: true, cwd: 'contents/', src: '**/*.{jpg,png}', dest: '<%= config.buildPath %>/'}
+					{expand: true, cwd: 'contents/', src: '**/*.{jpg,png}', dest: '<%= config.buildPath %>/'},
+					{expand: true, cwd: 'sass', src: 'assets/**/*.{jpg,png,gif}', dest: '<%= config.buildPath %>/css/'}
 				]
 			}
 		},
