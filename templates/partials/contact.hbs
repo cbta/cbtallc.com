@@ -1,40 +1,34 @@
-		<form id="contact-form" name="form2" enctype="multipart/form-data" method="post">
+		<form id="contact-form" name="form2" enctype="multipart/form-data" method="post" action="http://localhost:3000/forms/m7x4z5">
 
 			<div class="field single">
-				<label class="desc" id="title3" for="Field3">Your Name <span id="req_3" class="req">*</span>
+				<label class="desc" for="name">Your Name <span class="req">*</span>
 				</label>
-				<input id="Field3" name="Field3" type="text" value="" maxlength="255" tabindex="1" onkeyup="" required />
+				<input id="name" name="name" type="text" value="" maxlength="255" tabindex="1" onkeyup="" required />
 			</div>
 			<div class="field single">
-				<label class="desc" id="title4" for="Field4">Your Email <span id="req_4" class="req">*</span>
+				<label class="desc" for="email">Your Email <span class="req">*</span>
 				</label>
-				<input id="Field4" name="Field4" type="email" spellcheck="false" value="" maxlength="255" tabindex="2" required />
+				<input id="email" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="2" required />
 			</div>
 			<div class="field">
-				<label class="desc" id="title5" for="Field5">Your Phone
+				<label class="desc" for="phone">Your Phone
 				</label>
 				<div class="tel">
 					<span class="symbol">(</span>
-					<input id="Field5" name="Field5" type="tel" value="" size="3" maxlength="3" tabindex="3" />
+					<input id="tel-1" name="tel-1" type="tel" value="" size="3" maxlength="3" tabindex="3" />
 					<span class="symbol">)</span>
-					<input id="Field5-1" name="Field5-1" type="tel" value="" size="3" maxlength="3" tabindex="4" />
+					<input id="tel-2" name="tel-2" type="tel" value="" size="3" maxlength="3" tabindex="4" />
 					<span class="symbol"> &ndash; </span>
-					<input id="Field5-2" name="Field5-2" type="tel" value="" size="4" maxlength="4" tabindex="5" />
+					<input id="tel-3" name="tel-3" type="tel" value="" size="4" maxlength="4" tabindex="5" />
 				</div>
-				<!-- <p class="instruct" id="instruct5"><small>Help us get back to you faster</small></p>-->
 			</div>
 			<div class="field">
-				<label class="desc" id="title7" for="Field7">Your Message
+				<label class="desc" for="message">Your Message
 				</label>
 
-				<textarea id="Field7" name="Field7" spellcheck="true" rows="10" cols="50" tabindex="6" onkeyup="" required></textarea>
+				<textarea id="message" name="message" spellcheck="true" rows="10" cols="50" tabindex="6" onkeyup="" required></textarea>
 			</div>
 			<div class="field submit">
-				<input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit"/>
-			</div>
-			<div class="field hidden">
-				<label for="comment">Do Not Fill This Out</label>
-				<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-				<input type="hidden" id="idstamp" name="idstamp" value="Gxbs5KMszzGFKQCpbESB3eiPgMyNuJ9cvsz8xxV64ZY=" />
+				<input class="btTxt submit" type="submit" value="Submit"/>
 			</div>
 		</form>

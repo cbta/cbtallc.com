@@ -6,6 +6,8 @@ define(function (require) {
 	require('gcal');
 	require('form');
 	require('validate');
+	require('fancybox');
+	require('moment');
 
 	// DOM Manipulation
 	$(document).ready( function() {
@@ -44,22 +46,31 @@ define(function (require) {
 		$("#contact-form").validate({
 			ignore: "input[type='hidden']",
 			messages: {
-				Field3: "Please specify your name.",
-				Field4: {
+				name: "Please specify your name.",
+				email: {
 					required: "We need your email address to contact you."
 				},
-				Field7: "Please tell us what your message is about."
+				message: "Please tell us what your message is about."
 			},
 			submitHandler: function(form) {
 				console.log('Submitting..');
 				$(form).ajaxSubmit({
-					url: 'https://tringuyen.wufoo.com/api/v3/forms/m7x4z5/entries.json',
 					dataType: 'json',
+					beforeSubmit: function(arr, $form) {
+						// concat phone partials into full phone numbers
+						var phone_number = arr[2].value + arr[3].value + arr[4].value;
+						arr.push({
+							name: "phone",
+							value: phone_number
+						});
+						// remove the phone partials
+						arr.splice(2, 3);
+						$form.attr('name');
+
+					},
 					success: function(responseText, statusText, xhr, form) {
 						console.log(responseText);
 						console.log(statusText);
-						console.log(xhr);
-						console.log(form);
 					}
 				});
 			}
@@ -83,7 +94,27 @@ define(function (require) {
 					className: 'ehiggins'
 				}
 			],
-			defaultView: 'agendaWeek'
+			defaultView: 'agendaWeek',
+			eventClick: function(calEvent, jsEvent, view) {
+				var $form = $('.appointment-form');
+				var start = moment(calEvent.start);
+				var end = moment(calEvent.end);
+				var therapist = calEvent.source.className[0];
+				// check for therapist from selected appointment, select the right therapist
+				$("option", "#therapist").each(function(){
+					if ($(this).val() === therapist) {
+						$(this).prop('selected', true);
+						// since the select element is disabled, copy the value to the hidden therapist-input field
+						$("#therapist-input", $form).val($(this).text());
+					}
+				});
+				// bring over correct date and time to form
+				$("#app-date", $form).val(start.format("MMM D, YYYY"));
+				$("#app-time", $form).val(start.format("h:mm A") + " - " + end.format("h:mm A"));
+				// open the fancybox overlay
+				$.fancybox($form);
+				return false;
+			}
 		});
 
 	});

@@ -8,7 +8,7 @@
 		color: $red;
 		float: left;
 		font-family: $feature-font;
-		font-size: 4em;
+		font-size: 3em;
 		line-height: 1;
 	}
 }
@@ -31,8 +31,8 @@
 			color: $white;
 			display: block;
 			font-family: $feature-font;
-			font-size: 2em;
-			height: 10rem; // equal height of the h1 (4em + 2*(0.75 * 4))
+			font-size: 1.5em;
+			height: 6.25rem; // equal height of the h1 (4em + 2*(0.75 * 4))
 			padding: 1.8em 1em 0 1em;
 			text-align: center;
 			text-decoration: none;

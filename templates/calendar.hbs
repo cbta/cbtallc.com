@@ -1,8 +1,23 @@
 {{> header}}
 	<div class="calendar"></div>
 	<div class="appointment-form">
-		<label for="name">Your Name</label>
-		<input type="text" name="name"/>
-		<input type="submit" value="Request Appointment"/>
+		<form method="post" name="cbta-appointment-request" action="http://localhost:3000/forms/cbta-appointment-request">
+			<label for="name">Your Name</label>
+			<input type="text" name="name" required/>
+			<label for="email">Your Email</label>
+			<input type="email" name="email" required/>
+			<label for="phone">Your Phone Number</label>
+			<input type="tel" name="phone" required/>
+			<lalel for="therapist">Therapist</lalel>
+			<select id="therapist" disabled>
+				<option value="jvermilyea">Dr. Vermilyea</option>
+				<option value="ehiggins">Dr. Higgins</option>
+			</select>
+			<input type="hidden" id="therapist-input" name="therapist" value=""/>
+			<h3>Appointment Time</h3>
+			<label for="app-date">Date:</label><input class="info" name="app-date" id="app-date" value="" readonly />
+			<label for="app-time">Time:</label><input class="info" name="app-time" id="app-time" value="" readonly />
+			<input type="submit" value="Request Appointment"/>
+		</form>
 	</div><!-- .appointment-form -->
 {{> footer}}

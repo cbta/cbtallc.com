@@ -5,19 +5,19 @@
 		h1 {
 			color: $dark-jean;
 			font-family: $feature-font;
-			font-size: 4em;
+			font-size: 3em;
 		}
 	}
 	p {
 		color: $very-dark-jean;
-		font-size: 2em;
+		font-size: 1.5em;
 		line-height: 1.4;
 	}
 	.button {
 		@extend %button;
 		display: block;
 		float: left;
-		font-size: 2em;
+		font-size: 1.5em;
 		margin-right: 1em;
 		text-decoration: none;
 	}
@@ -62,7 +62,7 @@
 			margin-top: 0;
 		}
 		.bio {
-			font-size: 1.5em;
+			font-size: 1.2em;
 			line-height: 1.4;
 		}
 	}
@@ -99,7 +99,7 @@
 		}
 		h3 {
 			color: $white;
-			font-size: 1.5em;
+			font-size: 1.2em;
 			margin: 0.5em 0;
 			text-align: center;
 		}
@@ -113,15 +113,18 @@
 .contact {
 	@extend %clearfix;
 	background-color: $dark-jean;
+	#contact-form {
+		float: left;
+	}
 	form {
-		width: 50%;
+		width: 100%;
 		float: left;
 	}
 	label {
 		color: $white;
 		display: block;
 		font-family: $feature-font;
-		font-size: 1.8em;
+		font-size: 1.2em;
 		margin-bottom: 0.5em;
 	}
 	.error {
@@ -131,7 +134,7 @@
 	}
 	input,
 	textarea {
-		font-size: 2em;
+		font-size: 1.5em;
 		&:focus {
 			outline: $green auto 5px;
 		}
@@ -182,6 +185,7 @@
 			border-top: none;
 			border-left: none;
 			border-right: none;
+			font-size: 1.5em;
 			float: right;
 			text-transform: uppercase;
 		}

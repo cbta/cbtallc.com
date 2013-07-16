@@ -125,7 +125,7 @@ module.exports = function(grunt) {
 				tasks: ['handlebars_html:dev']
 			},
 			images: {
-				files: ['contents/**/*.{jpg,png}'],
+				files: ['contents/**/*.{jpg,png}', 'sass/assets/'],
 				tasks: ['copy']
 			},
 			grunt: {

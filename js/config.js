@@ -12,7 +12,8 @@ require.config({
 		gcal: 'components/fullcalendar/gcal',
 		validate: 'components/jquery.validation/jquery.validate',
 		form: 'components/jquery-form/jquery.form',
-		fancybox: 'components/fancybox/source/jquery.fancybox.pack'
+		fancybox: 'components/fancybox/source/jquery.fancybox.pack',
+		moment: 'components/moment/moment'
 	},
 
 	// load non-amd dependencies

@@ -1,9 +1,6 @@
 * {
 	@include box-sizing(border-box);
 }
-html {
-	font-size: 62.5%;
-}
 body {
 	background-color: $background-color;
 	font-family: $text-font;
@@ -15,7 +12,7 @@ a {
 	@extend .wrapper;
 	color: $red;
 	font-family: $feature-font;
-	font-size: 3em;
+	font-size: 2em;
 	margin: 0.5em auto;
 	text-transform: uppercase;
 }
