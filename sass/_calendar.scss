@@ -1,0 +1,14 @@
+.calendar {
+	@extend .wrapper;
+	margin: 2em auto;
+}
+
+.appointment-form {
+	display: none;
+}
+
+.fc-button {
+	background-color: $cloudy;
+	background-image: none;
+	border: none;
+}
