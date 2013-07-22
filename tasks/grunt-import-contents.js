@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 	}
 
 	// parse JSON and markdown content
-	var parseContent = function(filepath) {
+	var parseContent = function(filepath, options) {
 		var ext = path.extname(filepath),
 			basename = path.basename(filepath),
 			// remove 'contents' from path
@@ -43,7 +43,9 @@ module.exports = function (grunt) {
 			var fileContent = grunt.file.read(filepath);
 
 			// set options for marked
-			marked.setOptions(options.markdown);
+			if (options && options.markdown) {
+				marked.setOptions(options.markdown);
+			}
 
 			try {
 				var sections = fileContent.split('---');
@@ -86,7 +88,6 @@ module.exports = function (grunt) {
 	};
 
 	// inspired from grunt.file.recurse function https://github.com/gruntjs/grunt/blob/master/lib/grunt/file.js
-	// this is not being used in current version
 	var getDataRecurse = function(rootdir, data, subdir) {
 		var abspath = subdir ? path.join(rootdir, subdir) : rootdir;
 		fs.readdirSync(abspath).forEach(function(filename){
@@ -129,10 +130,18 @@ module.exports = function (grunt) {
 				}
 			})
 			.forEach(function (filepath) {
-				var content = parseContent(filepath),
-					dirname = path.dirname(filepath),
+				var dirname = path.dirname(filepath),
 					directories = dirname.split(path.sep),
-					basename = path.basename(filepath);
+					basename = path.basename(filepath),
+					relpath = path.relative(options.baseDir, filepath),
+					content = {};
+
+				content = parseContent(filepath, options);
+
+				// add filepath property if not specified
+				if (!content.filepath) {
+					content.filepath = relpath;
+				}
 
 				// start at the top of the content tree
 				var currentDir = contentTree;
