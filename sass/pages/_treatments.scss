@@ -1,0 +1,21 @@
+.treatments {
+
+}
+.anxiety {
+	.tab-menu {
+		float: right;
+		list-style: none;
+		li {
+			background-color: $background-darker;
+			border-radius: 3px;
+			float: left;
+			padding: 0.5em;
+			&.active {
+				background-color: $background-darker;
+			}
+		}
+	}
+	.treatment {
+		background-color: $background-dark;
+	}
+}

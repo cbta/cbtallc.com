@@ -2,13 +2,16 @@
 	<div class="treatments">
 		<section class="anxiety">
 			<h2 class="section-title">Anxiety</h2>
+			<ul class="treatment-menu tab-menu">
+				{{#each anxiety}}
+					<li><a href="#{{url-title}}">{{title}}</a>
+				{{/each}}
+			</ul>
 			{{#each anxiety}}
-				<div class="sub-treatment">
-					<a href="">{{title}}</a>
-					<div class="content">
-						{{{markdown}}}
-					</div>
-				</div><!-- .sub-treatment -->
+				<div class="treatment" id="{{url-title}}">
+					<h3>{{title}}</h3>
+					{{{markdown}}}
+				</div><!-- treatment -->
 			{{/each}}
 		</section><!-- .anxiety -->
 		<section class="depression">
