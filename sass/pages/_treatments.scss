@@ -1,21 +1,82 @@
 .treatments {
-
 }
 .anxiety {
+	background-color: $background-dark;
+	border-bottom: 2px solid $background-darker;
+	padding: 1em 0 2em;
+	.menu-wrapper {
+		@extend %clearfix;
+	}
+	.section-title {
+		float: left;
+		max-width: 30%;
+		margin-bottom: 0;
+		padding-left: 0.5em;
+	}
 	.tab-menu {
 		float: right;
 		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 70%;
 		li {
-			background-color: $background-darker;
-			border-radius: 3px;
+			background-color: $shady-blue;
+			border-top: 3px solid $shady-blue;
 			float: left;
-			padding: 0.5em;
-			&.active {
-				background-color: $background-darker;
+			height: 4em;
+			padding: 0.7em 1em;
+			width: 20%;
+			&.active,
+			&.active:hover {
+				background-color: $background-light;
+				border-color: $dark-jean;
+				a {
+					color: $very-dark-jean;
+					font-weight: 700;
+				}
+			}
+			&:hover {
+				border-color: $very-dark-jean;
+				cursor: pointer;
+			}
+			a {
+				color: $white;
+				text-decoration: none;
+			}
+			.outer-container {
+				display: table;
+			}
+			.inner-container {
+				display: table-cell;
+				text-align: center;
+				vertical-align: middle;
 			}
 		}
 	}
+	.tabs-content {
+		background-color: $background-light;
+		padding: 0.5em 1em;
+	}
 	.treatment {
-		background-color: $background-dark;
+		color: $very-dark-jean;
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}
+.depression {
+	padding: 2em 0;
+	text-align: justify;
+	.title-wrapper {
+		@extend %clearfix;
+		@extend .wrapper;
+	}
+	.section-title {
+		float: right;
+		margin: 0;
+	}
+	p {
+		text-indent: 3em;
 	}
 }

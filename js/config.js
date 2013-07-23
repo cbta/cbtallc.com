@@ -21,18 +21,10 @@ require.config({
 		handlebars: {
 			exports: 'Handlebars'
 		},
-		gcal: {
-			deps: ['fullcalendar']
-		},
-		validate: {
-			deps: ['jquery']
-		},
-		form: {
-			deps: ['jquery']
-		},
-		fancybox: {
-			deps: ['jquery']
-		}
+		gcal: ['fullcalendar'],
+		validate: ['jquery'],
+		form: ['jquery'],
+		fancybox: ['jquery']
 	},
 
 	// Remove these modules from the final build.

@@ -1,22 +1,29 @@
 {{> header}}
 	<div class="treatments">
 		<section class="anxiety">
-			<h2 class="section-title">Anxiety</h2>
-			<ul class="treatment-menu tab-menu">
-				{{#each anxiety}}
-					<li><a href="#{{url-title}}">{{title}}</a>
-				{{/each}}
-			</ul>
-			{{#each anxiety}}
-				<div class="treatment" id="{{url-title}}">
-					<h3>{{title}}</h3>
-					{{{markdown}}}
-				</div><!-- treatment -->
-			{{/each}}
+			<div class="wrapper">
+				<div class="menu-wrapper">
+					<h2 class="section-title">Anxiety</h2>
+					<ul class="treatment-menu tab-menu">
+						{{#each anxiety}}
+							<li class="{{#isEqual title "Generalized Anxiety"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
+						{{/each}}
+					</ul>
+				</div><!-- .menu-wrapper -->
+				<div class="tabs-content">
+					{{#each anxiety}}
+						<div class="treatment {{#isEqual title "Generalized Anxiety"}}active{{/isEqual}}" id="{{url-title}}">
+							{{{markdown}}}
+						</div><!-- treatment -->
+					{{/each}}
+				</div><!-- .tabs-content -->
+			</div><!-- .wrapper -->
 		</section><!-- .anxiety -->
 		<section class="depression">
-			<h2 class="section-title">Depression</h2>
-			<div class="">
+			<div class="title-wrapper">
+				<h2 class="section-title">Depression</h2>
+			</div>
+			<div class="wrapper">
 				{{{depression.markdown}}}
 			</div>
 		</section><!-- .depression -->

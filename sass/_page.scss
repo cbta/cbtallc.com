@@ -9,13 +9,14 @@ body {
 a {
 	color: $blue;
 }
+p {
+	line-height: 1.4;
+}
 .section-title {
-	@extend .wrapper;
 	color: $red;
 	font-family: $feature-font;
 	font-size: 2em;
 	margin: 0.5em auto;
-	text-transform: uppercase;
 }
 
 //Header
@@ -52,11 +53,12 @@ a {
 			color: $white;
 			display: block;
 			font-family: $feature-font;
-			font-size: 1.5em;
+			font-size: 1.2em;
 			height: 6.25rem; // equal height of the h1 (4em + 2*(0.75 * 4))
 			padding: 1.8em 1em 0 1em;
 			text-align: center;
 			text-decoration: none;
+			text-transform: uppercase;
 		}
 		span[class^="fontawesome"] {
 			font-size: 1.1em;

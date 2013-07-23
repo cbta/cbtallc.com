@@ -117,6 +117,26 @@ define(function (require) {
 			}
 		});
 
+		// tabs
+		$('.tab-menu li').click(function(e){
+			e.preventDefault();
+			var a = $('a', this);
+			var tabID = a.attr('href');
+
+			$(this).addClass('active'); // add class .active to the clicked button
+			$(this).siblings().removeClass('active'); // remove the .active class from sibling buttons
+			$(tabID).addClass('active');
+			$(tabID).siblings().removeClass('active');
+		});
+
+		// vertically align tab menu
+		$('.tab-menu li').each(function(){
+			$('a', this).wrap('<div class="outer-container" />').wrap('<div class="inner-container" />');
+			var h = $(this).height();
+			var w = $(this).width();
+			$('.outer-container', this).height(h).width(w);
+		});
+
 	});
 
 });

@@ -17,8 +17,9 @@ module.exports = function (grunt) {
 	 * @param {String} str
 	 * @return {String}
 	*/
+	// not have any <br> tags for now, as it creates more white space than needed
 	var nl2br = function(str) {
-		return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br>');
+		return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '');
 	}
 
 	// parse JSON and markdown content
