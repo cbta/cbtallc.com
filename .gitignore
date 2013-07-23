@@ -7,5 +7,6 @@ build
 .grunt
 
 *.psd
+*.pxm
 
 *.sublime*
