@@ -1,7 +1,7 @@
 .home {
 	.intro {
 		@extend %clearfix;
-		margin-bottom: 3em;
+		padding-bottom: 3em;
 		h1 {
 			color: $dark-jean;
 			font-family: $feature-font;
@@ -22,6 +22,63 @@
 		text-decoration: none;
 	}
 }
+
+// What we do
+.services {
+	.section-title {
+		@extend .wrapper;
+		border-top: 2px solid $background-darker;
+		padding-top: 1em;
+		text-align: center;
+	}
+	.service-wrapper {
+		@extend .wrapper;
+		padding-top: 2em;
+	}
+	.tabs-menu {
+		@extend %clearfix;
+		border: 2px solid $background-darker;
+		display: table;
+		list-style: none;
+		margin: 0 auto;
+		padding: 0;
+		li {
+			background-color: $background-dark;
+			float: left;
+			padding: 1em;
+			&.active {
+				background-color: $background-darker;
+				a {
+					color: $very-dark-jean;
+				}
+			}
+			&:hover {
+				cursor: pointer;
+				a {
+					color: $very-dark-jean;
+				}
+			}
+		}
+		a {
+			color: #a1a1a1;
+			font-size: 1.5em;
+			text-decoration: none;
+		}
+	}
+	.tabs-content {
+		border: 2px solid $background-darker;
+		border-radius: 4px;
+		margin-top: -2em;
+		padding: 1.5em 1em 1em;
+	}
+	.service {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}
+
 // Therapists
 .therapists {
 	background-color: $background-dark;
@@ -107,11 +164,6 @@
 			text-align: center;
 		}
 	}
-}
-
-// Treatments
-.treatments {
-	@extend %clearfix;
 }
 
 .contact {

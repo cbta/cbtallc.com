@@ -118,7 +118,7 @@ define(function (require) {
 		});
 
 		// tabs
-		$('.tab-menu li').click(function(e){
+		$('.tabs-menu li').click(function(e){
 			e.preventDefault();
 			var a = $('a', this);
 			var tabID = a.attr('href');
@@ -130,7 +130,7 @@ define(function (require) {
 		});
 
 		// vertically align tab menu
-		$('.tab-menu li').each(function(){
+		$('.anxiety .tab-menu li').each(function(){
 			$('a', this).wrap('<div class="outer-container" />').wrap('<div class="inner-container" />');
 			var h = $(this).height();
 			var w = $(this).width();

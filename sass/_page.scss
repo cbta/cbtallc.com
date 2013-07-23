@@ -19,6 +19,19 @@ p {
 	margin: 0.5em auto;
 }
 
+// Layout
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	@inlcude at-most($mama-bear) {
+		width: auto;
+		padding: 0 1em;
+	}
+}
+.menu-wrapper {
+	@extend %clearfix;
+}
+
 //Header
 .main-header {
 	@extend %clearfix;

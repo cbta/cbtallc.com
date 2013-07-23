@@ -4,16 +4,13 @@
 	background-color: $background-dark;
 	border-bottom: 2px solid $background-darker;
 	padding: 1em 0 2em;
-	.menu-wrapper {
-		@extend %clearfix;
-	}
 	.section-title {
 		float: left;
 		max-width: 30%;
 		margin-bottom: 0;
 		padding-left: 0.5em;
 	}
-	.tab-menu {
+	.tabs-menu {
 		float: right;
 		list-style: none;
 		margin: 0;

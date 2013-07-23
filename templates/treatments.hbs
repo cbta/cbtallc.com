@@ -4,15 +4,15 @@
 			<div class="wrapper">
 				<div class="menu-wrapper">
 					<h2 class="section-title">Anxiety</h2>
-					<ul class="treatment-menu tab-menu">
+					<ul class="treatment-menu tabs-menu">
 						{{#each anxiety}}
-							<li class="{{#isEqual title "Generalized Anxiety"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
+							<li class="{{#isEqual url-title "generalized-anxiety"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
 						{{/each}}
 					</ul>
 				</div><!-- .menu-wrapper -->
 				<div class="tabs-content">
 					{{#each anxiety}}
-						<div class="treatment {{#isEqual title "Generalized Anxiety"}}active{{/isEqual}}" id="{{url-title}}">
+						<div class="treatment {{#isEqual url-title "generalized-anxiety"}}active{{/isEqual}}" id="{{url-title}}">
 							{{{markdown}}}
 						</div><!-- treatment -->
 					{{/each}}

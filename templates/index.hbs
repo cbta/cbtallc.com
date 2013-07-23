@@ -11,6 +11,23 @@
 				<div class="intro-video"></div>
 			</div><!-- .wrapper -->
 		</section><!-- .intro -->
+		<section class="services">
+			<h1 class="section-title">What we do</h1>
+			<div class="service-wrapper">
+				<ul class="services-menu tabs-menu">
+					{{#each services}}
+						<li class="{{#isEqual url-title "cbt"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
+					{{/each}}
+				</ul><!-- .services-menu -->
+				<div class="tabs-content">
+					{{#each services}}
+						<div class="service {{#isEqual url-title "immigration"}}active{{/isEqual}}" id="{{url-title}}">
+						{{{markdown}}}
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</section><!-- .services -->
 		<section class="therapists">
 			<h1 class="section-title">Our Therapists</h1>
 			<div class="wrapper">
@@ -35,13 +52,6 @@
 				</div><!-- .therapist-stubs -->
 			</div><!-- .wrapper -->
 		</section><!-- .therapists -->
-		<section class="therapies">
-			<h1 class="section-title">What we treat</h1>
-			<div class="wrapper">
-				<p>Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-				<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.</p>
-			</div>
-		</section><!-- .therapies -->
 		<section class="contact">
 			<div class="wrapper">
 				<section class="form">
