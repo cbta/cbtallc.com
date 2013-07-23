@@ -29,14 +29,14 @@
 			&.active,
 			&.active:hover {
 				background-color: $background-light;
-				border-color: $dark-jean;
+				border-color: $green;
 				a {
 					color: $very-dark-jean;
 					font-weight: 700;
 				}
 			}
 			&:hover {
-				border-color: $very-dark-jean;
+				border-color: $darker-green;
 				cursor: pointer;
 			}
 			a {

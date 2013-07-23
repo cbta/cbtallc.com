@@ -44,7 +44,8 @@ p {
 	margin: 0;
 	li {
 		float: left;
-		&:hover {
+		&:hover,
+		&.current {
 			a {
 				color: $green;
 			}
