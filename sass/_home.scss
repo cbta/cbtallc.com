@@ -24,7 +24,9 @@
 }
 // Therapists
 .therapists {
-	background-color: $dark-jean;
+	background-color: $background-dark;
+	border-top: 2px solid $background-darker;
+	border-bottom: 2px solid $background-darker;
 	margin: 2em 0;
 	padding-top: 1em;
 	.section-title {
@@ -34,7 +36,7 @@
 .therapist-viewers {
 	@extend %clearfix;
 	.viewer {
-		background-color: $very-dark-jean;
+		background-color: $dark-jean;
 		border-radius: 4px;
 		color: $white;
 		display: none;
@@ -85,8 +87,8 @@
 			text-decoration: none;
 		}
 		img {
-			background-color: $background-color;
-			border: 5px solid $dark-jean;
+			background-color: $background-darker;
+			border: 5px solid $background-darker;
 			border-radius: 50%;
 			display: block;
 			margin: 0 auto;
@@ -98,7 +100,7 @@
 			}
 		}
 		h3 {
-			color: $white;
+			color: $very-dark-jean;
 			font-size: 1.2em;
 			margin: 0.5em 0;
 			text-align: center;
@@ -107,21 +109,24 @@
 }
 
 // Treatments
-.therapies {
+.treatments {
+	@extend %clearfix;
 }
 
 .contact {
 	@extend %clearfix;
-	background-color: $dark-jean;
-	#contact-form {
+	background-color: $background-dark;
+	.form,
+	.info {
 		float: left;
+		width: 50%;
 	}
 	form {
 		width: 100%;
 		float: left;
 	}
 	label {
-		color: $white;
+		color: $very-dark-jean;
 		display: block;
 		font-family: $feature-font;
 		font-size: 1.2em;
@@ -129,7 +134,7 @@
 	}
 	.error {
 		color: $red;
-		font-size: 1.5em;
+		font-size: 1.2em;
 		margin-top: 0.5em;
 	}
 	input,
@@ -162,20 +167,18 @@
 		}
 		input[type="tel"] {
 			display: inline;
-			float: left;
+			margin: 0 2%;
 			text-align: center;
 			width: 22%;
 			&:nth-of-type(3) {
-				width: 32%;
+				float: right;
+				margin-right: 0;
+				width: 33%;
 			}
 		}
 		.symbol {
-			color: $white;
-			display: inline-block;
-			float: left;
-			margin: 0 2%;
-			font-size: 3em;
-			width: 4%;
+			color: $very-dark-jean;
+			font-size: 2.5em;
 		}
 		&.submit {
 			padding-right: 15%; // flush with other fields

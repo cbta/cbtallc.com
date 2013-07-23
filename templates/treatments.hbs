@@ -1,0 +1,21 @@
+{{> header}}
+	<div class="treatments">
+		<section class="anxiety">
+			<h2 class="section-title">Anxiety</h2>
+			{{#each anxiety}}
+				<div class="sub-treatment">
+					<a href="">{{title}}</a>
+					<div class="content">
+						{{{markdown}}}
+					</div>
+				</div><!-- .sub-treatment -->
+			{{/each}}
+		</section><!-- .anxiety -->
+		<section class="depression">
+			<h2 class="section-title">Depression</h2>
+			<div class="">
+				{{{depression.markdown}}}
+			</div>
+		</section><!-- .depression -->
+	</div>
+{{> footer}}
