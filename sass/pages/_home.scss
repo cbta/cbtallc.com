@@ -1,7 +1,7 @@
 .home {
 	.intro {
 		@extend %clearfix;
-		padding-bottom: 3em;
+		padding-bottom: 2em;
 		h1 {
 			color: $dark-jean;
 			font-family: $feature-font;
@@ -25,10 +25,11 @@
 
 // What we do
 .services {
+	padding-bottom: 2em;
 	.section-title {
 		@extend .wrapper;
 		border-top: 2px solid $background-darker;
-		padding-top: 1em;
+		padding-top: 1rem;
 		text-align: center;
 	}
 	.service-wrapper {
@@ -61,7 +62,7 @@
 		}
 		a {
 			color: #a1a1a1;
-			font-size: 1.5em;
+			font-size: 1.3em;
 			text-decoration: none;
 		}
 	}
@@ -69,7 +70,13 @@
 		border: 2px solid $background-darker;
 		border-radius: 4px;
 		margin-top: -2em;
-		padding: 1.5em 1em 1em;
+		padding: 1.5em 1.5em 1em;
+		p {
+			font-size: 1.1em;
+		}
+		li {
+			margin-bottom: 0.5em;
+		}
 	}
 	.service {
 		display: none;
@@ -84,58 +91,23 @@
 	background-color: $background-dark;
 	border-top: 2px solid $background-darker;
 	border-bottom: 2px solid $background-darker;
-	margin: 2em 0;
-	padding-top: 1em;
+	padding: 1em 0 2em;
 	.section-title {
 		@extend .wrapper;
 		text-align: center;
 	}
 }
-.therapist-viewers {
-	@extend %clearfix;
-	.viewer {
-		background-color: $dark-jean;
-		border-radius: 4px;
-		color: $white;
-		display: none;
-		padding: 2em;
-		position: relative;
-		&.on {
-			display: block;
-		}
-		.close-button {
-			color: $white;
-			cursor: pointer;
-			font-family: $monospace;
-			font-size: 2em;
-			padding: 0.5em 0.8em;
-			position: absolute;
-			top: 0;
-			right: 0.3em;
-			&:hover {
-				color: $red;
-			}
-		}
-		h1 {
-			color: $red;
-			font-family: $feature-font;
-			margin-top: 0;
-		}
-		.bio {
-			font-size: 1.2em;
-			line-height: 1.4;
-		}
-	}
-}
+
 .therapist-stubs {
 	@extend %clearfix;
+	padding-top: 1em;
 	.stub {
 		float: left;
 		position: relative;
 		width: 33.33333%;
 		margin: 1em 0;
 		padding: 0 1em;
-		&.current {
+		&.active {
 			img {
 				border-color: $green;
 			}
@@ -162,6 +134,43 @@
 			font-size: 1.2em;
 			margin: 0.5em 0;
 			text-align: center;
+		}
+	}
+}
+
+.therapist-viewers {
+	@extend %clearfix;
+	.viewer {
+		background-color: $background-darker;
+		border-radius: 4px;
+		color: $very-dark-jean;
+		display: none;
+		padding: 2em;
+		position: relative;
+		&.active {
+			display: block;
+		}
+		.close-button {
+			color: $dark-jean;
+			cursor: pointer;
+			font-family: $monospace;
+			font-size: 1.5em;
+			padding: 0.5em 0.8em;
+			position: absolute;
+			top: -0.3em;
+			right: -0.2em;
+			&:hover {
+				color: $red;
+			}
+		}
+		h1 {
+			color: $red;
+			font-family: $feature-font;
+			margin-top: 0;
+		}
+		.bio {
+			font-size: 1.2em;
+			line-height: 1.4;
 		}
 	}
 }

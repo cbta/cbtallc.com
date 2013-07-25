@@ -21,7 +21,7 @@
 				</ul><!-- .services-menu -->
 				<div class="tabs-content">
 					{{#each services}}
-						<div class="service {{#isEqual url-title "immigration"}}active{{/isEqual}}" id="{{url-title}}">
+						<div class="service {{#isEqual url-title "cbt"}}active{{/isEqual}}" id="{{url-title}}">
 						{{{markdown}}}
 						</div>
 					{{/each}}
@@ -31,18 +31,9 @@
 		<section class="therapists">
 			<h1 class="section-title">Our Therapists</h1>
 			<div class="wrapper">
-				<div class="therapist-viewers">
-					{{#each therapists}}
-					<div class="viewer" id="{{id}}-viewer">
-						<a class="close-button">x</a>
-						<h1>{{full-title}}</h1>
-						<div class="bio">{{{nl2br bio}}}</div>
-					</div><!-- .viewer -->
-					{{/each}}
-				</div><!-- .therapist-viewers -->
 				<div class="therapist-stubs">
 					{{#each therapists}}
-					<div class="stub" id="{{id}}-stub" data-therapist="{{id}}" title="{{title}}">
+					<div class="stub" data-therapist="{{id}}" title="{{title}}">
 						<a href="#{{id}}">
 							<img class="image" src="{{image}}" alt="{{title}}"/>
 							<h3 class="title">{{title}}</h3>
@@ -50,6 +41,15 @@
 					</div><!-- .stub -->
 					{{/each}}
 				</div><!-- .therapist-stubs -->
+				<div class="therapist-viewers">
+					{{#each therapists}}
+					<div class="viewer" id="{{id}}">
+						<a class="close-button">x</a>
+						<h1>{{full-title}}</h1>
+						<div class="bio">{{{nl2br bio}}}</div>
+					</div><!-- .viewer -->
+					{{/each}}
+				</div><!-- .therapist-viewers -->
 			</div><!-- .wrapper -->
 		</section><!-- .therapists -->
 		<section class="contact">

@@ -14,32 +14,31 @@ define(function (require) {
 		$(".therapist-stubs .stub a").click(function(e){
 			e.preventDefault();
 			var $stub = $(this).parent(".stub"),
-				therapist_id = $stub.data("therapist"),
-				viewer_id = '#' + therapist_id + "-viewer",
-				therapist_on = ($stub.hasClass("current")) ? true : false;
+				therapist_id = $(this).attr('href'),
+				therapist_on = ($stub.hasClass("active")) ? true : false;
 
 			// remove any other current states
-			$(".therapist-stubs .stub").removeClass("current");
-			$(".therapist-viewers .viewer").removeClass("on");
+			$(".therapist-stubs .stub").removeClass("active");
+			$(".therapist-viewers .viewer").removeClass("active");
 
 			// activate clicked-on therapist if it was originally not activated
 			if (!therapist_on) {
-				$stub.toggleClass("current");
-				$(viewer_id).toggleClass("on");
-			}
+				$stub.toggleClass("active");
+				$(therapist_id).toggleClass("active");
 
-			// THIS SCROLLING ISN'T WORKING!!
-			var scrollPos = $(".therapists").offset().top;
-			$('html').animate(function(){
-				scrollTop: scrollPos
-			}, 'slow');
+				// Scroll to the viewer
+				var scrollPos = $(".therapist-viewers").offset().top;
+				$('html,body').animate({
+					scrollTop: scrollPos - 200
+				}, 'slow');
+			}
 		});
 
 		$(".therapist-viewers .close-button").click(function(e){
 			e.preventDefault();
 			// Close all viewer, remove current states
-			$(".therapist-stubs .stub").removeClass("current");
-			$(".therapist-viewers .viewer").removeClass("on");
+			$(".therapist-stubs .stub").removeClass("active");
+			$(".therapist-viewers .viewer").removeClass("active");
 		})
 
 		// FORMS
@@ -127,14 +126,6 @@ define(function (require) {
 			$(this).siblings().removeClass('active'); // remove the .active class from sibling buttons
 			$(tabID).addClass('active');
 			$(tabID).siblings().removeClass('active');
-		});
-
-		// vertically align tab menu
-		$('.anxiety .tab-menu li').each(function(){
-			$('a', this).wrap('<div class="outer-container" />').wrap('<div class="inner-container" />');
-			var h = $(this).height();
-			var w = $(this).width();
-			$('.outer-container', this).height(h).width(w);
 		});
 
 	});

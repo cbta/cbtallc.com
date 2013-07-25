@@ -13,15 +13,17 @@
 	.tabs-menu {
 		float: right;
 		list-style: none;
-		margin: 0;
+		margin: 0 0 -2px 0;
 		padding: 0;
 		width: 70%;
 		li {
 			background-color: $shady-blue;
-			border-top: 3px solid $shady-blue;
+			border-top: 4px solid $shady-blue;
+			display: table; //for vertical align
+			border-collapse: collapse;
 			float: left;
 			height: 4em;
-			padding: 0.7em 1em;
+			padding: 0.7em 0.5em;
 			width: 20%;
 			&.active,
 			&.active:hover {
@@ -36,22 +38,27 @@
 				border-color: $darker-green;
 				cursor: pointer;
 			}
+			&:first-child.active {
+				border-left: 2px solid $background-darker;
+			}
+			&:last-child.active {
+				border-right: 2px solid $background-darker;
+			}
 			a {
 				color: $white;
 				text-decoration: none;
 			}
-			.outer-container {
-				display: table;
-			}
-			.inner-container {
+			// for vertical align
+			.container {
 				display: table-cell;
-				text-align: center;
 				vertical-align: middle;
+				text-align: center;
 			}
 		}
 	}
 	.tabs-content {
 		background-color: $background-light;
+		border: 2px solid $background-darker;
 		padding: 0.5em 1em;
 	}
 	.treatment {

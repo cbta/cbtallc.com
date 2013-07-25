@@ -6,7 +6,11 @@
 					<h2 class="section-title">Anxiety</h2>
 					<ul class="treatment-menu tabs-menu">
 						{{#each anxiety}}
-							<li class="{{#isEqual url-title "generalized-anxiety"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
+							<li class="{{#isEqual url-title "generalized-anxiety"}}active{{/isEqual}}">
+								<div class="container">
+								<a href="#{{url-title}}">{{title}}</a>
+								</div>
+							</li>
 						{{/each}}
 					</ul>
 				</div><!-- .menu-wrapper -->
