@@ -10,8 +10,10 @@
 	}
 	p {
 		color: $very-dark-jean;
-		font-size: 1.3em;
 		line-height: 1.4;
+		@media (min-width: $bro-bear) {
+			font-size: 1.3em;
+		}
 	}
 	.button {
 		@extend %button;
@@ -48,8 +50,13 @@
 		padding: 0;
 		li {
 			background-color: $background-dark;
+			width: 50%;
 			float: left;
 			padding: 1em;
+			text-align: center;
+			@media (min-width: $bro-bear) {
+				width: auto;
+			}
 			&.active {
 				background-color: $background-darker;
 				a {
@@ -65,7 +72,12 @@
 		}
 		a {
 			color: #a1a1a1;
-			font-size: 1.3em;
+			display: block;
+			height: 2em;
+			@media (min-width: $bro-bear) {
+				font-size: 1.3em;
+				height: auto;
+			}
 			text-decoration: none;
 		}
 	}
@@ -74,9 +86,10 @@
 		border-radius: 4px 4px 0 0;
 		margin-top: -2em;
 		padding: 1.5em 1.5em 1em;
-		p,
 		ul {
-			font-size: 1.1em;
+			@media (min-width: $bro-bear) {
+				font-size: 1.1em;
+			}
 		}
 		li {
 			margin-bottom: 0.5em;
@@ -191,7 +204,7 @@
 	background-color: $background-dark;
 	.form,
 	.info {
-		@media (min-width: 760px) {
+		@media (min-width: $big-bro-bear) {
 			float: left;
 			width: 50%;
 		}
