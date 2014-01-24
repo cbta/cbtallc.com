@@ -136,9 +136,12 @@
 	.stub {
 		float: left;
 		position: relative;
-		width: 33.33333%;
+		width: 50%;
 		margin: 1em 0;
 		padding: 0 1em;
+		@media (min-width: $big-bro-bear) {
+			width: 33.33333%;
+		}
 		&.active {
 			img {
 				border-color: $green;
@@ -177,7 +180,7 @@
 		border-radius: 4px;
 		color: $very-dark-jean;
 		display: none;
-		padding: 2em;
+		padding: 2em 1em;
 		position: relative;
 		&.active {
 			display: block;
