@@ -16,7 +16,8 @@ p {
 	color: $red;
 	font-family: $feature-font;
 	font-size: 2em;
-	margin: 0.5em auto;
+	margin: 0 auto;
+	padding: 0.5em 0;
 }
 
 // Layout
@@ -45,6 +46,7 @@ p {
 		font-family: $feature-font;
 		font-size: 3em;
 		line-height: 1;
+		margin: 1rem 0;
 	}
 }
 
@@ -68,8 +70,7 @@ p {
 			display: block;
 			font-family: $feature-font;
 			font-size: 1.2em;
-			height: 6.25rem; // equal height of the h1 (4em + 2*(0.75 * 4))
-			padding: 1.8em 1em 0 1em;
+			padding: 1em 1em 0;
 			text-align: center;
 			text-decoration: none;
 			text-transform: uppercase;

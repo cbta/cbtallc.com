@@ -1,18 +1,6 @@
 {{> header}}
 	<div class="body home">
-		<section class="intro">
-			<div class="wrapper">
-				<h1>{{content.intro.heading}}</h1>
-				<div class="intro-content">
-					<p>{{content.intro.content}}</p>
-					<a class="button" href="{{content.intro.button1.link}}">{{content.intro.button1.title}}</a>
-					<a class="button" href="#">{{content.intro.button2.title}}</a>
-				</div><!-- .intro-content -->
-				<div class="intro-video"></div>
-			</div><!-- .wrapper -->
-		</section><!-- .intro -->
 		<section class="services">
-			<h1 class="section-title">What we do</h1>
 			<div class="service-wrapper">
 				<ul class="services-menu tabs-menu">
 					{{#each services}}
@@ -26,7 +14,12 @@
 						</div>
 					{{/each}}
 				</div>
-			</div>
+			</div><!--.service-wrapper -->
+			<h2 class="section-title">What We Do</h2>
+			<div class="button-wrap">
+				<a class="button" href="{{content.intro.button1.link}}">{{content.intro.button1.title}}</a>
+				<a class="button" href="#">{{content.intro.button2.title}}</a>
+			</div><!-- .button-wrap -->
 		</section><!-- .services -->
 		<section class="therapists">
 			<h1 class="section-title">Our Therapists</h1>
@@ -60,15 +53,15 @@
 				</section><!-- #contact-us -->
 				<section class="info map" id="location">
 					<h1 class="section-title">Where We Are</h1>
+					<div class="address">
+						<p>300 TradeCenter, <br/>
+						Suite 7790,<br/>
+						Woburn MA, 01801</p>
+					</div>
+					<p>Phone: <a class="tel" href="tel:6175317133">(617) 531-7133</a><br/>
+					Fax: (781) 281-0644</p>
 					<iframe class="google-map" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Cognitive+Behavior+Therapy+Associates,+LLC,+100+Sylvan+Road,+Woburn,+MA&amp;aq=0&amp;oq=cognitive&amp;sll=42.036922,-71.683501&amp;sspn=2.880309,8.453979&amp;ie=UTF8&amp;hq=Cognitive+Behavior+Therapy+Associates,+LLC,&amp;hnear=100+Sylvan+Rd,+Woburn,+Middlesex,+Massachusetts+01801&amp;t=m&amp;cid=13986380778700008528&amp;ll=42.538157,-71.151924&amp;spn=0.088539,0.145912&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe>
 					<a class="map-link" href="https://maps.google.com/maps?q=Cognitive+Behavior+Therapy+Associates,+LLC,+100+Sylvan+Road,+Woburn,+MA&hl=en&ll=42.501703,-71.162481&spn=0.011169,0.033023&sll=42.036922,-71.683501&sspn=2.880309,8.453979&oq=cognitive&hq=Cognitive+Behavior+Therapy+Associates,+LLC,&hnear=100+Sylvan+Rd,+Woburn,+Middlesex,+Massachusetts+01801&t=m&z=16&iwloc=A">Find us on Google Maps</a>
-					<div class="address">
-						300 TradeCenter, <br/>
-						Suite 7790,<br/>
-						Woburn MA, 01801
-					</div>
-					<a class="tel" href="tel:6175317133">(617) 531-7133</a>
-					<div class="fax">(781) 281-0644</div>
 				</section><!-- #location -->
 			</div><!--. wrapper -->
 		</section><!-- .contact -->
