@@ -36,6 +36,14 @@
 		font-weight: normal;
 		padding: 0.3em 0.5em;
 		text-align: right;
+		a {
+			color: $dark-jean;
+			text-decoration: none;
+			&:hover {
+				color: $darker-green;
+				text-decoration: underline;
+			}
+		}
 	}
 	.service-wrapper {
 		@extend .wrapper;
