@@ -201,8 +201,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', [
 		'import_contents',
-		'responsive_images',
-		'imagemin:build',
+		'newer:responsive_images',
+		'newer:imagemin:build',
 		'copy:build',
 		'handlebars_html:prod',
 		'sass:prod',
