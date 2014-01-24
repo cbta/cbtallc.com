@@ -153,6 +153,9 @@ module.exports = function(grunt) {
 			options: {
 				livereload: '<%= config.livereload %>' || 35729
 			},
+			js: {
+				files: ['js/**/*.js']
+			},
 			css: {
 				files: ['sass/**/*.scss'],
 				tasks: ['sass:dev', 'autoprefixer:dev']
