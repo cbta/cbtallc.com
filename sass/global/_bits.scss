@@ -45,7 +45,7 @@ $cloudy: #dadada;
 }
 
 @mixin at-most($device-width) {
-	@media screen and (max-width: $device-width - 1) {
+	@media screen and (max-width: $device-width - 1px) {
 		@content
 	}
 }

@@ -32,13 +32,16 @@
 		@extend .wrapper;
 		background-color: $background-darker;
 		color: $dark-jean;
-		font-size: 1.3em;
+		font-size: 1em;
 		font-weight: normal;
 		padding: 0.3em 0.5em;
 		text-align: right;
 		a {
 			color: $dark-jean;
 			text-decoration: none;
+			@media (min-width: $bro-bear) {
+				font-size: 1.3em;
+			}
 			&:hover {
 				color: $darker-green;
 				text-decoration: underline;

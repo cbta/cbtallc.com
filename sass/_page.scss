@@ -23,11 +23,11 @@ p {
 // Layout
 .wrapper {
 	@extend %clearfix;
-	width: 90%;
-	margin: 0 auto;
-	@mixin at-most($bro-bear) {
-		width: auto;
-		padding: 0 1em;
+	width: auto;
+	margin: 0 1em;
+	@include at-least($bro-bear) {
+		width: 90%;
+		margin: 0 auto;
 	}
 }
 .menu-wrapper {
@@ -38,8 +38,12 @@ p {
 .main-header {
 	@extend %clearfix;
 	background-color: $dark-jean;
-	.wrapper {
-		@extend %clearfix;
+	padding: 1em;
+	.header-wrap {
+		@extend .wrapper;
+		@include at-most($bro-bear) {
+			margin: 0;
+		}
 	}
 	h1 {
 		color: $red;
@@ -47,7 +51,7 @@ p {
 		font-family: $feature-font;
 		font-size: 3em;
 		line-height: 1;
-		margin: 1rem 0;
+		margin: 0;
 	}
 }
 
@@ -58,8 +62,13 @@ p {
 	@extend %clearfix;
 	list-style: none;
 	margin: 0;
+	padding: 0;
 	li {
-		float: left;
+		padding-bottom: 0.3em;
+		@media (min-width: $bro-bear) {
+			float: left;
+			padding: 0;
+		}
 		&:hover,
 		&.current {
 			a {
@@ -70,11 +79,13 @@ p {
 			color: $white;
 			display: block;
 			font-family: $feature-font;
-			font-size: 1.2em;
-			padding: 1em 1em 0;
-			text-align: center;
 			text-decoration: none;
 			text-transform: uppercase;
+			@include at-least($bro-bear) {
+				font-size: 1.2em;
+				padding: 1em 1em 0;
+				text-align: center;
+			}
 		}
 		span[class^="fontawesome"] {
 			font-size: 1.1em;
