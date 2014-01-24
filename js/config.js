@@ -21,6 +21,7 @@ require.config({
 		handlebars: {
 			exports: 'Handlebars'
 		},
+		fullcalendar: ['jquery'],
 		gcal: ['fullcalendar'],
 		validate: ['jquery'],
 		form: ['jquery'],

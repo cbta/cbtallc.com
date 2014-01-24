@@ -5,6 +5,29 @@
 
 .appointment-form {
 	display: none;
+	h2 {
+		text-align: center;
+	}
+	.form-group {
+		padding: 0.5em 0;
+		label {
+			display: block;
+			float: left;
+			padding-top: 0.5em;
+			width: 10em;
+		}
+		input {
+			padding: 0.5em;
+		}
+		select {
+			width: 13em; // seems to match the width of input
+		}
+	}
+	input[type="submit"] {
+		border: none;
+		@extend %button;
+		margin-top: 1em;
+	}
 }
 
 .fc-button {

@@ -1,5 +1,4 @@
 define(function (require) {
-
 	var $ = require('jquery'),
 		config = require('json!config.json');
 
@@ -39,7 +38,7 @@ define(function (require) {
 			// Close all viewer, remove current states
 			$(".therapist-stubs .stub").removeClass("active");
 			$(".therapist-viewers .viewer").removeClass("active");
-		})
+		});
 
 		// FORMS
 		$("#contact-form").validate({
@@ -75,8 +74,11 @@ define(function (require) {
 			}
 		});
 
-
 		// initialize full calendar
+		var calendarView = 'agendaDay';
+		if (window.matchMedia("(min-width: 800px)").matches) {
+			calendarView = 'agendaWeek';
+		}
 		$('.calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
@@ -93,7 +95,7 @@ define(function (require) {
 					className: 'ehiggins'
 				}
 			],
-			defaultView: 'agendaWeek',
+			defaultView: calendarView,
 			eventClick: function(calEvent, jsEvent, view) {
 				var $form = $('.appointment-form');
 				var start = moment(calEvent.start);
@@ -127,7 +129,5 @@ define(function (require) {
 			$(tabID).addClass('active');
 			$(tabID).siblings().removeClass('active');
 		});
-
 	});
-
 });
