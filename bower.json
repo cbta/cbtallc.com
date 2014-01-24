@@ -1,6 +1,6 @@
 {
   "name": "cbtallc2",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "devDependencies": {
     "requirejs": "~2.1.6",
     "requirejs-plugins": "~1.0.2",

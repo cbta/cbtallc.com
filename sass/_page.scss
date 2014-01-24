@@ -83,7 +83,7 @@ p {
 			text-transform: uppercase;
 			@include at-least($bro-bear) {
 				font-size: 1.2em;
-				padding: 1em 1em 0;
+				padding: 0.5em 1em 0;
 				text-align: center;
 			}
 		}
