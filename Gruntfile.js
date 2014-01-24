@@ -3,7 +3,9 @@
 module.exports = function(grunt) {
 
 	// load all grunt tasks
-	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	require('load-grunt-tasks')(grunt);
+	// display execution time of grunt tasks
+	require('time-grunt')(grunt);
 
 	grunt.initConfig({
 		config: grunt.file.readJSON('config-dev.json'),

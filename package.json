@@ -29,6 +29,8 @@
     "grunt-newer": "~0.5.4",
     "grunt-autoprefixer": "~0.4.0",
     "grunt-contrib-imagemin": "~0.3.0",
-    "grunt-responsive-images": "0.0.4"
+    "grunt-responsive-images": "0.0.4",
+    "time-grunt": "~0.2.5",
+    "load-grunt-tasks": "~0.2.1"
   }
 }
