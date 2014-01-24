@@ -34,7 +34,13 @@ module.exports = function(grunt) {
 			build: {
 				files: [
 					{expand: true, src: ['CNAME'], dest: '<%= config.buildPath %>/'},
-					{expand: true, cwd: 'components', src: ['fancybox/source/**/*'], dest: '<%= config.buildPath %>/components'},
+					{expand: true,
+						cwd: 'components',
+						src: [
+							'fancybox/source/**/*',
+							'fullcalendar/fullcalendar.css'
+						],
+						dest: '<%= config.buildPath %>/components'},
 					{expand: true, cwd: 'sass', src: 'assets/**/*', dest: '<%= config.buildPath %>/css/'}
 				]
 			}
