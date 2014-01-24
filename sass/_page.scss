@@ -22,6 +22,7 @@ p {
 
 // Layout
 .wrapper {
+	@extend %clearfix;
 	width: 90%;
 	margin: 0 auto;
 	@mixin at-most($bro-bear) {
@@ -90,9 +91,19 @@ p {
 // Footer
 footer {
 	background-color: $dark-jean;
-	padding: 2em 0;
+	padding: 1em 0;
 	.attribution {
 		color: $white;
 		float: left;
+	}
+	.footer-links {
+		float: right;
+		margin-top: 1em;
+		a {
+			color: $green;
+			&:hover {
+				color: $dark-green;
+			}
+		}
 	}
 }
