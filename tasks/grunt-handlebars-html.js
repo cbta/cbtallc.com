@@ -22,17 +22,18 @@ module.exports = function (grunt) {
 		config_dev = (grunt.file.exists('./config-dev.json')) ? grunt.file.readJSON('./config-dev.json') : {},
 		env = grunt.task.current.target;
 
-	// config_dev will overwrite config in dev
-	if (env === 'dev') {
-		config_dev = _.extend(config, config_dev);
-	}
-
 	// Grunt task!
 	grunt.registerMultiTask('handlebars_html', 'write templates to html', function () {
 		var options = this.options({
 			partialDir: 'app/templates/partials',
 			helperDir: 'app/templates/helpers'
-		});
+		}),
+			env = this.target;
+
+		// config_dev will overwrite config in dev
+		if (env === 'dev') {
+			_.extend(config, config_dev);
+		}
 
 		// register helpers
 		if (fs.existsSync(options.helperDir)) {
@@ -91,8 +92,6 @@ module.exports = function (grunt) {
 						if (templates[content.template]) {
 							// expose env and config to content
 							content.env = env;
-							// use config_dev if in dev environment
-							config = (env === 'dev') ? config_dev : config;
 
 							// pass in the whole collections to make other sibling contents available
 							collections.content = content;

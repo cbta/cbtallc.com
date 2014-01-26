@@ -49,7 +49,11 @@ module.exports = function(grunt) {
 			// build is done after responsive_images, dev is done before responsive_images
 			build: {
 				files: [
-					{expand: true, cwd: '<%= config.buildPath %>', src: '**/*.{jpg,png,gif}', dest: '<%= config.buildPath %>/'}
+					{
+						expand: true,
+						cwd: '<%= config.buildPath %>',
+						src: '**/*.{jpg,png,gif}',
+						dest: '<%= config.buildPath %>/'}
 				]
 			},
 			dev: {
