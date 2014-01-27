@@ -15,7 +15,8 @@
     "marked": "~0.2.9",
     "moment": "~2.0.0",
     "underscore": "~1.5.1",
-    "grunt-csso": "~0.5.3"
+    "grunt-csso": "~0.5.3",
+    "grunt-svgmin": "~0.3.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

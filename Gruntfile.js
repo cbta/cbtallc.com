@@ -34,7 +34,8 @@ module.exports = function(grunt) {
 			build: {
 				files: [
 					{expand: true, src: ['CNAME'], dest: '<%= config.buildPath %>/'},
-					{expand: true,
+					{
+						expand: true,
 						cwd: 'components',
 						src: [
 							'fancybox/source/**/*',
@@ -59,6 +60,19 @@ module.exports = function(grunt) {
 			dev: {
 				files: [
 					{expand: true, cwd: 'contents', src: '**/*.{jpg,png,gif}', dest: 'contents'}
+				]
+			}
+		},
+		svgmin: {
+			build: {
+				files: [
+					{
+						expand: true,
+						cwd: 'contents',
+						src: '**/*.svg',
+						dest: '<%= config.buildPath %>',
+						ext: '.min.svg'
+					}
 				]
 			}
 		},
@@ -179,8 +193,8 @@ module.exports = function(grunt) {
 				tasks: ['handlebars_html:dev']
 			},
 			images: {
-				files: ['contents/**/*.{jpg,png,gif}'],
-				tasks: ['imagemin:dev', 'responsive_images']
+				files: ['contents/**/*.{jpg,png,gif,svg}'],
+				tasks: ['newer:svgmin', 'newer:imagemin:dev', 'newer:responsive_images']
 			},
 			assets: {
 				files: ['sass/assets/'],
@@ -204,6 +218,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('dev', [
 		'process',
+		'newer:svgmin',
 		'newer:imagemin:dev',
 		'newer:responsive_images',
 		'sass:dev',
@@ -216,6 +231,7 @@ module.exports = function(grunt) {
 		'import_contents',
 		'newer:responsive_images',
 		'newer:imagemin:build',
+		'newer:svgmin',
 		'copy:build',
 		'handlebars_html:prod',
 		'sass:prod',
