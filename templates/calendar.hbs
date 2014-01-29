@@ -1,7 +1,7 @@
 {{> header}}
 	<div class="calendar"></div>
 	<div class="appointment-form">
-		<form method="post" method="post" action="{{config.forms.url}}{{config.forms.appointment-request}}">
+		<form id="appointment-request" method="post" method="post" action="{{config.forms.url}}{{config.forms.appointment-request}}">
 			<h2>Request an appointment</h2>
 			<div class="form-group">
 				<label for="name">Your Name</label>
@@ -25,11 +25,12 @@
 			<input type="hidden" id="therapist-input" name="therapist" value=""/>
 			<h3>Appointment Time</h3>
 			<div class="form-group">
-				<label for="app-date">Date</label><input class="info" name="app-date" id="app-date" value="" readonly />
+				<label for="appointment-date">Date</label><input class="info" name="appointment-date" id="app-date" value="" readonly />
 			</div>
 			<div class="form-group">
-				<label for="app-time">Time</label><input class="info" name="app-time" id="app-time" value="" readonly />
+				<label for="appointment-time">Time</label><input class="info" name="appointment-time" id="app-time" value="" readonly />
 			</div>
+			<p>*Please note that your appointment is NOT booked until you receive a confirmation from your therapist.</p>
 			<input type="hidden" name="form_id" value="{{config.forms.appointment-request}}"/>
 			<input type="submit" value="Request Appointment"/>
 		</form>

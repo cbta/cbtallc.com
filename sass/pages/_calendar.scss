@@ -15,9 +15,21 @@
 			float: left;
 			padding-top: 0.5em;
 			width: 10em;
+			&.error {
+				color: $red;
+				float: none;
+				margin-left: 10em;
+				width: auto;
+			}
 		}
 		input {
 			padding: 0.5em;
+			&:focus {
+				outline: $green auto 5px;
+			}
+			&.error {
+				outline: $red auto 3px;
+			}
 		}
 		select {
 			width: 13em; // seems to match the width of input

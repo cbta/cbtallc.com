@@ -88,6 +88,28 @@ define(function (require) {
 			}
 		});
 
+		$("#appointment-request").validate({
+			ignore: "input[type='hidden']",
+			messages: {
+				name: "Please specify your name.",
+				email: {
+					required: "We need your email address to contact you."
+				},
+				phone: {
+					required: "We need your phone number to contact you."
+				}
+			},
+			submitHandler: function(form) {
+				$(form).ajaxSubmit({
+					dataType: 'json',
+					success: function(responseText, statusText, xhr, $form) {
+						$form.empty();
+						$form.html('<p>Your request has been received. Please wait for a confirmation from the therapist.</p>')
+					}
+				});
+			}
+		});
+
 		// initialize full calendar
 		var calendarView = 'agendaDay';
 		if (window.matchMedia("(min-width: 800px)").matches) {
@@ -103,10 +125,6 @@ define(function (require) {
 				{
 					url: "http://www.google.com/calendar/feeds/cep1ta6rnrasr0h68a9f3qir80%40group.calendar.google.com/public/basic",
 					className: 'jvermilyea'
-				},
-				{
-					url: "http://www.google.com/calendar/feeds/8fe01o3ivjvd9tomq8o7obub20%40group.calendar.google.com/public/basic",
-					className: 'ehiggins'
 				}
 			],
 			defaultView: calendarView,
