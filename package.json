@@ -14,9 +14,7 @@
     "js-yaml": "~2.1.0",
     "marked": "~0.2.9",
     "moment": "~2.0.0",
-    "underscore": "~1.5.1",
-    "grunt-csso": "~0.5.3",
-    "grunt-svgmin": "~0.3.0"
+    "underscore": "~1.5.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -33,6 +31,8 @@
     "grunt-contrib-imagemin": "~0.3.0",
     "grunt-responsive-images": "0.0.4",
     "time-grunt": "~0.2.5",
-    "load-grunt-tasks": "~0.2.1"
+    "load-grunt-tasks": "~0.2.1",
+    "grunt-csso": "~0.5.3",
+    "grunt-svgmin": "~0.3.0"
   }
 }
