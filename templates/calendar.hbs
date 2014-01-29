@@ -1,7 +1,7 @@
 {{> header}}
 	<div class="calendar"></div>
 	<div class="appointment-form">
-		<form method="post" name="cbta-appointment-request" action="http://localhost:3000/forms/cbta-appointment-request">
+		<form method="post" method="post" action="{{config.forms.url}}{{config.forms.appointment-request}}">
 			<h2>Request an appointment</h2>
 			<div class="form-group">
 				<label for="name">Your Name</label>
@@ -30,6 +30,7 @@
 			<div class="form-group">
 				<label for="app-time">Time</label><input class="info" name="app-time" id="app-time" value="" readonly />
 			</div>
+			<input type="hidden" name="form_id" value="{{config.forms.appointment-request}}"/>
 			<input type="submit" value="Request Appointment"/>
 		</form>
 	</div><!-- .appointment-form -->

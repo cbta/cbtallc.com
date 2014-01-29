@@ -1,6 +1,6 @@
 define(function (require) {
 	var $ = require('jquery'),
-		config = require('json!config.json');
+		config = require('json!config');
 
 	require('gcal');
 	require('form');
@@ -63,8 +63,6 @@ define(function (require) {
 						});
 						// remove the phone partials
 						arr.splice(2, 3);
-						$form.attr('name');
-
 					},
 					success: function(responseText, statusText, xhr, form) {
 						console.log(responseText);
