@@ -1,19 +1,20 @@
 require.config({
 
-	baseUrl: '/',
-	deps: ['js/app'],
+	baseUrl: 'bower_components',
+	deps: ['../js/app'],
 
 	paths: {
-		text: 'components/requirejs-plugins/lib/text',
-		json: 'components/requirejs-plugins/src/json',
-		handlebars: 'components/handlebars/handlebars',
-		jquery: 'components/jquery/jquery',
-		fullcalendar: 'components/fullcalendar/fullcalendar.min',
-		gcal: 'components/fullcalendar/gcal',
-		validate: 'components/jquery.validation/jquery.validate',
-		form: 'components/jquery-form/jquery.form',
-		fancybox: 'components/fancybox/source/jquery.fancybox.pack',
-		moment: 'components/moment/moment'
+		text: 'requirejs-plugins/lib/text',
+		json: 'requirejs-plugins/src/json',
+		handlebars: 'handlebars/handlebars',
+		jquery: 'jquery/jquery',
+		fullcalendar: 'fullcalendar/fullcalendar.min',
+		gcal: 'fullcalendar/gcal',
+		validate: 'jquery.validation/jquery.validate',
+		form: 'jquery-form/jquery.form',
+		fancybox: 'fancybox/source/jquery.fancybox.pack',
+		moment: 'moment/moment',
+		config: '../config.json'
 	},
 
 	// load non-amd dependencies
