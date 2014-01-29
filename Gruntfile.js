@@ -36,12 +36,12 @@ module.exports = function(grunt) {
 					{expand: true, src: ['CNAME'], dest: '<%= config.buildPath %>/'},
 					{
 						expand: true,
-						cwd: 'components',
+						cwd: 'bower_components',
 						src: [
 							'fancybox/source/**/*',
 							'fullcalendar/fullcalendar.css'
 						],
-						dest: '<%= config.buildPath %>/components'},
+						dest: '<%= config.buildPath %>/bower_components'},
 					{expand: true, cwd: 'sass', src: 'assets/**/*', dest: '<%= config.buildPath %>/css/'}
 				]
 			}
@@ -125,7 +125,7 @@ module.exports = function(grunt) {
 				options: {
 					baseUrl: '.',
 					mainConfigFile: 'js/config.js',
-					name: 'components/almond/almond',
+					name: 'bower_components/almond/almond',
 					insertRequire: ['js/app'],
 					out: '<%= config.buildPath %>/app.js',
 					optimize: 'uglify2',
