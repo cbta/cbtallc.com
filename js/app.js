@@ -1,12 +1,12 @@
 define(function (require) {
 	var $ = require('jquery'),
-		config = require('json!config');
+		config = require('json!config'),
+		moment = require('moment');
 
 	require('gcal');
 	require('form');
 	require('validate');
 	require('fancybox');
-	require('moment');
 
 	// DOM Manipulation
 	$(document).ready( function() {
@@ -51,22 +51,38 @@ define(function (require) {
 				message: "Please tell us what your message is about."
 			},
 			submitHandler: function(form) {
-				console.log('Submitting..');
 				$(form).ajaxSubmit({
 					dataType: 'json',
 					beforeSubmit: function(arr, $form) {
 						// concat phone partials into full phone numbers
-						var phone_number = arr[2].value + arr[3].value + arr[4].value;
+						var tel1, tel2, tel3, telIndex;
+						for (var i = 0, n = arr.length; i < n; i++) {
+							switch(arr[i].name) {
+								case 'tel-1':
+									tel1 = arr[i].value;
+									telIndex = i;
+									break;
+								case 'tel-2':
+									tel2 = arr[i].value;
+									break;
+								case 'tel-3':
+									tel3 = arr[i].value;
+									break;
+								default:
+									continue;
+							}
+						}
+
 						arr.push({
 							name: "phone",
-							value: phone_number
+							value: '(' + tel1 + ') ' + tel2 +  '-' + tel3
 						});
-						// remove the phone partials
-						arr.splice(2, 3);
+						// remove the phone partials from telIndex
+						arr.splice(telIndex, 3);
 					},
-					success: function(responseText, statusText, xhr, form) {
-						console.log(responseText);
-						console.log(statusText);
+					success: function(responseText, statusText, xhr, $form) {
+						$form.empty();
+						$form.html('<p>Thank you for contacting us. We will be in touch shortly.</p>')
 					}
 				});
 			}
@@ -95,10 +111,10 @@ define(function (require) {
 			],
 			defaultView: calendarView,
 			eventClick: function(calEvent, jsEvent, view) {
-				var $form = $('.appointment-form');
-				var start = moment(calEvent.start);
-				var end = moment(calEvent.end);
-				var therapist = calEvent.source.className[0];
+				var $form = $('.appointment-form'),
+					start = moment(calEvent.start),
+					end = moment(calEvent.end),
+					therapist = calEvent.source.className[0];
 				// check for therapist from selected appointment, select the right therapist
 				$("option", "#therapist").each(function(){
 					if ($(this).val() === therapist) {
