@@ -9,10 +9,10 @@
   "dependencies": {
     "jquery": "~2.0.3",
     "fullcalendar": "~1.6.1",
-    "normalize.scss": "~2.1.2",
     "jquery.validation": "~1.11.1",
     "jquery-form": "latest",
     "fancybox": "~2.1.5",
-    "moment": "~2.1.0"
+    "moment": "~2.1.0",
+    "normalize-scss": "~2.1.3"
   }
 }
