@@ -1,8 +1,5 @@
 require.config({
-
-	baseUrl: 'bower_components',
-	deps: ['../js/app'],
-
+	baseUrl: '/bower_components',
 	paths: {
 		text: 'requirejs-plugins/lib/text',
 		json: 'requirejs-plugins/src/json',
@@ -31,4 +28,7 @@ require.config({
 
 	// Remove these modules from the final build.
 	stubModules: ['text', 'json']
+});
+
+require(['/js/app.js'], function(){
 });
