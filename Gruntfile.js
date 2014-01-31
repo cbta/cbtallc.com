@@ -134,14 +134,19 @@ module.exports = function(grunt) {
 		requirejs: {
 			prod: {
 				options: {
-					baseUrl: '.',
+					baseUrl: 'bower_components',
 					mainConfigFile: 'js/config.js',
-					name: 'bower_components/almond/almond',
-					insertRequire: ['js/app'],
+					paths: {
+						'almond': 'almond/almond',
+						'app': '../js/app',
+					},
+					include: ['app'],
+					insertRequire: ['app'],
+					name: 'almond',
 					out: '<%= config.buildPath %>/app.js',
 					optimize: 'uglify2',
 					generateSourceMaps: true,
-					preserveLicenseComments: false,
+					preserveLicenseComments: false
 				}
 			}
 		},
@@ -227,16 +232,21 @@ module.exports = function(grunt) {
 		'handlebars_html:dev'
 	]);
 
-	grunt.registerTask('dev', [
-		'process',
-		'newer:svgmin',
-		'newer:imagemin:dev',
-		'newer:responsive_images',
-		'sass:dev',
-		'autoprefixer:dev',
-		'connect:dev',
-		'watch'
-	]);
+	grunt.registerTask('dev', function(target){
+		if (target === 'prod') {
+			return grunt.task.run(['build', 'connect:prod']);
+		}
+		grunt.task.run([
+			'process',
+			'newer:svgmin',
+			'newer:imagemin:dev',
+			'newer:responsive_images',
+			'sass:dev',
+			'autoprefixer:dev',
+			'connect:dev',
+			'watch'
+		]);
+	});
 
 	grunt.registerTask('build', [
 		'import_contents',

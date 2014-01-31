@@ -11,7 +11,8 @@ require.config({
 		form: 'jquery-form/jquery.form',
 		fancybox: 'fancybox/source/jquery.fancybox.pack',
 		moment: 'moment/moment',
-		config: '../config.json'
+		config: '../config.json',
+		app: '../js/app'
 	},
 
 	// load non-amd dependencies
@@ -30,5 +31,5 @@ require.config({
 	stubModules: ['text', 'json']
 });
 
-require(['../js/app.js'], function(){
+require(['app'], function(){
 });
