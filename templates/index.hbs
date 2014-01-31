@@ -1,6 +1,12 @@
 {{> header}}
 	<div class="body home">
+		<section class="intro">
+			<div class="intro-wrapper">
+				<p>{{content.intro.content}}</p>
+			</div>
+		</section>
 		<section class="services">
+			<h2 class="section-title">Our Services</h2>
 			<div class="service-wrapper">
 				<ul class="services-menu tabs-menu">
 					{{#each services}}
@@ -15,7 +21,7 @@
 					{{/each}}
 				</div>
 			</div><!--.service-wrapper -->
-			<h2 class="section-title"><a href="/treatments">What We Do</a></h2>
+			<h3 class="section-link"><a href="/treatments">What We Treat</a></h3>
 			<div class="button-wrap">
 				<a class="button" href="{{content.intro.button1.link}}">{{content.intro.button1.title}}</a>
 				<a class="button" href="#">{{content.intro.button2.title}}</a>

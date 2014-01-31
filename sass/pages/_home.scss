@@ -7,6 +7,9 @@
 			font-family: $feature-font;
 			font-size: 2em;
 		}
+		.intro-wrapper {
+			@extend .wrapper;
+		}
 	}
 	p {
 		color: $very-dark-jean;
@@ -28,7 +31,7 @@
 .services {
 	@extend %clearfix;
 	padding-bottom: 2em;
-	.section-title {
+	.section-link {
 		@extend .wrapper;
 		background-color: $background-darker;
 		color: $dark-jean;
