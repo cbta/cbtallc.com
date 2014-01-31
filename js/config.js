@@ -30,5 +30,5 @@ require.config({
 	stubModules: ['text', 'json']
 });
 
-require(['/js/app.js'], function(){
+require(['../js/app.js'], function(){
 });
