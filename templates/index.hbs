@@ -1,33 +1,33 @@
 {{> header}}
 	<div class="body home">
-		<section class="intro">
-			<div class="intro-wrapper">
+		<div class="background-wrapper">
+			<section class="intro">
 				<p>{{content.intro.content}}</p>
-			</div>
-		</section>
-		<section class="services">
-			<h2 class="section-title">Our Services</h2>
-			<div class="service-wrapper">
-				<ul class="services-menu tabs-menu">
-					{{#each services}}
-						<li class="{{#isEqual url-title "cbt"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
+			</section>
+			<section class="services">
+				<h2 class="section-title">Our Services</h2>
+				<div class="service-wrapper">
+					<ul class="services-menu tabs-menu">
+						{{#each services}}
+							<li class="{{#isEqual url-title "cbt"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
+						{{/each}}
+					</ul><!-- .services-menu -->
+					<div class="tabs-content">
+						{{#each services}}
+							<div class="service {{#isEqual url-title "cbt"}}active{{/isEqual}}" id="{{url-title}}">
+							{{{markdown}}}
+							</div>
+						{{/each}}
+					</div>
+				</div><!--.service-wrapper -->
+				<h3 class="section-link"><a href="/treatments">What We Treat</a></h3>
+				<div class="button-wrap">
+					{{#each content.intro.buttons}}
+						<a class="button" href="{{link}}">{{title}}</a>
 					{{/each}}
-				</ul><!-- .services-menu -->
-				<div class="tabs-content">
-					{{#each services}}
-						<div class="service {{#isEqual url-title "cbt"}}active{{/isEqual}}" id="{{url-title}}">
-						{{{markdown}}}
-						</div>
-					{{/each}}
-				</div>
-			</div><!--.service-wrapper -->
-			<h3 class="section-link"><a href="/treatments">What We Treat</a></h3>
-			<div class="button-wrap">
-				{{#each content.intro.buttons}}
-					<a class="button" href="{{link}}">{{title}}</a>
-				{{/each}}
-			</div><!-- .button-wrap -->
-		</section><!-- .services -->
+				</div><!-- .button-wrap -->
+			</section><!-- .services -->
+		</div>
 		<section class="therapists">
 			<h1 class="section-title">Our Therapists</h1>
 			<div class="wrapper">

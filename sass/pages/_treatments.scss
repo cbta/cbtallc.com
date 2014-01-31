@@ -5,12 +5,12 @@
 	padding: 1em 0 2em;
 	.section-title {
 		margin-bottom: 0.5em;
-		padding-left: 0.5em;
 		padding-bottom: 0;
 		@media (min-width: $big-bro-bear) {
 			float: left;
 			max-width: 30%;
 			margin-bottom: 0;
+			padding-left: 0.5em;
 		}
 	}
 	.menu-wrapper {
@@ -89,28 +89,29 @@
 	}
 }
 .depression {
-	padding: 2em 0;
+	padding: 0 0 2em;
 	text-align: justify;
 	.title-wrapper {
 		@extend %clearfix;
 		@extend .wrapper;
+		padding-bottom: 1em;
 		@media (min-width: $big-bro-bear) {
-			background-color: $background-dark;
-			padding-right: 1em;
+			padding-right: 2em;
 		}
 	}
-	.wrapper {
+	.content-wrapper {
+		@extend .wrapper;
 		@media (min-width: $big-bro-bear) {
-			background-color: $background-dark;
-			padding: 0.5em 1em;
+			background-color: $background-darker;
+			padding: 2em;
 		}
 	}
 	.section-title {
 		float: right;
 		margin: 0;
+		padding-bottom: 0;
 	}
 	p {
 		margin-top: 0;
-		text-indent: 3em;
 	}
 }

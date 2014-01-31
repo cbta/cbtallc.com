@@ -59,7 +59,11 @@ module.exports = function(grunt) {
 			},
 			dev: {
 				files: [
-					{expand: true, cwd: 'contents', src: '**/*.{jpg,png,gif}', dest: 'contents'}
+					{
+						expand: true,
+						cwd: 'contents',
+						src: '**/*.{jpg,png,gif}',
+						dest: 'contents'}
 				]
 			}
 		},
@@ -85,10 +89,17 @@ module.exports = function(grunt) {
 					}, {
 						name: 'medium',
 						width: 800
+					}, {
+						name: 'large',
+						width: 1200
 					}]
 				},
 				files: [
-					{expand: true, cwd: 'contents', src: '**/*.{jpg,png}', dest: '<%= config.buildPath %>'}
+					{
+						expand: true,
+						cwd: 'contents',
+						src: '**/*.{jpg,png}',
+						dest: '<%= config.buildPath %>'}
 				]
 			}
 		},
