@@ -2,14 +2,13 @@
 title: "Immigration Services"
 url-title: "immigration"
 ---
-Our practice offers psychological assessment for clients involved in immigration related issues such as asylum cases, deportation orders and immigrant spousal abuse, among others. We work with several of the largest immigration practices in the greater Boston area. References are available.
+Our practice offers psychological assessment for those involved in immigration-related issues such as asylum cases, deportation orders and spousal abuses, among others. We work with many of the largest immigration practices in the Greater Boston Area. References are available upon request.
 
-At CBTA we are proud of our competitive fees and speedy and professional consultation with attorneys in need of immigration-related evaluations. We do thorough and professional evaluations that yield comprehensive psychological reports for use in filings.
+CBTA offers competitive fees and speedy services for attorneys in need of immigration-related consultations. We do thorough and professional evaluations that yield comprehensive psychological reports for use in filings.
 
-Our clinical interviews examine the following issues:
+In the past, our clinical interviews have helped clients in cases involving:
 
 - Family separation and its psychological consequences
 - Psychological assessment of past persecution and/or fear of future persecution
 - Spousal/partner abuse and violence
 - Comprehensive psychological reports for use in filings
-- And other issues
