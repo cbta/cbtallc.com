@@ -1,7 +1,6 @@
 .home {
 	.intro {
 		@extend %clearfix;
-		padding-bottom: 2em;
 		h1 {
 			color: $dark-jean;
 			font-family: $feature-font;
@@ -31,6 +30,10 @@
 .services {
 	@extend %clearfix;
 	padding-bottom: 2em;
+	.section-title {
+		padding: 0;
+		text-align: center;
+	}
 	.section-link {
 		@extend .wrapper;
 		background-color: $background-darker;
@@ -159,8 +162,8 @@
 			text-decoration: none;
 		}
 		img {
-			background-color: $background-darker;
-			border: 5px solid $background-darker;
+			background-color: $background-light;
+			border: 5px solid $background-light;
 			border-radius: 50%;
 			display: block;
 			margin: 0 auto;
@@ -231,6 +234,13 @@
 		p {
 			font-size: 1.2em;
 			margin-top: 0;
+		}
+	}
+	a {
+		color: $dark-jean;
+		text-decoration: none;
+		&:hover {
+			color: $green;
 		}
 	}
 	form {

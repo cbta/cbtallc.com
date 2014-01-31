@@ -4,13 +4,17 @@
 	"intro": {
 		"heading": "Welcome to Cognitive Behavior Therapy Associates",
 		"content": "Cognitive Behavior Therapy Associates, LLC. (CBTA) is a group of highly specialized licensed psychologists located in Woburn, MA, serving the Greater Boston Area. Using cognitive and behavioral therapies, our therapists work together with patients to solve their puzzles one piece at a time.",
-		"button1": {
-			"title": "Request an Appointment",
-			"link": "appointment.html"
-		},
-		"button2": {
-			"title": "Contact us"
-		}
+		"buttons": [
+			{
+				"title": "Request an Appointment",
+				"link": "calendar"
+			}, {
+				"title": "Contact us",
+				"link": "#contact-us"
+			}
+		]
 	},
-	"address": "300 TradeCenter, Woburn MA 01801"
+	"address": "300 TradeCenter,\n Suite 7790, \n Woburn, MA 01801",
+	"phone": "6175317133",
+	"fax": "7812810644"
 }
