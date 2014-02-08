@@ -106,6 +106,29 @@ p {
 	}
 }
 
+.form {
+	label {
+		display: block;
+	}
+	.disclaimer {
+		padding-left: 1.2rem;
+		input[type="checkbox"] {
+			float: left;
+			margin-left: -1.2rem;
+		}
+		label {
+			color: lighten($dark-jean, 40%);
+			font-size: 0.7em;
+			&:hover {
+				color: lighten($dark-jean, 10%);
+			}
+		}
+		.error {
+			color: $red;
+		}
+	}
+}
+
 // Footer
 footer {
 	background-color: $dark-jean;

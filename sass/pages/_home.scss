@@ -269,14 +269,13 @@
 	}
 	label {
 		color: $very-dark-jean;
-		display: block;
 		font-family: $feature-font;
 		font-size: 1.2em;
 		margin-bottom: 0.5em;
 	}
 	.error {
 		color: $red;
-		font-size: 1.2em;
+		font-size: 1em;
 		margin-top: 0.5em;
 	}
 	input,
@@ -336,5 +335,8 @@
 		&.hidden {
 			display: none;
 		}
+	}
+	.disclaimer {
+		width: 85%;
 	}
 }

@@ -1,8 +1,9 @@
 {{> header}}
 	<div class="calendar"></div>
-	<div class="appointment-form">
+	<div class="appointment-form form">
 		<form id="appointment-request" method="post" method="post" action="{{config.forms.url}}{{config.forms.appointment-request}}">
 			<h2>Request an appointment</h2>
+			<p>This appointment request is only available for returning patients. If you're a new patient, please <a href="/#contact-us">contact us</a> first.</p>
 			<div class="form-group">
 				<label for="name">Your Name</label>
 				<input type="text" name="name" required/>
@@ -31,6 +32,11 @@
 				<label for="appointment-time">Time</label><input class="info" name="appointment-time" id="app-time" value="" readonly />
 			</div>
 			<p>*Please note that your appointment is NOT booked until you receive a confirmation from your therapist.</p>
+			<div class="field disclaimer">
+				<label>
+					<input type="checkbox" name="disclaimer" required>The complete privacy of personal information transmitted over the Internet cannot be guaranteed by CBTA, LLC. By using this form, you are acknowledging that you accept responsibility for any risk of exposure to your personal health care information or personal identifiers. If you have concerns about this, we encourage you to contact us via more conventional means such as telephone, fax or the United States Postal Service.
+				</label>
+			</div>
 			<input type="hidden" name="form_id" value="{{config.forms.appointment-request}}"/>
 			<input type="submit" value="Request Appointment"/>
 		</form>

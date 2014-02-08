@@ -55,9 +55,17 @@ define(function (require) {
 				messages: {
 					name: "Please specify your name.",
 					email: {
-						required: "We need your email address to contact you."
+						required: "We need your email address to contact you back."
 					},
-					message: "Please tell us what your message is about."
+					message: "Please tell us what you need to contact us about.",
+					disclaimer: "You need to agree to this disclaimer in order to submit."
+				},
+				errorPlacement: function(error, element) {
+					if (element.is(':checkbox')) {
+						error.insertAfter(element.parent('label'));
+					} else {
+						error.insertAfter(element);
+					}
 				},
 				submitHandler: function(form) {
 					$(form).ajaxSubmit({
@@ -106,6 +114,14 @@ define(function (require) {
 					},
 					phone: {
 						required: "We need your phone number to contact you."
+					},
+					disclaimer: "You need to agree to this disclaimer in order to submit."
+				},
+				errorPlacement: function(error, element) {
+					if (element.is(':checkbox')) {
+						error.insertAfter(element.parent('label'));
+					} else {
+						error.insertAfter(element);
 					}
 				},
 				submitHandler: function(form) {
@@ -139,6 +155,7 @@ define(function (require) {
 				],
 				defaultView: calendarView,
 				eventClick: function(calEvent, jsEvent, view) {
+					jsEvent.preventDefault();
 					var $form = $('.appointment-form'),
 						start = moment(calEvent.start),
 						end = moment(calEvent.end),
@@ -155,7 +172,12 @@ define(function (require) {
 					$("#app-date", $form).val(start.format("MMM D, YYYY"));
 					$("#app-time", $form).val(start.format("h:mm A") + " - " + end.format("h:mm A"));
 					// open the fancybox overlay
-					$.fancybox($form);
+					$.fancybox([
+						$form
+					],{
+						autoSize: false,
+						width: '50%'
+					});
 					return false;
 				}
 			});
