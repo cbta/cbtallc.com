@@ -46,7 +46,16 @@
 					<div class="viewer" id="{{id}}">
 						<a class="close-button">x</a>
 						<h1>{{full-title}}</h1>
-						<div class="bio">{{{nl2br bio}}}</div>
+						<div class="bio">
+							{{{nl2br bio}}}
+							{{#if licenses}}
+							<ul class="licenses">
+								{{#each licenses}}
+									<li>{{this}}</li>
+								{{/each}}
+							</ul>
+							{{/if}}
+						</div>
 					</div><!-- .viewer -->
 					{{/each}}
 				</div><!-- .therapist-viewers -->
