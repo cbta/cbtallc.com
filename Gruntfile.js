@@ -33,7 +33,11 @@ module.exports = function(grunt) {
 		copy: {
 			build: {
 				files: [
-					{expand: true, src: ['CNAME'], dest: '<%= config.buildPath %>/'},
+					{
+						expand: true,
+						src: ['CNAME', 'favicon.ico'],
+						dest: '<%= config.buildPath %>/'
+					},
 					{
 						expand: true,
 						cwd: 'bower_components',
@@ -42,7 +46,12 @@ module.exports = function(grunt) {
 							'fullcalendar/fullcalendar.css'
 						],
 						dest: '<%= config.buildPath %>/bower_components'},
-					{expand: true, cwd: 'sass', src: 'assets/**/*', dest: '<%= config.buildPath %>/css/'}
+					{
+						expand: true,
+						cwd: 'sass',
+						src: 'assets/**/*',
+						dest: '<%= config.buildPath %>/css/'
+					}
 				]
 			}
 		},
