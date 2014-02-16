@@ -272,10 +272,10 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('deploy', 'Deploy site via gh-pages.', function(target) {
-		if (target === 'stage') {
-			return grunt.task.run(['build', 'gh-pages:stage']);
-		} else {
+		if (target === 'prod') {
 			return grunt.task.run(['build', 'gh-pages:prod']);
+		} else {
+			return grunt.task.run(['build', 'gh-pages:stage']);
 		}
 	});
 
