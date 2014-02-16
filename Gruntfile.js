@@ -189,14 +189,6 @@ module.exports = function(grunt) {
 					repo: 'git@github.com:cbta/cbta.github.io.git'
 				},
 				src: ['**/*']
-			},
-			stage: {
-				options: {
-					base: '<%= config.buildPath %>',
-					branch: 'gh-pages',
-					repo: 'git@github.com:cbta/cbtallc.com.git'
-				},
-				src: ['**/*']
 			}
 		},
 		watch: {
@@ -271,13 +263,10 @@ module.exports = function(grunt) {
 		'requirejs:prod'
 	]);
 
-	grunt.registerTask('deploy', 'Deploy site via gh-pages.', function(target) {
-		if (target === 'prod') {
-			return grunt.task.run(['build', 'gh-pages:prod']);
-		} else {
-			return grunt.task.run(['build', 'gh-pages:stage']);
-		}
-	});
+	grunt.registerTask('deploy', 'Deploy site via gh-pages.', [
+		'build',
+		'gh-pages:prod'
+	]);
 
 	grunt.registerTask('default', ['dev']);
 }
