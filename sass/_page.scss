@@ -133,18 +133,23 @@ p {
 footer {
 	background-color: $dark-jean;
 	padding: 1em 0;
-	.attribution {
+	a {
+		color: $green;
+		&:hover {
+			color: $dark-green;
+		}
+	}
+	p {
 		color: $white;
+	}
+	.attribution {
 		float: left;
+	}
+	.report-issue {
+		float: right;
 	}
 	.footer-links {
 		float: right;
 		margin-top: 1em;
-		a {
-			color: $green;
-			&:hover {
-				color: $dark-green;
-			}
-		}
 	}
 }
