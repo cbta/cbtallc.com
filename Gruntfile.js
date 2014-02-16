@@ -193,6 +193,8 @@ module.exports = function(grunt) {
 			stage: {
 				options: {
 					base: '<%= config.buildPath %>',
+					branch: 'gh-pages',
+					repo: 'git@github.com:cbta/cbtallc.com.git'
 				},
 				src: ['**/*']
 			}
