@@ -89,17 +89,14 @@ define(function (require) {
 										continue;
 								}
 							}
-
-							arr.push({
+							// remove the phone partials from telIndex
+							arr.splice(telIndex, 3, {
 								name: "phone",
 								value: '(' + tel1 + ') ' + tel2 +  '-' + tel3
 							});
-							// remove the phone partials from telIndex
-							arr.splice(telIndex, 3);
 						},
 						success: function(responseText, statusText, xhr, $form) {
-							$form.empty();
-							$form.html('<p>Thank you for contacting us. We will be in touch shortly.</p>')
+							$form.empty().html('<p>Thank you for contacting us. We will be in touch shortly.</p>')
 						}
 					});
 				}
@@ -128,8 +125,7 @@ define(function (require) {
 					$(form).ajaxSubmit({
 						dataType: 'json',
 						success: function(responseText, statusText, xhr, $form) {
-							$form.empty();
-							$form.html('<p>Your request has been received. Please wait for a confirmation from the therapist.</p>')
+							$form.empty().html('<p>Your request has been received. Please wait for a confirmation from the therapist.</p>')
 						}
 					});
 				}
