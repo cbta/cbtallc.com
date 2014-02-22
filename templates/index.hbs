@@ -4,7 +4,7 @@
 			<section class="intro">
 				<p>{{content.intro.content}}</p>
 			</section>
-			<section class="services">
+			<section id="our-services" class="services">
 				<h2 class="section-title">Our Services</h2>
 				<div class="service-wrapper">
 					<ul class="services-menu tabs-menu">
@@ -28,7 +28,7 @@
 				</div><!-- .button-wrap -->
 			</section><!-- .services -->
 		</div>
-		<section class="therapists">
+		<section id="our-therapists" class="therapists">
 			<h1 class="section-title">Our Therapists</h1>
 			<div class="wrapper">
 				<div class="therapist-stubs">
@@ -61,13 +61,13 @@
 				</div><!-- .therapist-viewers -->
 			</div><!-- .wrapper -->
 		</section><!-- .therapists -->
-		<section class="contact">
+		<section id="contact-us" class="contact">
 			<div class="wrapper">
 				<section class="form" id="contact-us">
 					<h1 class="section-title">Contact Us</h1>
 					{{> contact}}
 				</section><!-- #contact-us -->
-				<section class="info map" id="location">
+				<section id="location" class="info map" id="location">
 					<h1 class="section-title">Where We Are</h1>
 					<p><a class="address" href="https://maps.google.com/maps?q=Cognitive+Behavior+Therapy+Associates,+LLC,+100+Sylvan+Road,+Woburn,+MA&hl=en&ll=42.501703,-71.162481&spn=0.011169,0.033023&sll=42.036922,-71.683501&sspn=2.880309,8.453979&oq=cognitive&hq=Cognitive+Behavior+Therapy+Associates,+LLC,&hnear=100+Sylvan+Rd,+Woburn,+Middlesex,+Massachusetts+01801&t=m&z=16&iwloc=A">{{{nl2br content.address}}}</a></p>
 					<p>Phone: <a class="tel" href="tel:{{content.phone}}">{{parsePhone content.phone}}</a><br/>
