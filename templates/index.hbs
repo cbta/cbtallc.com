@@ -16,16 +16,17 @@
 						{{#each services}}
 							<div class="service {{#isEqual url-title "cbt"}}active{{/isEqual}}" id="{{url-title}}">
 							{{{markdown}}}
+							<div class="button-wrap">
+								{{#each buttons}}
+									<a class="button" href="{{link}}">{{title}}</a>
+								{{/each}}
+							</div><!-- .button-wrap -->
 							</div>
 						{{/each}}
 					</div>
 				</div><!--.service-wrapper -->
 				<h3 class="section-link"><a href="/treatments">What We Treat</a></h3>
-				<div class="button-wrap">
-					{{#each content.intro.buttons}}
-						<a class="button" href="{{link}}">{{title}}</a>
-					{{/each}}
-				</div><!-- .button-wrap -->
+
 			</section><!-- .services -->
 		</div>
 		<section id="our-therapists" class="therapists">
