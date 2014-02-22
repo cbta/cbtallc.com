@@ -231,6 +231,12 @@ module.exports = function(grunt) {
 				files: ['tasks/**/*.js', 'Gruntfile.js'],
 				tasks: ['process']
 			}
+		},
+		sitemap: {
+			dist: {
+				siteRoot: 'build/www/',
+				homepage: 'http://www.cbtallc.com'
+			}
 		}
 	});
 
@@ -269,7 +275,8 @@ module.exports = function(grunt) {
 		'sass:prod',
 		'autoprefixer',
 		'csso:prod',
-		'requirejs:prod'
+		'requirejs:prod',
+		'sitemap:dist'
 	]);
 
 	grunt.registerTask('deploy', 'Deploy site via gh-pages.', [
