@@ -68,8 +68,10 @@ define(function (require) {
 					}
 				},
 				submitHandler: function(form) {
+					var url = $(form).data('url');
 					$(form).ajaxSubmit({
 						dataType: 'json',
+						url: url,
 						beforeSubmit: function(arr, $form) {
 							// concat phone partials into full phone numbers
 							var tel1, tel2, tel3, telIndex;
@@ -122,8 +124,10 @@ define(function (require) {
 					}
 				},
 				submitHandler: function(form) {
+					var url = $(form).data('url');
 					$(form).ajaxSubmit({
 						dataType: 'json',
+						url: url,
 						success: function(responseText, statusText, xhr, $form) {
 							$form.empty().html('<p>Your request has been received. Please wait for a confirmation from the therapist.</p>')
 						}
