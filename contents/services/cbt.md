@@ -2,10 +2,10 @@
 title: "Cognitive Behavior Therapy"
 url-title: "cbt"
 buttons:
-  - title: "Request an Appointment"
-    link: "calendar"
   - title: "Contact Us"
     link: "#contact-us"
+  - title: "Request an Appointment"
+    link: "calendar"
 ---
  Cognitive behavior therapy (CBT) is the therapy of empowerment. It helps people change the way they think, feel and act through collaboration between a skilled therapist and a motivated patient.
 
