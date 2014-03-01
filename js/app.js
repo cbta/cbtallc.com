@@ -7,7 +7,6 @@ define(function (require) {
 	require('form');
 	require('validate');
 	require('fancybox');
-	require('ladda');
 
 	var app = {
 		ready: function() {
