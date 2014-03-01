@@ -13,6 +13,8 @@
     "jquery-form": "latest",
     "fancybox": "~2.1.5",
     "moment": "~2.1.0",
-    "normalize-scss": "~2.1.3"
+    "normalize-scss": "~2.1.3",
+    "bootstrap-sass-official": "~3.1.1",
+    "ladda-bootstrap": "~0.1.0"
   }
 }

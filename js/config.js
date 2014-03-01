@@ -12,7 +12,9 @@ require.config({
 		fancybox: 'fancybox/source/jquery.fancybox.pack',
 		moment: 'moment/moment',
 		config: '../config.json',
-		app: '../js/app'
+		app: '../js/app',
+		spin: 'ladda-bootstrap/dist/spin.min',
+		ladda: 'ladda-bootstrap/dist/ladda.min'
 	},
 
 	// load non-amd dependencies
@@ -24,7 +26,8 @@ require.config({
 		gcal: ['fullcalendar'],
 		validate: ['jquery'],
 		form: ['jquery'],
-		fancybox: ['jquery']
+		fancybox: ['jquery'],
+		ladda: ['spin']
 	},
 
 	// Remove these modules from the final build.
