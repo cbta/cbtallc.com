@@ -69,7 +69,7 @@ define(function (require) {
 				},
 				submitHandler: function(form) {
 					var url = $(form).data('url');
-					$(form).ajaxSubmit({
+					$(form).addClass('loading').ajaxSubmit({
 						dataType: 'json',
 						url: url,
 						beforeSubmit: function(arr, $form) {
@@ -98,7 +98,7 @@ define(function (require) {
 							});
 						},
 						success: function(responseText, statusText, xhr, $form) {
-							$form.empty().html('<p>Thank you for contacting us. We will be in touch shortly.</p>')
+							$form.removeClass('loading').empty().html('<p>Thank you for contacting us. We will be in touch shortly.</p>')
 						}
 					});
 				}
@@ -125,11 +125,11 @@ define(function (require) {
 				},
 				submitHandler: function(form) {
 					var url = $(form).data('url');
-					$(form).ajaxSubmit({
+					$(form).addClass('loading').ajaxSubmit({
 						dataType: 'json',
 						url: url,
 						success: function(responseText, statusText, xhr, $form) {
-							$form.empty().html('<p>Your request has been received. Please wait for a confirmation from the therapist.</p>')
+							$form.removeClass('loading').empty().html('<p>Your request has been received. Please wait for a confirmation from the therapist.</p>')
 						}
 					});
 				}

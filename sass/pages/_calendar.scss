@@ -6,6 +6,9 @@
 .appointment-form {
 	display: none;
 	padding: 0.5em;
+	form {
+		position: relative;
+	}
 	h2 {
 		text-align: center;
 	}
