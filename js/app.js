@@ -7,6 +7,7 @@ define(function (require) {
 	require('form');
 	require('validate');
 	require('fancybox');
+	require('modal');
 
 	var app = {
 		ready: function() {
@@ -161,7 +162,7 @@ define(function (require) {
 						end = moment(calEvent.end),
 						therapist = calEvent.source.className[0];
 					// check for therapist from selected appointment, select the right therapist
-					$("option", "#therapist").each(function(){
+					$("#therapist option").each(function(){
 						if ($(this).val() === therapist) {
 							$(this).prop('selected', true);
 							// since the select element is disabled, copy the value to the hidden therapist-input field
@@ -171,14 +172,7 @@ define(function (require) {
 					// bring over correct date and time to form
 					$("#app-date", $form).val(start.format("MMM D, YYYY"));
 					$("#app-time", $form).val(start.format("h:mm A") + " - " + end.format("h:mm A"));
-					// open the fancybox overlay
-					$.fancybox([
-						$form
-					],{
-						autoSize: false,
-						width: '50%'
-					});
-					return false;
+					$('.appointment-form').modal();
 				}
 			});
 		},

@@ -10,6 +10,7 @@ require.config({
 		validate: 'jquery.validation/jquery.validate',
 		form: 'jquery-form/jquery.form',
 		fancybox: 'fancybox/source/jquery.fancybox.pack',
+		modal: 'bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal',
 		moment: 'moment/moment',
 		config: '../config.json',
 		app: '../js/app'
@@ -24,7 +25,8 @@ require.config({
 		gcal: ['fullcalendar'],
 		validate: ['jquery'],
 		form: ['jquery'],
-		fancybox: ['jquery']
+		fancybox: ['jquery'],
+		modal: ['jquery']
 	},
 
 	// Remove these modules from the final build.
