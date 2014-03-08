@@ -9,7 +9,6 @@ require.config({
 		gcal: 'fullcalendar/gcal',
 		validate: 'jquery.validation/jquery.validate',
 		form: 'jquery-form/jquery.form',
-		fancybox: 'fancybox/source/jquery.fancybox.pack',
 		modal: 'bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal',
 		moment: 'moment/moment',
 		config: '../config.json',
@@ -25,7 +24,6 @@ require.config({
 		gcal: ['fullcalendar'],
 		validate: ['jquery'],
 		form: ['jquery'],
-		fancybox: ['jquery'],
 		modal: ['jquery']
 	},
 

@@ -6,7 +6,6 @@ define(function (require) {
 	require('gcal');
 	require('form');
 	require('validate');
-	require('fancybox');
 	require('modal');
 
 	var app = {
