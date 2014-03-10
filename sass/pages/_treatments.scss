@@ -8,83 +8,93 @@
 		padding-bottom: 0;
 		@media (min-width: $big-bro-bear) {
 			float: left;
-			max-width: 30%;
+			max-width: 20%;
 			margin-bottom: 0;
 		}
 	}
 	.menu-wrapper {
 		float: right;
-		margin-left: 0.5em;
+		margin-left: 1em;
 		margin-bottom: 0.5em;
+		width: 40%;
 		@media (min-width: $big-bro-bear) {
 			float: none;
-			margin-bottom: 0;
+			margin: 0;
+			width: 100%;
 		}
 	}
 	.tabs-menu {
+		border-bottom: none;
 		float: right;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		@media (min-width: $big-bro-bear) {
 			width: 80%;
-			max-width: none;
-			margin-right: -1px;
 		}
 		li {
-			background-color: $background-dark;
-			border-top: 4px solid $background-dark;
-			display: table; //for vertical align
-			border-collapse: collapse;
-			height: 4em;
+			margin-bottom: 0;
 			width: 100%;
 			@media (min-width: $big-bro-bear) {
 				float: left;
 				width: 20%;
 			}
+			&:last-of-type {
+				a {
+					margin-right: 0;
+				}
+			}
 			&.active,
 			&.active:hover {
-				background-color: $background-darker;
-				border-color: $darker-green;
 				a {
+					background-color: #fff;
+					border-top-color: $darker-green;
+					border-top-width: 4px;
+					border-left: none;
+					border-right: none;
 					color: $very-dark-jean;
 					font-weight: 700;
 				}
 			}
 			&:hover {
-				border-color: $dark-green;
 				cursor: pointer;
 				a {
+					background-color: $background-darker;
+					border-top-color: $dark-green;
+					border-top-width: 4px;
 					color: $very-dark-jean;
 				}
 			}
 			a {
+				background-color: $background-dark;
+				border: none;
+				border-top: 4px solid $background-dark;
+				border-bottom: none;
 				color: $dark-jean;
-				text-decoration: none;
-			}
-			// for vertical align
-			.container {
-				display: table-cell;
-				max-width: 7em;
-				padding: 0.5em;
-				vertical-align: middle;
+				height: 4em;
 				text-align: center;
+				@include at-most($big-bro-bear) {
+					border-radius: 0;
+				}
+				@include at-least($mama-bear) {
+					font-size: 1.1em;
+				}
+				text-decoration: none;
 			}
 		}
 	}
-	.tabs-content {
-		background-color: $background-light;
-		@media (min-width: $big-bro-bear) {
-			border: 2px solid $background-darker;
-			padding: 0.5em 1em;
+	.tab-content {
+		border-top-right-radius: 0;
+		@include at-most($big-bro-bear) {
+			// remove well effect
+			background-color: none;
+			border: none;
+			box-shadow: none;
+			padding: 0;
 		}
 	}
 	.treatment {
 		color: $very-dark-jean;
-		display: none;
-		&.active {
-			display: block;
-		}
 	}
 }
 .depression {
@@ -98,16 +108,17 @@
 			padding-right: 2em;
 		}
 	}
-	.content-wrapper {
-		@extend .wrapper;
-		@media (min-width: $big-bro-bear) {
-			background-color: $background-darker;
-			padding: 2em;
-		}
-	}
 	.section-title {
 		margin: 0;
 		padding-bottom: 0;
+	}
+	.content {
+		@include at-most($big-bro-bear) {
+			background-color: none;
+			border: none;
+			box-shadow: none;
+			padding: 0;
+		}
 	}
 	p {
 		margin-top: 0;
