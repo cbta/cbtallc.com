@@ -178,20 +178,16 @@ define(function (require) {
 		},
 		tabs: function() {
 			// // tabs
-			// $('.tabs-menu li').click(function(e){
-			// 	e.preventDefault();
-			// 	var a = $('a', this);
-			// 	var tabID = a.attr('href');
+			$('.services .tabs-menu li').click(function(e){
+				e.preventDefault();
+				var a = $('a', this);
+				var tabID = a.attr('href');
 
-			// 	$(this).addClass('active'); // add class .active to the clicked button
-			// 	$(this).siblings().removeClass('active'); // remove the .active class from sibling buttons
-			// 	$(tabID).addClass('active');
-			// 	$(tabID).siblings().removeClass('active');
-			// });
-			// $('.tabs-menu a').click(function (e) {
-			// 	e.preventDefault();
-			// 	$(this).tab('show');
-			// });
+				$(this).addClass('active'); // add class .active to the clicked button
+				$(this).siblings().removeClass('active'); // remove the .active class from sibling buttons
+				$(tabID).addClass('active');
+				$(tabID).siblings().removeClass('active');
+			});
 		}
 	}
 	return app.ready();
