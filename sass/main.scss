@@ -2,11 +2,10 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700italic|Arimo:400,400italic,700|Sintony:400,700|Droid+Sans+Mono);
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
+@import "_bits";
+
 // Vendor Dependencies
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
-
-// Authored Dependencies
-@import "_bits";
 
 // Sections
 @import "_page";

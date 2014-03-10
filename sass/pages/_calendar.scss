@@ -21,10 +21,10 @@
 				width: auto;
 			}
 		}
-		input {
-			padding: 0.5em;
+		input,
+		textarea {
 			&:focus {
-				outline: $green auto 5px;
+				// border-color: $green;
 			}
 			&.error {
 				outline: $red auto 3px;
