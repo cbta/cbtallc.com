@@ -138,16 +138,22 @@ define(function (require) {
 		},
 		calendar: function() {
 			// initialize full calendar
-			var calendarView = 'agendaDay';
+			var calendarView = 'agendaDay',
+				header = {
+					left: 'prev,next',
+					center: 'title',
+					right: ''
+				};
 			if (window.matchMedia("(min-width: 800px)").matches) {
 				calendarView = 'agendaWeek';
-			}
-			$('.calendar').fullCalendar({
-				header: {
+				header = {
 					left: 'prev,next today',
 					center: 'title',
 					right: 'month,agendaWeek,agendaDay'
-				},
+				};
+			}
+			$('.calendar').fullCalendar({
+				header: header,
 				eventSources: [
 					{
 						url: "http://www.google.com/calendar/feeds/cep1ta6rnrasr0h68a9f3qir80%40group.calendar.google.com/public/basic",
