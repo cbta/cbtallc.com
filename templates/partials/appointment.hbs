@@ -1,37 +1,56 @@
-<form id="appointment-request" method="post" data-url="{{config.forms.url}}{{config.forms.appointment-request}}">
+<form class="form-horizontal" role="form" id="appointment-request" method="post" data-url="{{config.forms.url}}{{config.forms.appointment-request}}">
 	<p>This appointment request is only available for returning patients. If you're a new patient, please <a href="/#contact-us">contact us</a> first.</p>
-	<div class="form-group">
-		<label for="name">Your Name</label>
-		<input type="text" name="name" required/>
-	</div>
-	<div class="form-group">
-		<label for="email">Your Email</label>
-		<input type="email" name="email" required/>
-	</div>
-	<div class="form-group">
-		<label for="phone">Your Phone Number</label>
-		<input type="tel" name="phone" required/>
-	</div>
-	<div class="form-group">
-		<label for="therapist">Therapist</label>
-		<select id="therapist" disabled>
-			<option value="jvermilyea">Dr. Vermilyea</option>
-			<option value="ehiggins">Dr. Higgins</option>
-		</select>
-	</div>
-	<input type="hidden" id="therapist-input" name="therapist" value=""/>
 	<h3>Appointment Time</h3>
 	<div class="form-group">
-		<label for="appointment-date">Date</label><input class="info" name="appointment-date" id="app-date" value="" readonly />
+		<label for="appointment-date" class="control-label col-sm-2">Date</label>
+		<div class="col-sm-10">
+			<input class="info" class="form-control" name="appointment-date" id="app-date" value="" readonly />
+		</div>
 	</div>
 	<div class="form-group">
-		<label for="appointment-time">Time</label><input class="info" name="appointment-time" id="app-time" value="" readonly />
+		<label for="appointment-time" class="control-label col-sm-2">Time</label>
+		<div class="col-sm-10">
+			<input class="info" name="appointment-time" id="app-time" value="" readonly />
+		</div>
 	</div>
-	<p>*Please note that your appointment is NOT booked until you receive a confirmation from your therapist.</p>
-	<div class="checkbox disclaimer">
-		<label>
-			<input type="checkbox" name="disclaimer" value="acknowledged" required>The complete privacy of personal information transmitted over the Internet cannot be guaranteed by CBTA, LLC. By using this form, you are acknowledging that you accept responsibility for any risk of exposure to your personal health care information or personal identifiers. If you have concerns about this, we encourage you to contact us via more conventional means such as telephone, fax or the United States Postal Service.
-		</label>
+	<h3>Appointment Details</h3>
+	<div class="form-group">
+		<label for="name" class="control-label col-sm-2">Your Name</label>
+		<div class="col-sm-8">
+			<input type="text" class="form-control" name="name" required/>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="email" class="control-label col-sm-2">Your Email</label>
+		<div class="col-sm-8">
+			<input type="email" class="form-control" name="email" required/>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="phone" class="control-label col-sm-2">Your Phone Number</label>
+		<div class="col-sm-8">
+			<input type="tel" class="form-control" name="phone" required/>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="therapist" class="control-label col-sm-2">Therapist</label>
+		<div class="col-sm-8">
+			<select id="therapist" disabled>
+				<option value="jvermilyea">Dr. Vermilyea</option>
+				<option value="ehiggins">Dr. Higgins</option>
+			</select>
+		</div>
+	</div>
+	<input type="hidden" id="therapist-input" name="therapist" value=""/>
+	<p class="help-block">* Please note that your appointment is NOT booked until you receive a confirmation from your therapist.</p>
+	<div class="form-group">
+		<div class="col-sm-10">
+			<div class="checkbox disclaimer">
+				<label>
+					<input type="checkbox" name="disclaimer" value="acknowledged" required>The complete privacy of personal information transmitted over the Internet cannot be guaranteed by CBTA, LLC. By using this form, you are acknowledging that you accept responsibility for any risk of exposure to your personal health care information or personal identifiers. If you have concerns about this, we encourage you to contact us via more conventional means such as telephone, fax or the United States Postal Service.
+				</label>
+			</div>
+		</div>
 	</div>
 	<input type="hidden" name="form_id" value="{{config.forms.appointment-request}}"/>
 	<input type="submit" value="Request Appointment"/>

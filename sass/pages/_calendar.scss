@@ -15,13 +15,9 @@
 	.form-group {
 		padding: 0.5em 0;
 		label {
-			float: left;
-			padding-top: 0.5em;
-			width: 10em;
 			&.error {
 				color: $red;
 				float: none;
-				margin-left: 10em;
 				width: auto;
 			}
 		}
