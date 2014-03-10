@@ -1,6 +1,7 @@
 .calendar-container {
 	@extend .wrapper;
 	margin: 2em auto;
+	overflow: visible;
 }
 
 .modal-header {
