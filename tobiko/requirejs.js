@@ -1,14 +1,19 @@
 module.exports = {
 	prod: {
 		options: {
-			baseUrl: '.',
+			baseUrl: 'bower_components',
 			mainConfigFile: 'js/config.js',
-			name: 'bower_components/almond/almond',
-			insertRequire: ['js/app'],
+			paths: {
+				'almond': 'almond/almond',
+				'app': '../js/app',
+			},
+			include: ['app'],
+			insertRequire: ['app'],
+			name: 'almond',
 			out: '<%= buildPath %>/app.js',
 			optimize: 'uglify2',
 			generateSourceMaps: true,
-			preserveLicenseComments: false,
+			preserveLicenseComments: false
 		}
 	}
 }
