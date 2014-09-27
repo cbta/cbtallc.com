@@ -14,6 +14,8 @@ module.exports = function(grunt) {
         prod: {
             options: {
                 base: '<%= buildPath %>',
+                branch: 'master',
+                repo: 'git@github.com:cbta/cbta.github.io.git'
             },
             src: ['**/*']
         }
