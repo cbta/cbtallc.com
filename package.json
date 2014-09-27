@@ -1,8 +1,9 @@
 {
   "name": "cbtallc2",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "CBTALLC website http://cbtallc.com",
   "author": "Tri Nguyen",
-  "respository": {
+  "repository": {
     "type": "git",
     "url": "git://github.com/tnguyen14/cbtallc"
   },
