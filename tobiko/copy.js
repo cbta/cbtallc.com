@@ -1,9 +1,25 @@
 module.exports = {
 	build: {
 		files: [
-			{expand: true, src: ['CNAME'], dest: '<%= buildPath %>/'},
-			{expand: true, cwd: 'components', src: ['fancybox/source/**/*'], dest: '<%= buildPath %>/components'},
-			{expand: true, cwd: 'sass', src: 'assets/**/*', dest: '<%= buildPath %>/css/'}
+			{
+				expand: true,
+				src: ['CNAME', 'favicon.ico'],
+				dest: '<%= buildPath %>/'
+			},
+			{
+				expand: true,
+				cwd: 'bower_components',
+				src: [
+					'fancybox/source/**/*',
+					'fullcalendar/fullcalendar.css'
+				],
+				dest: '<%= buildPath %>/bower_components'},
+			{
+				expand: true,
+				cwd: 'sass',
+				src: 'assets/**/*',
+				dest: '<%= buildPath %>/css/'
+			}
 		]
 	}
 }
