@@ -3,13 +3,12 @@
 // @param {String|Object} a date string (http://momentjs.com/docs/#/parsing/string/) or momentjs date object
 // @return {String} the date string in the desired format
 
-var  moment = require('moment'),
-	_ = require('underscore');
+var  moment = require('moment');
 
 module.exports = function(formatStr, date) {
 	var momentDate;
 	// A rather hacky way to test if the second argument is empty
-	if (_.isEmpty(date.data)) {
+	if (date && date.data) {
 		momentDate = moment();
 	} else {
 		// if the date passed in is not a moment type, convert it to moment

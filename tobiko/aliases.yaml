@@ -1,0 +1,28 @@
+process:
+  - 'import_contents'
+  - 'copy:build'
+  - 'generate_html:dev'
+dev:
+  - 'process'
+  - 'newer:imagemin:dev'
+  - 'newer:responsive_images'
+  - 'sass:dev'
+  - 'autoprefixer:dev'
+  - 'requirejs'
+  - 'connect:dev'
+  - 'watch'
+build:
+  - 'import_contents'
+  - 'newer:responsive_images'
+  - 'newer:imagemin:build'
+  - 'copy:build'
+  - 'generate_html:prod'
+  - 'sass:prod'
+  - 'autoprefixer'
+  - 'csso:prod'
+  - 'requirejs:prod'
+deploy:
+  - 'build'
+  - 'gh-pages'
+default:
+  - 'dev'

@@ -18,9 +18,6 @@ require.config({
 
 	// load non-amd dependencies
 	shim: {
-		handlebars: {
-			exports: 'Handlebars'
-		},
 		fullcalendar: ['jquery'],
 		gcal: ['fullcalendar'],
 		validate: ['jquery'],

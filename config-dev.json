@@ -1,9 +1,6 @@
 {
 	"site-name": "CBTA",
 	"site-url": "http://localhost:7000",
-	"port": 7000,
-	"livereload": 35731,
-	"buildPath": "build/www",
 	"forms": {
 		"url": "http://localhost:3000/forms/",
 		"contact": "52e88dd6b0b6e8568a000002",
