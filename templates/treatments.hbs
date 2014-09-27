@@ -15,7 +15,7 @@
 				<div class="tab-content well">
 					{{#each anxiety}}
 						<div class="tab-pane treatment fade {{#isEqual url-title "generalized-anxiety"}}in active{{/isEqual}}" id="{{url-title}}">
-							{{{markdown}}}
+							{{{main}}}
 						</div><!-- treatment -->
 					{{/each}}
 				</div><!-- .tabs-content -->
@@ -26,7 +26,7 @@
 				<h2 class="section-title">Depression</h2>
 			</div>
 			<div class="content wrapper well">
-				{{{depression.markdown}}}
+				{{{depression.main}}}
 			</div>
 		</section><!-- .depression -->
 	</div>
