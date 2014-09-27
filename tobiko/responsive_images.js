@@ -7,6 +7,9 @@ module.exports = {
 			}, {
 				name: 'medium',
 				width: 800
+			}, {
+				name: 'large',
+				width: 1200
 			}]
 		},
 		files: [

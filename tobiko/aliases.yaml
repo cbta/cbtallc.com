@@ -4,6 +4,7 @@ process:
   - 'generate_html:dev'
 dev:
   - 'process'
+  - 'newer:svgmin'
   - 'newer:imagemin:dev'
   - 'newer:responsive_images'
   - 'sass:dev'
@@ -15,6 +16,7 @@ build:
   - 'import_contents'
   - 'newer:responsive_images'
   - 'newer:imagemin:build'
+  - 'newer:svgmin'
   - 'copy:build'
   - 'generate_html:prod'
   - 'sass:prod'
