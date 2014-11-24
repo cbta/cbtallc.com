@@ -156,7 +156,8 @@ define(function (require) {
 				header: header,
 				eventSources: [
 					{
-						url: "http://www.google.com/calendar/feeds/cep1ta6rnrasr0h68a9f3qir80%40group.calendar.google.com/public/basic",
+						googleCalendarApiKey: 'AIzaSyBR4_LxJsWDMkcz0Zc-lt_vt9uxPhgycPE',
+						googleCalendarId: 'cep1ta6rnrasr0h68a9f3qir80@group.calendar.google.com',
 						className: 'jvermilyea'
 					}
 				],
