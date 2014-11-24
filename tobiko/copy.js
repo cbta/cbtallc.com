@@ -10,6 +10,7 @@ module.exports = {
 				expand: true,
 				cwd: 'bower_components',
 				src: [
+					'jquery/jquery.min.js',
 					'fancybox/source/**/*',
 					'fullcalendar/fullcalendar.css'
 				],

@@ -4,7 +4,7 @@ require.config({
 		text: 'requirejs-plugins/lib/text',
 		json: 'requirejs-plugins/src/json',
 		handlebars: 'handlebars/handlebars',
-		jquery: 'jquery/dist/jquery',
+		jquery: 'jquery/jquery.min',
 		fullcalendar: 'fullcalendar/fullcalendar.min',
 		gcal: 'fullcalendar/gcal',
 		validate: 'jquery.validation/jquery.validate',
