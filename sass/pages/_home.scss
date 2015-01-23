@@ -38,9 +38,12 @@
 	.button {
 		@extend %button;
 		display: block;
-		font-size: 1.5em;
+		font-size: 1.3em;
 		margin-right: 1em;
 		text-decoration: none;
+		@media (min-width: $bro-bear) {
+			font-size: 1.5em;
+		}
 	}
 }
 
@@ -194,9 +197,12 @@
 		}
 		h3 {
 			color: $very-dark-jean;
-			font-size: 1.2em;
+			font-size: 1em;
 			margin: 0.5em 0;
 			text-align: center;
+			@media (min-width: $bro-bear) {
+				font-size: 1.2em;
+			}
 		}
 	}
 }
@@ -266,8 +272,10 @@
 
 .contact {
 	@extend %clearfix;
+	padding: 1em 0;
 	.form,
 	.info {
+		@extend %clearfix;
 		@media (min-width: $big-bro-bear) {
 			float: left;
 			width: 50%;
@@ -336,11 +344,18 @@
 		input[type="text"],
 		input[type="email"],
 		textarea {
+			border: none;
 			padding: 0.5em;
-			width: 85%;
+			width: 100%;
+			@media (min-width: $bro-bear) {
+				width: 85%;
+			}
 		}
 		.tel {
-			width: 85%;
+			width: 100%;
+			@media (min-width: $bro-bear) {
+				width: 85%;
+			}
 		}
 		input[type="tel"] {
 			display: inline;
@@ -357,7 +372,9 @@
 			font-size: 2vw;
 		}
 		&.submit {
-			padding-right: 15%; // flush with other fields
+			@media (min-width: $bro-bear) {
+				padding-right: 15%; // flush with other fields
+			}
 		}
 		input[type="submit"] {
 			@extend %button;
@@ -373,6 +390,9 @@
 		}
 	}
 	.disclaimer {
-		width: 85%;
+		width: 100%;
+		@media (min-width: $bro-bear) {
+			width: 85%;
+		}
 	}
 }
