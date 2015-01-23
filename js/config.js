@@ -11,6 +11,7 @@ require.config({
 		form: 'jquery-form/jquery.form',
 		modal: 'bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal',
 		tab: 'bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab',
+		tooltip: 'bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip',
 		moment: 'moment/moment',
 		config: '../config.json',
 		app: '../js/app'
@@ -23,7 +24,8 @@ require.config({
 		validate: ['jquery'],
 		form: ['jquery'],
 		modal: ['jquery'],
-		tab: ['jquery']
+		tab: ['jquery'],
+		tooltip: ['jquery']
 	},
 
 	// Remove these modules from the final build.

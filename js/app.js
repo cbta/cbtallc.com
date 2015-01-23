@@ -8,6 +8,7 @@ define(function (require) {
 	require('validate');
 	require('modal');
 	require('tab');
+	require('tooltip');
 
 	var app = {
 		ready: function() {
@@ -17,6 +18,7 @@ define(function (require) {
 				this.forms();
 				this.calendar();
 				this.tabs();
+				this.tooltip();
 			}.bind(this));
 		},
 		therapists: function() {
@@ -195,6 +197,9 @@ define(function (require) {
 				$(tabID).addClass('active');
 				$(tabID).siblings().removeClass('active');
 			});
+		},
+		tooltip: function () {
+			$('[data-toggle="tooltip"]').tooltip();
 		}
 	}
 	return app.ready();
