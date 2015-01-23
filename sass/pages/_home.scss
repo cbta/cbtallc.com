@@ -240,6 +240,11 @@
 			list-style: none;
 			padding: 1em 0 0;
 		}
+		.tel,
+		.email {
+			display: block;
+			color: $green;
+		}
 	}
 }
 

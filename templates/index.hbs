@@ -55,6 +55,12 @@
 								{{/each}}
 							</ul>
 							{{/if}}
+							{{#if phone}}
+								<a class="tel" href="tel:{{phone}}">Call {{title}}</a>
+							{{/if}}
+							{{#if email}}
+								<a class="email" href="mailto:{{email}}">Email {{title}}</a>
+							{{/if}}
 						</div>
 					</div><!-- .viewer -->
 					{{/each}}
