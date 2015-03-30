@@ -1,8 +1,7 @@
 module.exports = {
 	dev: {
 		options: {
-			style: 'expanded',
-			sourcemap: true
+			style: 'expanded'
 		},
 		files: {
 			'<%= buildPath %>/css/main.css': 'sass/main.scss'
