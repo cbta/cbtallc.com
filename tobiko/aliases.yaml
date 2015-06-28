@@ -3,6 +3,7 @@ process:
   - 'copy:build'
   - 'generate_html:dev'
 dev:
+  - 'clean:build'
   - 'process'
   - 'newer:svgmin'
   - 'newer:imagemin:dev'
@@ -13,6 +14,7 @@ dev:
   - 'connect:dev'
   - 'watch'
 build:
+  - 'clean:build'
   - 'import_contents'
   - 'newer:responsive_images'
   - 'newer:imagemin:build'
