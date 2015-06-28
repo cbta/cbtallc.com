@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "dependencies": {
     "jquery": "~2.1.4",
-    "fullcalendar": "~1.6.1",
+    "fullcalendar": "~2.3.2",
     "jquery.validation": "~1.13.1",
     "bootstrap-sass": "~3.3.5",
     "jquery-form": "~3.46.0"

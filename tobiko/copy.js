@@ -12,7 +12,7 @@ module.exports = {
 				src: [
 					'jquery/jquery.min.js',
 					'fancybox/source/**/*',
-					'fullcalendar/fullcalendar.css'
+					'fullcalendar/dist/fullcalendar.css'
 				],
 				dest: '<%= buildPath %>/bower_components'},
 			{
@@ -23,4 +23,4 @@ module.exports = {
 			}
 		]
 	}
-}
+};

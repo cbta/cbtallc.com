@@ -20,7 +20,7 @@ var app = {
 		}.bind(this));
 	},
 	therapists: function() {
-		$(".therapist-stubs .stub a").click(function(e){
+		$(".therapist-stubs .stub a").on('click', function (e) {
 			e.preventDefault();
 			var $stub = $(this).parent(".stub"),
 				therapist_id = $(this).attr('href'),
@@ -43,14 +43,15 @@ var app = {
 			}
 		});
 
-		$(".therapist-viewers .close-button").click(function(e){
+		$(".therapist-viewers .close-button").on('click', function (e) {
 			e.preventDefault();
 			// Close all viewer, remove current states
 			$(".therapist-stubs .stub").removeClass("active");
 			$(".therapist-viewers .viewer").removeClass("active");
 		});
 	},
-	forms: function() {
+	forms: function () {
+		var self = this;
 		$("#contact-form").validate({
 			ignore: "input[type='hidden']",
 			messages: {
@@ -105,6 +106,7 @@ var app = {
 			}
 		});
 
+		var appointmentFormHtml = $("#appointment-request").html();
 		$("#appointment-request").validate({
 			ignore: "input[type='hidden']",
 			messages: {
@@ -133,12 +135,14 @@ var app = {
 						$form.removeClass('loading')
 							.empty()
 							.html('<p>Your request has been received. Please wait for a confirmation from the therapist.</p>');
+						self.appointmentForm = appointmentFormHtml;
 					}
 				});
 			}
 		});
 	},
 	calendar: function() {
+		var self = this;
 		// initialize full calendar
 		var calendarView = 'agendaDay',
 			header = {
@@ -166,10 +170,8 @@ var app = {
 			defaultView: calendarView,
 			eventClick: function(calEvent, jsEvent, view) {
 				jsEvent.preventDefault();
-				var $form = $('.appointment-form'),
-					start = moment(calEvent.start),
-					end = moment(calEvent.end),
-					therapist = calEvent.source.className[0];
+				var $form = $('.appointment-form');
+				var therapist = calEvent.source.className[0];
 				// check for therapist from selected appointment, select the right therapist
 				$("#therapist option").each(function(){
 					if ($(this).val() === therapist) {
@@ -179,9 +181,17 @@ var app = {
 					}
 				});
 				// bring over correct date and time to form
-				$("#app-date", $form).val(start.format("MMM D, YYYY"));
-				$("#app-time", $form).val(start.format("h:mm A") + " - " + end.format("h:mm A"));
-				$('.appointment-form').modal();
+				$("#app-date", $form).val(calEvent.start.format("MMM D, YYYY"));
+				$("#app-time", $form).val(calEvent.start.format("h:mm A") + " - " + calEvent.end.format("h:mm A"));
+				$('.appointment-form').modal()
+					.on('hidden.bs.modal', function () {
+						if (self.appointmentForm) {
+							$('#appointment-request')
+								.removeClass('loading')
+								.empty()
+								.html(self.appointmentForm);
+						}
+					});
 			}
 		});
 	},
