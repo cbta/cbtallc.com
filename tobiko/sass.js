@@ -1,7 +1,7 @@
 module.exports = {
 	dev: {
 		options: {
-			style: 'expanded'
+			outputStyle: 'expanded'
 		},
 		files: {
 			'<%= buildPath %>/css/main.css': 'sass/main.scss'
@@ -9,10 +9,10 @@ module.exports = {
 	},
 	prod: {
 		options: {
-			style: 'compressed'
+			outputStyle: 'compressed'
 		},
 		files: {
 			'<%= buildPath %>/css/main.css': 'sass/main.scss'
 		}
 	}
-}
+};
