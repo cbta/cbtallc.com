@@ -4,4 +4,4 @@ module.exports = function(a, b, options) {
 	} else {
 		return options.inverse(this);
 	}
-}
+};

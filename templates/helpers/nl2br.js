@@ -11,4 +11,4 @@ function nl2br (str, is_xhtml) {
 
 module.exports = function( string ) {
 	return (string + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br>');
-}
+};

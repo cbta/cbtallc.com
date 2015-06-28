@@ -24,5 +24,5 @@ module.exports = function(formatStr, date) {
 		}
 	}
 
-	return momentDate.format(formatStr)
-}
+	return momentDate.format(formatStr);
+};
