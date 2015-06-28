@@ -10,11 +10,11 @@
 			</div><!-- .wrapper -->
 		</footer>
 
+		<script type="text/javascript" src="/app.js"></script>
+
 		{{#isEqual content.env 'dev'}}
-			<script type="text/javascript" data-main="/js/config.js" src="/bower_components/requirejs/require.js"></script>
 			<script src="http://localhost:35731/livereload.js"></script>
 		{{else}}
-			<script type="text/javascript" src="/app.js"></script>
 			<script>
 				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

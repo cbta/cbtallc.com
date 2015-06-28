@@ -1,18 +1,11 @@
 {
   "name": "cbtallc2",
   "version": "0.0.4",
-  "devDependencies": {
-    "requirejs": "~2.1.6",
-    "requirejs-plugins": "~1.0.2",
-    "almond": "~0.2.5"
-  },
   "dependencies": {
-    "jquery": "~2.0.3",
+    "jquery": "~2.1.4",
     "fullcalendar": "~1.6.1",
-    "jquery.validation": "~1.11.1",
-    "jquery-form": "latest",
-    "fancybox": "~2.1.5",
-    "moment": "~2.1.0",
-    "bootstrap-sass-official": "~3.1.1"
+    "jquery.validation": "~1.13.1",
+    "bootstrap-sass": "~3.3.5",
+    "jquery-form": "~3.46.0"
   }
 }
