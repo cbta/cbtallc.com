@@ -42,8 +42,8 @@
   "browser": {
     "jquery": "./bower_components/jquery/dist/jquery.js",
     "validate": "./bower_components/jquery.validation/dist/jquery.validate.js",
-    "fullcalendar": "./bower_components/fullCalendar/fullcalendar.js",
-    "gcal": "./bower_components/fullcalendar/gcal.js",
+    "fullcalendar": "./bower_components/fullcalendar/dist/fullcalendar.js",
+    "gcal": "./bower_components/fullcalendar/dist/gcal.js",
     "form": "./bower_components/jquery-form/jquery.form.js",
     "modal": "./bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js",
     "tab": "./bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js",
