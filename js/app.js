@@ -135,6 +135,7 @@ var app = {
 						$form.removeClass('loading')
 							.empty()
 							.html('<p>Your request has been received. Please wait for a confirmation from the therapist.</p>');
+						// only save form html if the current request has been success
 						self.appointmentForm = appointmentFormHtml;
 					}
 				});
@@ -185,6 +186,7 @@ var app = {
 				$("#app-time", $form).val(calEvent.start.format("h:mm A") + " - " + calEvent.end.format("h:mm A"));
 				$('.appointment-form').modal()
 					.on('hidden.bs.modal', function () {
+						// reset form if there is form html
 						if (self.appointmentForm) {
 							$('#appointment-request')
 								.removeClass('loading')

@@ -31,7 +31,7 @@
     "grunt-responsive-images": "^0.1.6",
     "grunt-sass": "^1.0.0",
     "grunt-svgmin": "^2.0.1",
-    "grunt-tobiko": "^2.0.0",
+    "grunt-tobiko": "^4.4.1",
     "load-grunt-config": "^0.17.1",
     "time-grunt": "^0.4.0"
   },

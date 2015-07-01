@@ -26,4 +26,4 @@ module.exports = {
 		files: ['tasks/**/*.js', 'grunt/**/*.{js,yaml}', 'Gruntfile.js'],
 		tasks: ['process']
 	}
-}
+};
