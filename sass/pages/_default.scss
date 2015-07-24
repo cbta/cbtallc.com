@@ -1,0 +1,29 @@
+.page {
+	padding-top: 2rem;
+	.main-content {
+		font-size: 1.2rem;
+		p {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.col-2 {
+	float: left;
+	width: 50%;
+}
+
+.office-map,
+.office-image {
+	text-align: center;
+	figcaption {
+		margin-top: 1rem;
+	}
+}
+
+.office-map {
+	iframe {
+		width: 500px;
+		height: 380px;
+	}
+}
