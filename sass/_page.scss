@@ -39,6 +39,26 @@ p {
 }
 
 //Header
+.header-banner {
+	background-color: $green;
+	height: 0;
+	transition: height 2s linear;
+	text-align: center;
+	&.active {
+		height: auto;
+	}
+	a {
+		color: $dark-jean;
+		display: inline-block;
+		font-weight: bold;
+		padding: .5rem 0;
+		text-decoration: underline;
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
 .main-header {
 	@extend %clearfix;
 	background-color: $dark-jean;

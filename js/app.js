@@ -17,6 +17,7 @@ var app = {
 			this.calendar();
 			this.tabs();
 			this.tooltip();
+			this.banner();
 		}.bind(this));
 	},
 	therapists: function() {
@@ -212,6 +213,11 @@ var app = {
 	},
 	tooltip: function () {
 		$('[data-toggle="tooltip"]').tooltip();
+	},
+	banner: function () {
+		setTimeout(function () {
+			$('.header-banner').addClass('active');
+		}, 1000);
 	}
 };
 return app.ready();

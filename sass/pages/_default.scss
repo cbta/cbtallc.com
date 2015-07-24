@@ -17,8 +17,10 @@
 }
 
 .col-2 {
-	float: left;
-	width: 50%;
+	@media (min-width: 70em) {
+		float: left;
+		width: 50%;
+	}
 }
 
 .office-map,
