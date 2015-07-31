@@ -213,11 +213,6 @@ var app = {
 	},
 	tooltip: function () {
 		$('[data-toggle="tooltip"]').tooltip();
-	},
-	banner: function () {
-		setTimeout(function () {
-			$('.header-banner').addClass('active');
-		}, 1000);
 	}
 };
 return app.ready();

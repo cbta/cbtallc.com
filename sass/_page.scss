@@ -41,11 +41,17 @@ p {
 //Header
 .header-banner {
 	background-color: $green;
-	height: 0;
+	border-bottom: 1px solid $dark-jean;
 	transition: height 2s linear;
 	text-align: center;
-	&.active {
-		height: auto;
+	&.urgent {
+		background-color: $red;
+		a {
+			color: $white;
+			&:hover {
+				color: $dark-jean;
+			}
+		}
 	}
 	a {
 		color: $dark-jean;
