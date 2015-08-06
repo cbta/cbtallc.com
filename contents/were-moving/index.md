@@ -3,7 +3,7 @@ title: "We're Moving!"
 template: page.hbs
 ---
 
-We’re very pleased to announce that Cognitive Behavior Therapy Associates, LLC will be moving to a new location on August 1, 2015.  Our Woburn office will be closing and we will be practicing in Lexington, MA going forward.
+We’re very pleased to announce that Cognitive Behavior Therapy Associates, LLC have recently moved to our new location on August 1, 2015.
 
 The new office is located at 394 Lowell Street, Unit 15, Lexington, MA,  3.6 miles from Arlington Center, 1.5 miles from Lexington Center and 2.4 miles from the Burlington mall. Our number is still <a href="tel:(617) 531-7133">(617) 531-7133</a>.
 
