@@ -48,7 +48,7 @@
 			&.active,
 			&.active:hover {
 				a {
-					background-color: #fff;
+					background-color: $background-darker;
 					border-top-color: $darker-green;
 					border-top-width: 4px;
 					border-left: none;
@@ -99,7 +99,7 @@
 	}
 }
 .depression {
-	padding: 0 0 2em;
+	padding: 1.5rem 0 2em;
 	text-align: justify;
 	.title-wrapper {
 		@extend %clearfix;
