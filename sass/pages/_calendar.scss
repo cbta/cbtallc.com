@@ -48,13 +48,35 @@
 	}
 }
 
+
+// Full Calendar
 .fc-button {
-	background-color: $cloudy;
+	background-color: $background-dark;
 	background-image: none;
 	border: none;
 }
+
+.fc-state-active {
+	background-color: $background-darker;
+}
+
 .fc-header-title {
 	h2 {
 		font-size: 1.5em;
+	}
+}
+
+.fc-head th {
+	padding: .8rem 0;
+}
+
+.fc-unthemed .fc-today {
+	background-color: $background-light;
+}
+
+.fc-event {
+	&.jvermilyea {
+		background-color: $blue;
+		border-color: $blue;
 	}
 }

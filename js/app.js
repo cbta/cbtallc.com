@@ -1,3 +1,5 @@
+'use strict';
+
 var $ = require('jquery');
 var moment = require('moment');
 
@@ -17,7 +19,6 @@ var app = {
 			this.calendar();
 			this.tabs();
 			this.tooltip();
-			this.banner();
 		}.bind(this));
 	},
 	therapists: function() {
