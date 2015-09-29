@@ -55,26 +55,6 @@
 		padding: 0;
 		text-align: center;
 	}
-	.section-link {
-		@extend .wrapper;
-		background-color: darken($background-darker, 10%);
-		color: $dark-jean;
-		font-size: 1.2em;
-		font-weight: normal;
-		padding: 0.3em 0.5em;
-		text-align: right;
-		a {
-			color: $dark-jean;
-			text-decoration: none;
-			@media (min-width: $bro-bear) {
-				font-size: 1.3em;
-			}
-			&:hover {
-				color: $darker-green;
-				text-decoration: underline;
-			}
-		}
-	}
 	.service-wrapper {
 		@extend .wrapper;
 		padding-top: 1em;
