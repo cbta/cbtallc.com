@@ -72,36 +72,26 @@ var app = {
 				}
 			},
 			submitHandler: function(form) {
-				var url = $(form).data('url');
-				$(form).addClass('loading').ajaxSubmit({
-					dataType: 'json',
+				var $form = $(form);
+				var url = $form.data('url');
+				$form.addClass('loading');
+				var data = $form.serializeArray();
+				// construct the phone number
+				var phone = '(' + data[2].value + ') ' + data[3].value + '-' + data[4].value;
+				// remove the tel partials, add phone
+				data.splice(2, 3, {
+					name: 'phone',
+					value: phone
+				});
+				// serialize again
+				data = data.map(function (field) {
+					return encodeURIComponent(field.name) + '=' + encodeURIComponent(field.value);
+				}).join('&');
+				$.ajax({
 					url: url,
-					beforeSubmit: function(arr, $form) {
-						// concat phone partials into full phone numbers
-						var tel1, tel2, tel3, telIndex;
-						for (var i = 0, n = arr.length; i < n; i++) {
-							switch(arr[i].name) {
-								case 'tel-1':
-									tel1 = arr[i].value;
-									telIndex = i;
-									break;
-								case 'tel-2':
-									tel2 = arr[i].value;
-									break;
-								case 'tel-3':
-									tel3 = arr[i].value;
-									break;
-								default:
-									continue;
-							}
-						}
-						// remove the phone partials from telIndex
-						arr.splice(telIndex, 3, {
-							name: "phone",
-							value: '(' + tel1 + ') ' + tel2 +  '-' + tel3
-						});
-					},
-					success: function(responseText, statusText, xhr, $form) {
+					method: 'POST',
+					data: data,
+					success: function () {
 						$form.removeClass('loading').empty().html('<p>Thank you for contacting us. We will be in touch shortly.</p>');
 					}
 				});
@@ -135,6 +125,7 @@ var app = {
 				$.ajax({
 					url: url,
 					data: $form.serialize(),
+					method: 'POST',
 					success: function() {
 						$form.removeClass('loading')
 							.empty()
