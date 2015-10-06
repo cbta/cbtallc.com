@@ -129,11 +129,13 @@ var app = {
 				}
 			},
 			submitHandler: function(form) {
-				var url = $(form).data('url');
-				$(form).addClass('loading').ajaxSubmit({
-					dataType: 'json',
+				var $form = $(form);
+				var url = $form.data('url');
+				$form.addClass('loading')
+				$.ajax({
 					url: url,
-					success: function(responseText, statusText, xhr, $form) {
+					data: $form.serialize(),
+					success: function() {
 						$form.removeClass('loading')
 							.empty()
 							.html('<p>Your request has been received. Please wait for a confirmation from the therapist.</p>');
