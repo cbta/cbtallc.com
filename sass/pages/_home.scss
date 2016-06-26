@@ -325,27 +325,12 @@
 
 		input[type="text"],
 		input[type="email"],
+		input[type="tel"],
 		textarea {
 			padding: 0.5em;
 			width: 100%;
 			@media (min-width: $bro-bear) {
 				width: 85%;
-			}
-		}
-		.tel {
-			width: 100%;
-			@media (min-width: $bro-bear) {
-				width: 85%;
-			}
-		}
-		input[type="tel"] {
-			display: inline;
-			margin: 0 1%;
-			text-align: center;
-			width: 25%;
-			&:nth-of-type(3) {
-				margin-right: 0;
-				width: 33%;
 			}
 		}
 		.symbol {

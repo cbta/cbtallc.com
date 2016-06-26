@@ -1,4 +1,4 @@
-		<form id="contact-form" name="form2" enctype="multipart/form-data" method="post" data-url="{{config.forms.url}}{{config.forms.contact}}">
+		<form id="contact-form" method="post" data-url="{{config.forms.url}}{{config.forms.contact}}">
 			<div class="field single">
 				<label class="desc" for="name">Your Name<span class="req">*</span>
 				</label>
@@ -10,28 +10,22 @@
 				<input id="email" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="2" required />
 			</div>
 			<div class="field">
-				<label class="desc" for="phone">Your Phone
+				<label class="desc" for="phone">Your Phone<span class="req">*</span>
 				</label>
-				<div class="tel">
-					<input id="tel-1" name="tel-1" type="tel" value="" size="3" maxlength="3" tabindex="3" />
-					<span class="symbol">&ndash;</span>
-					<input id="tel-2" name="tel-2" type="tel" value="" size="3" maxlength="3" tabindex="4" />
-					<span class="symbol">&ndash;</span>
-					<input id="tel-3" name="tel-3" type="tel" value="" size="4" maxlength="4" tabindex="5" />
-				</div>
+				<input id="phone" name="phone" type="tel" tabindex="3" required>
 			</div>
 			<div class="field">
 				<label class="desc" for="message">Your Message<span class="req">*</span>
 				</label>
-				<textarea id="message" name="message" spellcheck="true" rows="10" cols="50" tabindex="6" onkeyup="" required></textarea>
+				<textarea id="message" name="message" spellcheck="true" rows="10" cols="50" tabindex="4" onkeyup="" required></textarea>
 			</div>
 			<div class="checkbox disclaimer">
 				<label>
-					<input type="checkbox" name="disclaimer" value="acknowledged" required>The complete privacy of personal information transmitted over the Internet cannot be guaranteed by CBTA, LLC. By using this form, you are acknowledging that you accept responsibility for any risk of exposure to your personal health care information or personal identifiers. If you have concerns about this, we encourage you to contact us via more conventional means such as telephone, fax or the United States Postal Service.
+					<input type="checkbox" name="disclaimer" value="acknowledged" tabindex="5" required>The complete privacy of personal information transmitted over the Internet cannot be guaranteed by CBTA, LLC. By using this form, you are acknowledging that you accept responsibility for any risk of exposure to your personal health care information or personal identifiers. If you have concerns about this, we encourage you to contact us via more conventional means such as telephone, fax or the United States Postal Service.
 				</label>
 			</div>
 			<input type="hidden" name="form_id" value="{{config.forms.contact}}"/>
 			<div class="field submit">
-				<input class="btTxt submit" type="submit" value="Submit"/>
+				<input class="btTxt submit" type="submit" tabindex="6" value="Submit"/>
 			</div>
 		</form>

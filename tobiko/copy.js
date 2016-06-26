@@ -14,7 +14,16 @@ module.exports = {
 					'fancybox/source/**/*',
 					'fullcalendar/dist/fullcalendar.css'
 				],
-				dest: '<%= buildPath %>/bower_components'},
+				dest: '<%= buildPath %>/bower_components'
+			},
+			{
+				expand: true,
+				cwd: 'node_modules',
+				src: [
+					'fullcalendar/dist/fullcalendar.min.css'
+				],
+				dest: '<%= buildPath %>/node_modules'
+			},
 			{
 				expand: true,
 				cwd: 'sass',
