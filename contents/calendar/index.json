@@ -1,4 +1,5 @@
 {
 	"title": "Book an Appointment",
+	"name": "calendar",
 	"template": "calendar.hbs"
 }

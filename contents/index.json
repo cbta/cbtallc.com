@@ -1,5 +1,6 @@
 {
 	"title": "Cognitive Behavior Therapy Associates, LLC.",
+	"name": "home",
 	"template": "index.hbs",
 	"intro": {
 		"heading": "Welcome to Cognitive Behavior Therapy Associates",

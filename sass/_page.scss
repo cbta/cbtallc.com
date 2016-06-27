@@ -114,6 +114,11 @@ p {
 				color: $green;
 			}
 		}
+		&.mobile-assist {
+			@media (min-width: $bro-bear) {
+				display: none;
+			}
+		}
 		a {
 			color: $white;
 			display: block;
