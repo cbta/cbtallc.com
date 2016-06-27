@@ -1,19 +1,19 @@
-		<footer>
-			<div class="wrapper">
-				<p class="attribution">Built by <a href="http://tridnguyen.com">Tri Nguyen</a>. Hosted by Github Pages. © Copyrights {{getDate 'YYYY'}}. <a href="https://plus.google.com/102030715425733045907" rel="publisher">Google+</a>.</p>
-				<p class="report-issue">If you run into an issue with the website, please <a href="mailto:tri&#64;tridnguyen.com?subject=CBTA LLC Website Support&body=Please provide the details of the issue. A screenshot of it would be helpful as well.">send us an email</a>.</p>
+	<footer>
+		<div class="wrapper">
+			<p class="attribution">Built by <a href="http://tridnguyen.com">Tri Nguyen</a>. Hosted by Github Pages. © Copyrights {{getDate 'YYYY'}}. <a href="https://plus.google.com/102030715425733045907" rel="publisher"> <i class="fa fa-google-plus-square"></i> Google+</a>.</p>
+			<p class="report-issue">If you run into an issue with the website, please <a href="mailto:tri&#64;tridnguyen.com?subject=CBTA LLC Website Support&body=Please provide the details of the issue. A screenshot of it would be helpful as well.">send us an email</a>.</p>
 
-				<!--
-				<div class="footer-links">
-					<a href="{{config.site-url}}/resources">Resources for Patients</a>
-				</div> -->
-			</div><!-- .wrapper -->
-		</footer>
+			<!--
+			<div class="footer-links">
+				<a href="{{config.site-url}}/resources">Resources for Patients</a>
+			</div> -->
+		</div><!-- .wrapper -->
+	</footer>
 
-		<script type="text/javascript" src="/app.js"></script>
+	<script type="text/javascript" src="/app.js"></script>
 
-		{{#isEqual content.env 'dev'}}
-			<script src="http://localhost:35731/livereload.js"></script>
-		{{/isEqual}}
-	</body>
+	{{#isEqual content.env 'dev'}}
+		<script src="http://localhost:35731/livereload.js"></script>
+	{{/isEqual}}
+</body>
 </html>
