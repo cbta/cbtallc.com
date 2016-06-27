@@ -8,16 +8,6 @@ module.exports = {
 			},
 			{
 				expand: true,
-				cwd: 'bower_components',
-				src: [
-					'jquery/jquery.min.js',
-					'fancybox/source/**/*',
-					'fullcalendar/dist/fullcalendar.css'
-				],
-				dest: '<%= buildPath %>/bower_components'
-			},
-			{
-				expand: true,
 				cwd: 'node_modules',
 				src: [
 					'fullcalendar/dist/fullcalendar.min.css'
