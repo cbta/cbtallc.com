@@ -14,17 +14,17 @@ var app = {
 		$('.therapist-stubs .stub a').on('click', function (e) {
 			e.preventDefault();
 			var $stub = $(this).parent('.stub');
-			var therapist_id = $(this).attr('href');
-			var therapist_on = $stub.hasClass('active');
+			var therapistId = $(this).attr('href');
+			var therapistOn = $stub.hasClass('active');
 
 			// remove any other current states
 			$('.therapist-stubs .stub').removeClass('active');
 			$('.therapist-viewers .viewer').removeClass('active');
 
 			// activate clicked-on therapist if it was originally not activated
-			if (!therapist_on) {
+			if (!therapistOn) {
 				$stub.toggleClass('active');
-				$(therapist_id).toggleClass('active');
+				$(therapistId).toggleClass('active');
 
 				// Scroll to the viewer
 				var scrollPos = $('.therapist-viewers').offset().top;
