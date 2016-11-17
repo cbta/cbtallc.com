@@ -131,7 +131,6 @@
 
 // Therapists
 .therapists {
-	background-color: $background-light;
 	border-top: 2px solid $background-darker;
 	border-bottom: 2px solid $background-darker;
 	padding: 1em 0 2em;
@@ -164,7 +163,7 @@
 		}
 		img {
 			background-color: #fff;
-			border: 5px solid $background-dark;
+			border: 5px solid $background-darker;
 			border-radius: 50%;
 			box-shadow: 0 0 1px rgba(0,0,0,.3), inset 0 0 1px rgba(0,0,0,.2);
 			display: block;
