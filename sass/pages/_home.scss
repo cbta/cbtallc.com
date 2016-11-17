@@ -279,13 +279,10 @@
 		float: left;
 		position: relative;
 		&:before {
-			left: 45%;
-			top: 49.5%;
+			left: -5%;
 		}
 		&:after {
-			margin-left: -5%;
-			margin-top: -2.5%;
-			height: 102%;
+			left: calc(47.5% - 20px);
 		}
 		p {
 			margin-top: 0;
