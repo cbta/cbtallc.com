@@ -1,6 +1,5 @@
-bower_components
 node_modules
-build
+dist
 
 .DS_Store
 .sass-cache
