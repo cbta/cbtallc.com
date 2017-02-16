@@ -54,7 +54,14 @@ var app = {
 				method: 'POST',
 				data: data
 			}).then(function () {
-				$this.removeClass('loading').empty().html('<p>Thank you for contacting us. We will be in touch shortly.</p>');
+				$this.removeClass('loading')
+					.empty()
+					.html('<p>Thank you for contacting us. We will be in touch shortly.</p>');
+			}, function (jqxhr, textStatus, errorThrown) {
+				$this.removeClass('loading');
+				$this.find('.error').html('An error has occurred' +
+					(errorThrown ? ': ' + errorThrown : '') +
+					'. Please try again.');
 			});
 		});
 
@@ -73,6 +80,11 @@ var app = {
 					.empty()
 					.html('<p>Thank you! Your request has been received. Please wait for confirmation from the therapist.</p>');
 				self.appointmentForm = appointmentFormHtml;
+			}, function (jqxhr, textStatus, errorThrown) {
+				$this.removeClass('loading');
+				$this.find('.error').html('An error has occurred' +
+					(errorThrown ? ': ' + errorThrown : '') +
+					'. Please try again.');
 			});
 		});
 	},
