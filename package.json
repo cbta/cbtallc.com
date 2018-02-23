@@ -35,7 +35,7 @@
     "http-server": "^0.9.0",
     "node-sass": "^4.1.1",
     "postcss-cli": "^2.6.0",
-    "tobiko": "^1.0.1",
+    "tobiko": "^1.2.5",
     "watchify": "^3.7.0"
   },
   "license": "ISC",
