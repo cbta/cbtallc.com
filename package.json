@@ -12,11 +12,11 @@
     "copy": "sh bin/copy.sh",
     "clean": "rm -rf dist && mkdir -p dist",
     "css": "node-sass sass/main.scss dist/main.css && postcss -u autoprefixer -o dist/main.css dist/main.css && csso dist/main.css -o dist/main.css",
-    "css:watch": "node-sass -w sass/main.css dist/main.css",
+    "css:watch": "node-sass -w sass/main.scss dist/main.css",
     "js": "browserify js/app.js -o dist/app.js",
     "js:watch": "watchify js/app.js -o dist/app.js -dv",
     "build": "npm run js && npm run css && npm run tobiko",
-    "serve": "http-server dist -p 7000",
+    "serve": "http-server dist -p 15002 & npm run css:watch & npm run js:watch",
     "start": "npm run clean && npm run copy && ENV=dev npm run build && npm run serve",
     "ghpages": "gh-pages -d dist -b master -r git@github.com:cbta/cbta.github.io.git",
     "deploy": "npm run clean && npm run copy && npm run build && npm run ghpages"
