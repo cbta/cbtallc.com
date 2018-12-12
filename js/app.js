@@ -116,7 +116,10 @@ var app = {
 				googleCalendarId: 'cbtallc.com_6fob72tp6i9vs6t72hdng0bn38@group.calendar.google.com',
 				className: 'arubin'
 			}],
+			height: 'auto',
 			defaultView: calendarView,
+			minTime: '05:00:00',
+			maxTime: '21:00:00',
 			eventClick: function (calEvent, jsEvent, view) {
 				jsEvent.preventDefault();
 				var $form = $('.appointment-form');
