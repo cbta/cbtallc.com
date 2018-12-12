@@ -76,7 +76,11 @@
 
 .fc-event {
 	&.jvermilyea {
-		background-color: $blue;
-		border-color: $blue;
+		background-color: $international-orange;
+		border-color: $international-orange;
+	}
+	&.arubin {
+		background-color: $dark-orchid;
+		border-color: $dark-orchid;
 	}
 }

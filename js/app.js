@@ -103,17 +103,19 @@ var app = {
 				left: 'prev,next today',
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
+
 			};
 		}
 		$('.calendar').fullCalendar({
 			header: header,
-			eventSources: [
-				{
-					googleCalendarApiKey: 'AIzaSyBR4_LxJsWDMkcz0Zc-lt_vt9uxPhgycPE',
-					googleCalendarId: 'cep1ta6rnrasr0h68a9f3qir80@group.calendar.google.com',
-					className: 'jvermilyea'
-				}
-			],
+			googleCalendarApiKey: 'AIzaSyBR4_LxJsWDMkcz0Zc-lt_vt9uxPhgycPE',
+			eventSources: [{
+				googleCalendarId: 'cep1ta6rnrasr0h68a9f3qir80@group.calendar.google.com',
+				className: 'jvermilyea'
+			}, {
+				googleCalendarId: 'cbtallc.com_6fob72tp6i9vs6t72hdng0bn38@group.calendar.google.com',
+				className: 'arubin'
+			}],
 			defaultView: calendarView,
 			eventClick: function (calEvent, jsEvent, view) {
 				jsEvent.preventDefault();
