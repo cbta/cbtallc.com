@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
-    "fullcalendar": "^2.8.0",
+    "fullcalendar": "^3.9.0",
     "jquery": "^3.0.0",
     "moment": "^2.22.2"
   },
