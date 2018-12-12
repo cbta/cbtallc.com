@@ -19,7 +19,7 @@
     "serve": "http-server dist -p 15002 & npm run css:watch & npm run js:watch",
     "start": "npm run clean && npm run copy && ENV=dev npm run build && npm run serve",
     "ghpages": "gh-pages -d dist -b master -r git@github.com:cbta/cbta.github.io.git",
-    "deploy": "npm run clean && npm run copy && npm run build && npm run ghpages"
+    "deploy": "ENV= npm run clean && npm run copy && npm run build && npm run ghpages"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
