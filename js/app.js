@@ -125,8 +125,11 @@ var app = {
 				$('#therapist option').each(function () {
 					if ($(this).val() === therapist) {
 						$(this).prop('selected', true);
-						// since the select element is disabled, copy the value to the hidden therapist-input field
+						// since the select element is disabled,
+						// copy the value to the hidden therapist-input field
 						$('#therapist-input', $form).val($(this).text());
+						// set the hidden therapist-email field
+						$('#therapist-email', $form).val($(this).val() + '@cbtallc.com');
 					}
 				});
 				// bring over correct date and time to form
