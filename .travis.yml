@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '10'
 
-script: npm run copy && npm run build
+script: npm run clean && npm run copy && npm run build
 
 deploy:
   - provider: pages
@@ -10,7 +10,7 @@ deploy:
     github_token: $GITHUB_TOKEN
     repo: cbta/cbta.github.io
     target-branch: master
-    fqdn: cbtallc.com
+    fqdn: www.cbtallc.com
     local_dir: dist
     keep-history: true
     on:
