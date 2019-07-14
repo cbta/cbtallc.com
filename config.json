@@ -2,7 +2,7 @@
 	"site-name": "CBTA",
 	"site-url": "https://www.cbtallc.com",
 	"forms": {
-		"url": "https://api.tridnguyen.com/forms/",
+		"url": "https://forms.cloud.tridnguyen.com/",
 		"contact": "52e88da1fe75390200000003",
 		"appointment-request": "52e88f08fe75390200000004"
 	}
