@@ -15,9 +15,9 @@
 			}
 		]
 	},
-	"banner-outdated": {
-		"link": "#our-therapists",
-		"text": "Welcome Dr. Rubin to our practice!"
+	"banner": {
+		"link": "#covid-19",
+		"text": "COVID-19 and Telemedicine service"
 	},
 	"address": "394 Lowell Street, \nSuite 15 (2nd Floor), \n Lexington, MA 02420",
 	"phone": "6175317133",
