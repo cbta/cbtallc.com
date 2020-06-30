@@ -1,11 +1,11 @@
 <div class="header-banner">
-	{{#if content.banner}}
-		{{#if content.banner.link}}
-			<a href="{{content.banner.link}}">
+	{{#with global.index.banner}}
+		{{#if link}}
+			<a href="{{link}}">
 		{{/if}}
-			{{content.banner.text}}
-		{{#if content.banner.link}}
+			{{text}}
+		{{#if link}}
 			</a>
 		{{/if}}
-	{{/if}}
+	{{/with}}
 </div>
