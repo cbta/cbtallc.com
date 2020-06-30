@@ -16,8 +16,7 @@
     "js": "browserify js/app.js -o dist/app.js",
     "js:watch": "watchify js/app.js -o dist/app.js -dv",
     "build": "npm run js && npm run css && npm run tobiko",
-    "serve": "http-server dist -p 15002 & npm run css:watch & npm run js:watch",
-    "start": "npm run clean && npm run copy && ENV=dev npm run build && npm run serve",
+    "start": "npm run clean && npm run copy && ENV=dev npm run build && npm run css:watch & npm run js:watch",
     "ghpages": "gh-pages -d dist -b master -r git@github.com:cbta/cbta.github.io.git",
     "deploy": "npm run clean && npm run copy && ENV= npm run build && npm run ghpages"
   },

@@ -44,6 +44,15 @@ p {
 	border-bottom: 1px solid $dark-jean;
 	transition: height 2s linear;
 	text-align: center;
+	color: $dark-jean;
+	font-weight: bold;
+	padding: .5rem 0;
+	a {
+		text-decoration: underline;
+	}
+	a:hover {
+		color: $white;
+	}
 	&.urgent {
 		background-color: $red;
 		a {
@@ -51,16 +60,6 @@ p {
 			&:hover {
 				color: $dark-jean;
 			}
-		}
-	}
-	a {
-		color: $dark-jean;
-		display: inline-block;
-		font-weight: bold;
-		padding: .5rem 0;
-		text-decoration: underline;
-		&:hover {
-			color: $white;
 		}
 	}
 }

@@ -1,5 +1,11 @@
 <div class="header-banner">
 	{{#if content.banner}}
-		<a href="{{content.banner.link}}">{{content.banner.text}}</a>
+		{{#if content.banner.link}}
+			<a href="{{content.banner.link}}">
+		{{/if}}
+			{{content.banner.text}}
+		{{#if content.banner.link}}
+			</a>
+		{{/if}}
 	{{/if}}
 </div>
