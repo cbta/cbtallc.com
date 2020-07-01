@@ -46,13 +46,15 @@ p {
 	text-align: center;
 	color: $dark-jean;
 	font-weight: bold;
-	padding: .5rem 0;
 	a {
 		color: $dark-jean;
 		text-decoration: underline;
 	}
 	a:hover {
 		color: $white;
+	}
+	.text {
+		padding: .5rem 0;
 	}
 	&.urgent {
 		background-color: $red;

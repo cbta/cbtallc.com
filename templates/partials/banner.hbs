@@ -3,7 +3,9 @@
 		{{#if link}}
 			<a href="{{link}}">
 		{{/if}}
-			{{text}}
+		{{#if text}}
+				<span class="text">{{text}}</span>
+		{{/if}}
 		{{#if link}}
 			</a>
 		{{/if}}

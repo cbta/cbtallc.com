@@ -108,8 +108,8 @@ var app = {
 		}
 		$('.calendar').fullCalendar({
 			header: header,
-			// API Key from cbta-checkbook-analysis project
-			googleCalendarApiKey: 'AIzaSyB-5OknabkmVc64AX5_Yq_eu5Zg0bS7B24',
+			// API Key from Website project
+			googleCalendarApiKey: 'AIzaSyDC4VV1NvUTsDaph6uwKGADpmYfeVyBKcw',
 			eventSources: [{
 				googleCalendarId: 'cep1ta6rnrasr0h68a9f3qir80@group.calendar.google.com',
 				className: 'jvermilyea'
