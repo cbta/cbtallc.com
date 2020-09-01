@@ -31,8 +31,8 @@
     "browserify": "^16.2.3",
     "csso": "^2.3.0",
     "gh-pages": "^2.2.0",
-    "http-server": "^0.12.1",
-    "node-sass": "^4.13.1",
+    "http-server": "^0.12.3",
+    "node-sass": "^4.14.1",
     "postcss-cli": "^7.1.0",
     "tobiko": "^1.2.9",
     "watchify": "^3.11.1"
