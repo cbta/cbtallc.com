@@ -1,4 +1,8 @@
 # CBTALLC Redesigned
 
-[![Build Status](https://travis-ci.org/cbta/cbtallc.com.svg?branch=master)](https://travis-ci.org/cbta/cbtallc.com)
+## Contents
 
+### Therapists
+
+#### Photo editing
+This seems to be a good place to do some basic photo editing <https://photoshop.adobe.com/>.
