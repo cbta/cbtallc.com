@@ -69,7 +69,9 @@
 							</ul>
 							{{/if}}
 							{{#if phone}}
-								<a class="tel" href="tel:{{phone}}" data-toggle="tooltip" title="{{phone}} {{#if ext}}ext. {{ext}}{{/if}}"><i class="fa fa-phone"></i>Call {{title}}</a>
+								<a class="tel" href="tel:{{phone}}" data-toggle="tooltip" title="{{phone}} {{#if ext}}ext. {{ext}}{{/if}}"><i class="fa fa-phone"></i>
+									Call {{title}} {{#if ext}}(Ext {{ext}}){{/if}}
+								</a>
 							{{/if}}
 							{{#if email}}
 								<a class="email" href="mailto:{{email}}" data-toggle="tooltip" title="{{email}}"><i class="fa fa-envelope"></i>Email {{title}}</a>
