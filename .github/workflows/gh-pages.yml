@@ -1,0 +1,34 @@
+name: Deploy to GH Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # do not persist-credentials to allow git push to another repo
+          persist-credentials: 'false'
+
+      - name: Install deps
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        # subtree instructions from https://gist.github.com/tduarte/eac064b4778711b116bb827f8c9bef7b
+        run: |
+          git config --global user.name $GITHUB_ACTOR
+          git config --global user.email "deploy@cbtallc.com"
+          git add -f dist
+          git commit --no-verify -m "Update from commit cbta/cbtallc.com@$GITHUB_SHA"
+          git subtree split --prefix dist -b gh-pages
+          git remote add gh-pages https://x-access-token:${{ secrets.GH_PAGES_TOKEN }}@github.com/cbta/cbta.github.io.git
+          git push -f gh-pages gh-pages:master
