@@ -78,3 +78,9 @@
 		border-color: $dark-orchid;
 	}
 }
+
+.fc-toolbar .fc-center h2 {
+	@include at-most($big-bro-bear) {
+		font-size: 1.35em;
+	}
+}

@@ -24,6 +24,7 @@
     "@fullcalendar/core": "^4.4.2",
     "@fullcalendar/daygrid": "^4.4.2",
     "@fullcalendar/google-calendar": "^4.4.2",
+    "@fullcalendar/list": "^4.4.2",
     "@fullcalendar/timegrid": "^4.4.2",
     "bootstrap-sass": "^3.4.1",
     "jquery": "^3.5.0",

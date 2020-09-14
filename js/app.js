@@ -7,6 +7,7 @@ const { Calendar } = require('@fullcalendar/core');
 const googleCalendarPlugin = require('@fullcalendar/google-calendar').default;
 const timeGridPlugin = require('@fullcalendar/timegrid').default;
 const dayGridPlugin = require('@fullcalendar/daygrid').default;
+const listPlugin = require('@fullcalendar/list').default;
 const luxon = require('luxon');
 require('modal');
 require('tab');
@@ -92,28 +93,31 @@ var app = {
 		});
 	},
 	calendar: function () {
-		var self = this;
+		const self = this;
 		// initialize full calendar
 		let defaultView = 'timeGridDay';
-		var header = {
+		let header = {
 			left: 'prev,next',
 			center: 'title',
-			right: ''
+			right: 'listMonth,listWeek,timeGridDay'
 		};
 		if (window.matchMedia('(min-width: 800px)').matches) {
 			defaultView = 'timeGridWeek';
 			header = {
-				left: 'prev,next today',
+				left: 'prev,next,today',
 				center: 'title',
 				right: 'dayGridMonth,timeGridWeek,timeGridDay'
-
 			};
 		}
 		const calendarEl = document.getElementById('calendar');
 		const calendar = new Calendar(calendarEl, {
-			plugins: [ googleCalendarPlugin, dayGridPlugin, timeGridPlugin ],
+			plugins: [ googleCalendarPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
 			defaultView,
-			header: header,
+			header,
+			buttonText: {
+				listMonth: 'month',
+				listWeek: 'week',
+			},
 			// API Key from Website project
 			googleCalendarApiKey: 'AIzaSyDC4VV1NvUTsDaph6uwKGADpmYfeVyBKcw',
 			eventSources: [{
