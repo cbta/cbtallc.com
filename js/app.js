@@ -3,8 +3,11 @@
 var $ = require('jquery');
 window.jQuery = $;
 
-require('fullcalendar');
-require('fullcalendar/dist/gcal');
+const { Calendar } = require('@fullcalendar/core');
+const googleCalendarPlugin = require('@fullcalendar/google-calendar').default;
+const timeGridPlugin = require('@fullcalendar/timegrid').default;
+const dayGridPlugin = require('@fullcalendar/daygrid').default;
+const luxon = require('luxon');
 require('modal');
 require('tab');
 require('tooltip');
@@ -91,14 +94,14 @@ var app = {
 	calendar: function () {
 		var self = this;
 		// initialize full calendar
-		var calendarView = 'agendaDay';
+		let defaultView = 'timeGridDay';
 		var header = {
 			left: 'prev,next',
 			center: 'title',
 			right: ''
 		};
 		if (window.matchMedia('(min-width: 800px)').matches) {
-			calendarView = 'agendaWeek';
+			defaultView = 'timeGridWeek';
 			header = {
 				left: 'prev,next today',
 				center: 'title',
@@ -106,25 +109,31 @@ var app = {
 
 			};
 		}
-		$('.calendar').fullCalendar({
+		const calendarEl = document.getElementById('calendar');
+		const calendar = new Calendar(calendarEl, {
+			plugins: [ googleCalendarPlugin, dayGridPlugin, timeGridPlugin ],
+			defaultView,
 			header: header,
 			// API Key from Website project
 			googleCalendarApiKey: 'AIzaSyDC4VV1NvUTsDaph6uwKGADpmYfeVyBKcw',
 			eventSources: [{
 				googleCalendarId: 'cep1ta6rnrasr0h68a9f3qir80@group.calendar.google.com',
+				id: 'jvermilyea',
 				className: 'jvermilyea'
 			}, {
 				googleCalendarId: 'cbtallc.com_6fob72tp6i9vs6t72hdng0bn38@group.calendar.google.com',
+				id: 'arubin',
 				className: 'arubin'
 			}],
 			height: 'auto',
-			defaultView: calendarView,
 			minTime: '05:00:00',
 			maxTime: '21:00:00',
-			eventClick: function (calEvent, jsEvent, view) {
+			eventClick: function ({event, el, jsEvent, view}) {
 				jsEvent.preventDefault();
-				var $form = $('.appointment-form');
-				var therapist = calEvent.source.className[0];
+				const $form = $('.appointment-form');
+				const therapist = event.source.id;
+				const eventStart = luxon.DateTime.fromJSDate(event.start);
+				const eventEnd = luxon.DateTime.fromJSDate(event.end);
 				// check for therapist from selected appointment, select the right therapist
 				$('#therapist option').each(function () {
 					if ($(this).val() === therapist) {
@@ -137,8 +146,8 @@ var app = {
 					}
 				});
 				// bring over correct date and time to form
-				$('#app-date', $form).val(calEvent.start.format('MMM D, YYYY'));
-				$('#app-time', $form).val(calEvent.start.format('h:mm A') + ' - ' + calEvent.end.format('h:mm A'));
+				$('#app-date', $form).val(eventStart.toFormat('LLL d, y'));
+				$('#app-time', $form).val(eventStart.toFormat('hh:mm a') + ' - ' + eventEnd.toFormat('hh:mm a'));
 				$('.appointment-form').modal()
 					.on('hidden.bs.modal', function () {
 						// reset form if there is form html
@@ -151,6 +160,7 @@ var app = {
 					});
 			}
 		});
+		calendar.render();
 	},
 	tabs: function () {
 		// // tabs

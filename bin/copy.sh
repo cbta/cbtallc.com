@@ -2,7 +2,9 @@
 # http://unix.stackexchange.com/questions/102891/posix-compliant-way-to-work-with-a-list-of-filenames-possibly-with-whitespace
 
 ASSETS="
-node_modules/fullcalendar/dist/fullcalendar.min.css
+node_modules/@fullcalendar/core/main.css fullcalendar.css
+node_modules/@fullcalendar/daygrid/main.css daygrid.css
+node_modules/@fullcalendar/timegrid/main.css timegrid.css
 CNAME
 favicon.ico
 "
