@@ -5,6 +5,7 @@ ASSETS="
 node_modules/@fullcalendar/core/main.css fullcalendar.css
 node_modules/@fullcalendar/daygrid/main.css daygrid.css
 node_modules/@fullcalendar/timegrid/main.css timegrid.css
+node_modules/@fullcalendar/list/main.css list.css
 CNAME
 favicon.ico
 "

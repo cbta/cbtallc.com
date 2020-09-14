@@ -68,19 +68,8 @@
 	background-color: $background-light;
 }
 
-.fc-event {
-	&.jvermilyea {
-		background-color: $international-orange;
-		border-color: $international-orange;
-	}
-	&.arubin {
-		background-color: $dark-orchid;
-		border-color: $dark-orchid;
-	}
-}
-
 .fc-toolbar .fc-center h2 {
 	@include at-most($big-bro-bear) {
-		font-size: 1.35em;
+		font-size: 1.25em;
 	}
 }

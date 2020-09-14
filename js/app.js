@@ -123,11 +123,11 @@ var app = {
 			eventSources: [{
 				googleCalendarId: 'cep1ta6rnrasr0h68a9f3qir80@group.calendar.google.com',
 				id: 'jvermilyea',
-				className: 'jvermilyea'
+				color: '#f4511e', // international-orange
 			}, {
 				googleCalendarId: 'cbtallc.com_6fob72tp6i9vs6t72hdng0bn38@group.calendar.google.com',
 				id: 'arubin',
-				className: 'arubin'
+				color: '#8e24aa', // dark-orchid
 			}],
 			height: 'auto',
 			minTime: '05:00:00',
