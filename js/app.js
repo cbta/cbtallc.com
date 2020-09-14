@@ -105,7 +105,7 @@ var app = {
 			header = {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
+				right: 'dayGridMonth,timeGridWeek,timeGridDay'
 
 			};
 		}
