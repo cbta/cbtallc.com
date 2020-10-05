@@ -110,6 +110,9 @@ var app = {
 			};
 		}
 		const calendarEl = document.getElementById('calendar');
+		if (!calendarEl) {
+			return;
+		}
 		const calendar = new Calendar(calendarEl, {
 			plugins: [ googleCalendarPlugin, dayGridPlugin, timeGridPlugin, listPlugin ],
 			defaultView,
