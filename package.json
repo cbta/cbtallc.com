@@ -32,15 +32,15 @@
     "moment": "^2.22.2"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
+    "autoprefixer": "^10.4.7",
     "browserify": "^16.2.3",
     "csso": "^2.3.0",
     "gh-pages": "^2.2.0",
-    "http-server": "^0.12.3",
-    "node-sass": "^4.14.1",
+    "http-server": "^14.1.0",
+    "node-sass": "^7.0.1",
     "postcss-cli": "^7.1.0",
     "tobiko": "^1.2.9",
-    "watchify": "^3.11.1"
+    "watchify": "^4.0.0"
   },
   "license": "ISC",
   "browser": {
