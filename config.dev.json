@@ -1,6 +1,6 @@
 {
 	"site-name": "CBTA",
-	"site-url": "https://lab.tridnguyen.com/cbtallc",
+	"site-url": "http://localhost:3000",
 	"forms": {
 		"url": "https://hookb.in/v9ra83eo",
 		"contact": "",
