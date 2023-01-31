@@ -11,4 +11,4 @@ buttons:
 
 Thoughts shape who we are and what we see around us. Our thoughts color all of our experiences and relationships. Some people may see their experience in black and white, good or bad. The therapists at CBTA try to help our patients develop a broader palette from which to paint their world.
 
-Learn more about <a href="/treatments">what we treat</a>.
+Learn more about <a href="/treatments" style="text-decoration:underline;color:#FFFDF8;">what we treat</a>.

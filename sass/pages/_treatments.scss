@@ -49,7 +49,7 @@
 			&.active:hover {
 				a {
 					background-color: $background-darker;
-					border-top-color: $darker-green;
+					border-top-color: $orange;
 					border-top-width: 4px;
 					border-left: none;
 					border-right: none;
@@ -61,7 +61,7 @@
 				cursor: pointer;
 				a {
 					background-color: $background-darker;
-					border-top-color: $dark-green;
+					border-top-color: $light-orange;
 					border-top-width: 4px;
 					color: $very-dark-jean;
 				}
