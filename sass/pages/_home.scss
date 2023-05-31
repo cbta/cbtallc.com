@@ -1,29 +1,12 @@
 .home {
-	.background-wrapper {
-		position: relative;
-		&:after {
-			background-image: url('boston.png');
-			background-repeat: no-repeat;
-			background-size: cover;
-			content: "";
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			opacity: 0.1;
-			position: absolute;
-			z-index: -1;
-		}
-	}
 	.section-title {
 		text-align: center;
 	}
-	#covid-19 {
-		@extend .wrapper;
-		border-bottom: 1px solid $background-darker;
-		padding-top: 1.5em;
-		padding-bottom: 2em;
-		max-width: 80em;
+	.section-title-orange {
+		text-align: center;
+	}
+	.section-title-white {
+		text-align: center;
 	}
 	.intro {
 		@extend %clearfix;
@@ -38,14 +21,19 @@
 		}
 		p {
 			margin-top: 0;
+			color: $orange;
+			text-align: center;
 		}
 	}
+	h2 {
+		font-family: 'Brandon Grotesque Light', sans-serif; 
+		font-size: 40px; 
+	}
 	p {
-		color: $very-dark-jean;
+		font-family: 'Avenir', Helvetica, sans-serif;
 		line-height: 1.4;
-		@media (min-width: $bro-bear) {
-			font-size: 1.5rem;
-		}
+		font-size: 20px; 
+		color: $very-dark-jean;
 	}
 	.button {
 		@extend %button;
@@ -62,10 +50,9 @@
 // What we do
 .services {
 	@extend %clearfix;
-	padding-bottom: 2em;
-	.section-title {
-		padding: 0;
-	}
+	padding-bottom: 5em;
+	padding-top: 5em;
+	background-color: $background-orange;
 	.service-wrapper {
 		@extend .wrapper;
 		padding-top: 1em;
@@ -73,13 +60,12 @@
 	}
 	.tabs-menu {
 		@extend %clearfix;
-		border: 2px solid darken($background-darker, 10%);
 		display: table;
 		list-style: none;
 		margin: 0 auto;
 		padding: 0;
 		li {
-			background-color: $background-dark;
+			background-color: $background-white;
 			width: 50%;
 			float: left;
 			padding: 1em;
@@ -88,15 +74,15 @@
 				width: auto;
 			}
 			&.active {
-				background-color: $background-darker;
+				background-color: $background-white;
 				a {
-					color: $very-dark-jean;
+					color: $orange;
 				}
 			}
 			&:hover {
 				cursor: pointer;
 				a {
-					color: $very-dark-jean;
+					color: $orange;
 				}
 			}
 		}
@@ -112,21 +98,25 @@
 		}
 	}
 	.tabs-content {
-		border: 3px solid darken($background-darker, 10%);
+		border: 3px solid $text-white;
 		border-radius: 4px 4px 0 0;
 		margin-top: -2em;
 		padding: 3em 2em 1em;
+		color: $text-white;
 		ul {
 			@media (min-width: $bro-bear) {
 				font-size: 1.5em;
 			}
 		}
 		li {
-			margin-bottom: 0.5em;
+			font-family: 'Avenir', Helvetica, sans-serif;
 		}
 	}
 	.service {
 		display: none;
+		p {
+			color: $text-white;
+		}
 		&.active {
 			display: block;
 		}
@@ -137,16 +127,27 @@
 		.button {
 			display: inline-block;
 			margin-top: 0.5em;
+			color: $orange;
+			&:hover {
+				background-color: $background-white;
+				color: $brown;
+			}
 		}
 	}
 }
 
 // Therapists
 .therapists {
-	border-top: 2px solid $background-darker;
-	border-bottom: 2px solid $background-darker;
 	padding: 1em 0 2em;
 	.section-title {
+		@extend .wrapper;
+		text-align: center;
+	}
+	.section-title-orange {
+		@extend .wrapper;
+		text-align: center;
+	}
+	.section-title-white {
 		@extend .wrapper;
 		text-align: center;
 	}
@@ -166,7 +167,7 @@
 		}
 		&.active {
 			img {
-				border-color: $green;
+				border-color: $orange;
 			}
 		}
 		a {
@@ -174,8 +175,8 @@
 			text-decoration: none;
 		}
 		img {
-			background-color: #fff;
-			border: 5px solid $background-darker;
+			background-color: $background-white;
+			border: 5px solid $light-orange;
 			border-radius: 50%;
 			box-shadow: 0 0 1px rgba(0,0,0,.3), inset 0 0 1px rgba(0,0,0,.2);
 			display: block;
@@ -185,11 +186,11 @@
 			max-width: 150px;
 			max-height: 150px;
 			&:hover {
-				border-color: $green;
+				border-color: $orange;
 			}
 		}
 		h3 {
-			color: $very-dark-jean;
+			color: $orange;
 			font-size: 1em;
 			margin: 0.5em 0;
 			text-align: center;
@@ -226,7 +227,7 @@
 			}
 		}
 		h1 {
-			color: $red;
+			color: $orange;
 			font-family: $feature-font;
 			margin-top: 0;
 		}
@@ -243,7 +244,7 @@
 		}
 		.tel,
 		.email {
-			background-color: $green;
+			background-color: $orange;
 			border: none;
 			color: #fff;
 			display: inline-block;
@@ -262,6 +263,21 @@
 		.tooltip {
 			font-size: 1.1em;
 		}
+	}
+}
+
+.covid-19 {
+	@extend %clearfix;
+	background-color: $background-orange;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	p {
+		color: $text-white;
+		margin: 0 8em;
+		text-align: center;
+	}
+	a {
+		color: $text-white;
 	}
 }
 
@@ -318,7 +334,7 @@
 		border: 1px solid $background-darker;
 		font-size: 1.5em;
 		&:focus {
-			outline: $green auto 5px;
+			outline: $orange auto 5px;
 		}
 		&.error {
 			outline: $red auto 5px;
@@ -354,12 +370,18 @@
 		}
 		input[type="submit"] {
 			@extend %button;
+			background-color: $orange;
+			color: $text-white;
 			border-top: none;
 			border-left: none;
 			border-right: none;
 			font-size: 1.5em;
 			float: right;
 			text-transform: uppercase;
+			&:hover {
+				background-color: $orange;
+				color: $brown;
+			}
 		}
 		&.hidden {
 			display: none;

@@ -12,9 +12,15 @@ $mama-bear: 900px;
 $papa-bear:  1000px;
 
 /* Colors */
+$logo-orange: #F1B73F;
+
 $background-light: #f8f8f8;
+$background-white: #FFFDF8;
 $background-dark: #eee;
 $background-darker: #d5d5d5;
+$background-orange: #F1B73F;
+
+$text-white: #FFFDF8;
 
 $red: #dd514c;
 $blue: #3498db;
@@ -24,6 +30,10 @@ $dark-green: #27ae60;
 $darker-green: #277f56;
 $international-orange: #f4511e;
 $dark-orchid: #8e24aa;
+$light-orange: #FCEBB2;
+$orange: #FCB400;
+$brown: #795C1B;
+$header-background: #FFFDF8;
 
 $dark-jean: #313841;
 $very-dark-jean: #1c242b;
@@ -49,6 +59,16 @@ $input-border-focus: $green;
 	}
 }
 
+@font-face {
+	font-family: 'Avenir';
+	src: url('../fonts/Avenir.eot?#iefix') format('embedded-opentype'),  url('../fonts/Avenir.svg#Avenir') format('svg');
+}
+
+@font-face {
+	font-family: "Brandon-Grotesque-Thin";
+	src: url('https://fonts.cdnfonts.com/css/brandon-grotesque-regular');
+}
+
 %clearfix {
 	&:after {
 		content: "";
@@ -58,13 +78,11 @@ $input-border-focus: $green;
 }
 
 %button {
-	background-color: $green;
-	border-bottom: 4px solid $dark-green;
+	background-color: $background-white;
 	border-radius: 2px;
-	color: $white;
 	line-height: 1;
 	padding: 0.5em 1em;
 	&:hover {
-		background-color: $dark-green;
+		background-color: $light-orange;
 	}
 }
