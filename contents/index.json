@@ -4,7 +4,7 @@
 	"template": "index.hbs",
 	"intro": {
 		"heading": "Welcome to Cognitive Behavior Therapy Associates",
-		"content": "Cognitive Behavior Therapy Associates, LLC. (CBTA) is a group of highly specialized licensed psychologists located in Lexington, MA, serving the Greater Boston Area. Using cognitive and behavioral therapies, our therapists work together with patients to solve their puzzles one piece at a time.",
+		"content": "Cognitive Behavior Therapy Associates, LLC. (CBTA) is a group of highly specialized licensed psychologists and other healthcare providers located in Lexington, MA, serving the Greater Boston Area. Using cognitive and behavioral therapies, our therapists work together with patients to solve their puzzles one piece at a time.",
 		"buttons": [
 			{
 				"title": "Request an Appointment",
