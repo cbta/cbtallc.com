@@ -4,7 +4,7 @@
 	"template": "index.hbs",
 	"intro": {
 		"heading": "Welcome to Cognitive Behavior Therapy Associates",
-		"content": "Cognitive Behavior Therapy Associates, LLC. (CBTA) is a group of highly specialized licensed psychologists and other healthcare providers located in Lexington, MA, serving the Greater Boston Area. Using cognitive and behavioral therapies, our therapists work together with patients to solve their puzzles one piece at a time.",
+		"content": "Cognitive Behavior Therapy Associates, LLC. (CBTA) is a group of highly specialized licensed psychologists and other healthcare providers serving Massachusetts, including the Cape and Islands, via teletherapy. Using cognitive and behavioral therapies, our therapists work together with patients to solve their puzzles one piece at a time.",
 		"buttons": [
 			{
 				"title": "Request an Appointment",
@@ -15,7 +15,7 @@
 			}
 		]
 	},
-	"address": "394 Lowell Street, \nSuite 15 (2nd Floor), \n Lexington, MA 02420",
+	"address": "20 Forest Street, \n# 1020, \n Medford, MA 02155",
 	"phone": "6175317133",
 	"fax": "7812810644"
 }
