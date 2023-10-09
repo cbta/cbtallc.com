@@ -1,6 +1,7 @@
 .page {
-	padding-top: 2rem;
-	height: calc(100vh - 10rem);
+	min-height: calc(100vh - 10rem);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	.main-content {
 		font-size: 1.2rem;
 		p {
