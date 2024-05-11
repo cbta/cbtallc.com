@@ -1,0 +1,5 @@
+{
+	"title": "Medical Records",
+	"name": "medical-records",
+	"template": "medical-records.hbs"
+}
