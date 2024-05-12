@@ -2,10 +2,10 @@
 	<div class="treatments">
 		<section id="anxiety" class="anxiety">
 			<div class="wrapper">
-				<h2 class="section-title">Anxiety</h2>
+				<h2 class="section-title">Client Info</h2>
 				<div class="menu-wrapper">
 					<ul class="nav nav-tabs tabs-menu">
-						{{#each anxiety}}
+						{{#each language}}
 						<li class="{{#isEqual url-title "english"}}active{{/isEqual}}">
 							<a href="#{{url-title}}" data-toggle="tab">{{title}}</a>
 						</li>
@@ -13,7 +13,7 @@
 					</ul>
 				</div><!-- .menu-wrapper -->
 				<div class="tab-content well">
-					{{#each anxiety}}
+					{{#each language}}
 					<div class="tab-pane treatment fade {{#isEqual url-title "english"}}in active{{/isEqual}}" id="{{url-title}}">
 						{{{main}}}
 					</div><!-- treatment -->
@@ -21,13 +21,5 @@
 				</div><!-- .tabs-content -->
 			</div><!-- .wrapper -->
 		</section><!-- .anxiety -->
-		<section id="depression" class="depression">
-			<div class="title-wrapper">
-				<h2 class="section-title">Depression</h2>
-			</div>
-			<div class="content wrapper well">
-				{{{depression.main}}}
-			</div>
-		</section><!-- .depression -->
 	</div>
 {{> footer}}

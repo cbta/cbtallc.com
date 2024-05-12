@@ -170,7 +170,8 @@
 		margin: 1em 0;
 		padding: 0 1em;
 		@media (min-width: $big-bro-bear) {
-			width: 33.33333%;
+			// width: 33.33333%;
+			width: 100%
 		}
 		&.active {
 			img {
@@ -281,7 +282,7 @@
 		@extend %clearfix;
 		@media (min-width: $big-bro-bear) {
 			float: left;
-			width: 50%;
+			width: 100%;
 		}
 	}
 	.info {
