@@ -71,7 +71,7 @@ p {
 .main-header {
 	@extend %clearfix;
 	background-color: $dark-jean;
-	padding: 2em 0;
+	padding: 1.5em 0;
 	.header-wrap {
 		@extend .wrapper;
 		@include at-most($bro-bear) {

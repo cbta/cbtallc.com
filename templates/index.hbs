@@ -10,12 +10,12 @@
 				<div class="service-wrapper">
 					<ul class="services-menu tabs-menu">
 						{{#each services}}
-						<li class="{{#isEqual url-title "immigration"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
+						<li class="{{#isEqual url-title "english"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
 						{{/each}}
 					</ul><!-- .services-menu -->
 					<div class="tabs-content">
 						{{#each services}}
-						<div class="service {{#isEqual url-title "immigration"}}active{{/isEqual}}" id="{{url-title}}">
+						<div class="service {{#isEqual url-title "english"}}active{{/isEqual}}" id="{{url-title}}">
 						{{{main}}}
 						<div class="button-wrap">
 							{{#each buttons}}
