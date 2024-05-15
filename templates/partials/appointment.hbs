@@ -1,5 +1,4 @@
 <form class="form-horizontal" role="form" id="appointment-request" method="post" data-url="{{config.forms.url}}{{config.forms.appointment-request}}">
-	<p>This appointment request is only available for returning patients. If you're a new patient, please <a href="/#contact-us">contact us</a> first.</p>
 	<h3>Appointment Time</h3>
 	<div class="form-group">
 		<label for="appointment-date" class="control-label col-sm-3">Date</label>
@@ -32,7 +31,7 @@
 			<input type="tel" class="form-control" name="phone" required>
 		</div>
 	</div>
-	<div class="form-group">
+	{{!-- <div class="form-group">
 		<label for="therapist" class="control-label col-sm-3">Therapist</label>
 		<div class="col-sm-8">
 			<select id="therapist" class="form-control" disabled>
@@ -40,7 +39,7 @@
 				<option value="arubin">Dr. Rubin</option>
 			</select>
 		</div>
-	</div>
+	</div> --}}
 	<div class="form-group">
 		<label for="comment" class="control-label col-sm-3">Comment</label>
 		<div class="col-sm-8">
@@ -49,7 +48,7 @@
 	</div>
 	<input type="hidden" id="therapist-input" name="therapist" value=""/>
 	<input type="hidden" id="therapist-email" name="therapist-email" value=""/>
-	<p class="help-block">* Please note that your appointment is NOT booked until you receive a confirmation from your therapist.</p>
+	<p class="help-block">* Please note that your appointment is NOT booked until you receive a confirmation from us.</p>
 	<div class="form-group">
 		<div class="col-sm-9">
 			<div class="checkbox disclaimer">
