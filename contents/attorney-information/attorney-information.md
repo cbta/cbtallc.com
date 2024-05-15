@@ -20,7 +20,7 @@ In the past, our clinical interviews have helped clients in cases involving:
 
 We can only do evaluations of petitioners who are:
 <ul>
-    <li>Located in Massachusetts at the time of the video intervie.</li>
+    <li>Located in Massachusetts at the time of the video interview.</li>
     <li>Are age 12 or over with the consent of their parent.</li>
 </ul>
 
