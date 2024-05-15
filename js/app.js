@@ -82,7 +82,7 @@ var app = {
 			}).then(function () {
 				$this.removeClass('loading')
 					.empty()
-					.html('<p>Thank you! Your request has been received. Please wait for confirmation from the therapist.</p>');
+					.html('<p>Thank you! Your request has been received. Please wait for confirmation from us.</p>');
 				self.appointmentForm = appointmentFormHtml;
 			}, function (jqxhr, textStatus, errorThrown) {
 				$this.removeClass('loading');
