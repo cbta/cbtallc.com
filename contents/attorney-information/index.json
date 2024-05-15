@@ -1,0 +1,5 @@
+{
+	"title": "Attorney Information",
+	"name": "attorney-information",
+	"template": "attorney-information.hbs"
+}
