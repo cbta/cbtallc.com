@@ -1,0 +1,25 @@
+{{> header}}
+	<div class="client-info">
+		<section id="languages" class="languages">
+			<div class="wrapper">
+				<h2 class="section-title">Client Info</h2>
+				<div class="menu-wrapper">
+					<ul class="nav nav-tabs tabs-menu">
+						{{#each language}}
+						<li class="{{#isEqual url-title "english"}}active{{/isEqual}}">
+							<a href="#{{url-title}}" data-toggle="tab">{{title}}</a>
+						</li>
+						{{/each}}
+					</ul>
+				</div><!-- .menu-wrapper -->
+				<div class="tab-content well">
+					{{#each language}}
+					<div class="tab-pane treatment fade {{#isEqual url-title "english"}}in active{{/isEqual}}" id="{{url-title}}">
+						{{{main}}}
+					</div><!-- treatment -->
+					{{/each}}
+				</div><!-- .tabs-content -->
+			</div><!-- .wrapper -->
+		</section><!-- .languages -->
+	</div>
+{{> footer}}

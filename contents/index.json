@@ -1,21 +1,22 @@
 {
-	"title": "Cognitive Behavior Therapy Associates, LLC.",
+	"title": "CBTA LLC is Closing",
 	"name": "home",
 	"template": "index.hbs",
 	"intro": {
 		"heading": "Welcome to Cognitive Behavior Therapy Associates",
-		"content": "Cognitive Behavior Therapy Associates, LLC. (CBTA) is a group of highly specialized licensed psychologists and other healthcare providers serving Massachusetts, including the Cape and Islands, via teletherapy. Using cognitive and behavioral therapies, our therapists work together with patients to solve their puzzles one piece at a time.",
+		"content": "As of June 12th 2024, your health records from this Practice will be transferred to Morgan Records Management, LLC (the “Records Custodian”). The Records Custodian will continue to maintain your records in accordance with applicable confidentiality and security standards and with other applicable laws. Your records will be destroyed no less than six years after the last date of services you received from this Practice, although most records will be held for at least 10 years from the date of last service. \n\nIn the future if you wish to have a copy of your records sent to you or to another provider or facility, you may submit a request to the Records Custodian by mail, online or by phone after June 17, 2024. Requests should be directed to: \"Morgan Records Management: Medical Records\". \n\t• Online: MorganRecordsManagement.com -> Medical Records Requests -> Request My Medical Records \n\t• By Email: Medical@MorganRM.com \n\t• Phone (O): 833-888-0061",
 		"buttons": [
 			{
 				"title": "Request an Appointment",
 				"link": "calendar"
-			}, {
+			},
+			{
 				"title": "Contact us",
 				"link": "#contact-us"
 			}
 		]
 	},
-	"address": "20 Forest Street, \n# 1020, \n Medford, MA 02155",
-	"phone": "6175317133",
+	"address": "Mailing (only): 20 Forest Street, P.O. Box 1020, Medford, MA 02155",
+	"phone": "3392247695",
 	"fax": "7812810644"
 }

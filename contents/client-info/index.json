@@ -1,0 +1,5 @@
+{
+	"title": "Client Info",
+	"name": "client-info",
+	"template": "client-info.hbs"
+}

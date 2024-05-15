@@ -17,6 +17,7 @@ p {
 }
 .section-title {
 	color: $red;
+	text-align: center;
 	font-family: $feature-font;
 	font-size: 2rem;
 	font-weight: 700;
@@ -70,7 +71,7 @@ p {
 .main-header {
 	@extend %clearfix;
 	background-color: $dark-jean;
-	padding: 2em 0;
+	padding: 1.5em 0;
 	.header-wrap {
 		@extend .wrapper;
 		@include at-most($bro-bear) {

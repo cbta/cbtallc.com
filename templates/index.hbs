@@ -3,20 +3,19 @@
 	<div class="body home">
 		<div class="background-wrapper">
 			<section class="intro">
-				<h2 class="section-title">Who We Are</h2>
-				<p>{{content.intro.content}}</p>
+				<p>CBTA is no longer taking new patients. If you were a patient prior to the closing of the psychotherapy practice on 6/14/2024, you can access your medical record <a href="/medical-records/">here</a>. </p>
 			</section>
 			<section id="our-services" class="services">
-				<h2 class="section-title">Our Services</h2>
+				<h2 class="section-title">Immigration Services</h2>
 				<div class="service-wrapper">
 					<ul class="services-menu tabs-menu">
 						{{#each services}}
-						<li class="{{#isEqual url-title "cbt"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
+						<li class="{{#isEqual url-title "english"}}active{{/isEqual}}"><a href="#{{url-title}}">{{title}}</a></li>
 						{{/each}}
 					</ul><!-- .services-menu -->
 					<div class="tabs-content">
 						{{#each services}}
-						<div class="service {{#isEqual url-title "cbt"}}active{{/isEqual}}" id="{{url-title}}">
+						<div class="service {{#isEqual url-title "english"}}active{{/isEqual}}" id="{{url-title}}">
 						{{{main}}}
 						<div class="button-wrap">
 							{{#each buttons}}
@@ -30,7 +29,7 @@
 			</section><!-- .services -->
 		</div>
 		<section id="our-therapists" class="therapists">
-			<h1 class="section-title">Our Therapists</h1>
+			<h1 class="section-title">About Dr. Vermilyea</h1>
 			<div class="wrapper">
 				<div class="therapist-stubs">
 					{{#each therapists}}
@@ -72,15 +71,10 @@
 		</section><!-- .therapists -->
 		<section id="contact-us" class="contact">
 			<div class="wrapper">
-				<section class="form" id="contact-us">
-					<h1 class="section-title">Contact Us</h1>
-					{{> contact}}
-				</section><!-- #contact-us -->
 				<section id="location" class="info" id="location">
-					<h1 class="section-title">By Mail</h1>
+					<h1 class="section-title">Contact Us</h1>
 					<p>{{{nl2br content.address}}}</p>
 					<p>Phone: <a class="tel" href="tel:{{content.phone}}">{{parsePhone content.phone}}</a><br/>
-					Fax: {{parsePhone content.fax}}</p>
 				</section><!-- #location -->
 			</div><!--. wrapper -->
 		</section><!-- .contact -->
