@@ -336,7 +336,9 @@
 	}
 	input[type="text"],
 	input[type="email"],
-	input[type="tel"] {
+	input[type="tel"],
+	input[type="attorney"],
+	input[type="attorneyPhone"] {
 		height: 2em;
 	}
 	.field {
