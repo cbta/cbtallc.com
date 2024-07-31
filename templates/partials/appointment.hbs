@@ -46,7 +46,7 @@
 	<div class="form-group">
 		<label for="petition" class="control-label col-sm-3">Petition Type</label>
 		<div class="col-sm-8">
-			<select id="petition" class="form-control" name="Petition Type">
+			<select id="petitionType" class="form-control" name="Petition Type">
 				<option value="Hardship Waver or Forgiveness">Hardship Waiver or Forgiveness</option>
 				<option value="VAWA Domestic Violence">VAWA Domestic Violence</option>
 				<option value="Asylum">Asylum</option>
@@ -56,7 +56,7 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="petition" class="control-label col-sm-3">Is it safe for Dr. Vermilyea text you about the appointment?</label>
+		<label for="safety" class="control-label col-sm-3">Is it safe for Dr. Vermilyea text you about the appointment?</label>
 		<div class="col-sm-8">
 			<select id="petition" class="form-control" name="Is it safe for Dr. V to text the petitioner">
 				<option value="No">No</option>
@@ -65,7 +65,7 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="petition" class="control-label col-sm-3">Is the person being evaluated fluent in English?</label>
+		<label for="englishFluency" class="control-label col-sm-3">Is the person being evaluated fluent in English?</label>
 		<div class="col-sm-8">
 			<select id="petition" class="form-control" name="Is the Petitioner Fluent in English">
 				<option value="No">No</option>
@@ -74,7 +74,7 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="petition" class="control-label col-sm-3">If you are not fluent in English, do you have your own professional interpreter?</label>
+		<label for="interpreter" class="control-label col-sm-3">If you are not fluent in English, do you have your own professional interpreter?</label>
 		<div class="col-sm-8">
 			<select id="petition" class="form-control" name="Does the Petitioner have an Interpreter">
 				<option value="No, because fluent in English">No, because I am fluent in English</option>
@@ -89,8 +89,8 @@
 			<textarea class="form-control" rows="3" name="Comment"></textarea>
 		</div>
 	</div>
-	<input type="hidden" id="therapist-input" name="therapist" value=""/>
-	<input type="hidden" id="therapist-email" name="therapist-email" value=""/>
+	{{!-- <input type="hidden" id="therapist-input" name="therapist" value=""/> --}}
+	{{!-- <input type="hidden" id="therapist-email" name="therapist-email" value=""/> --}}
 	<p class="help-block">* Please note that your appointment is NOT booked until you receive a confirmation from us.</p>
 	<p class="help-block">* If you do not have a professional interpreter for Spanish or Portuguese, Dr. Vermilyea works with Mrs. Tanya Pineda-Lehnert as his preferred translator. Please contact her at 617-669-3419.</p>
 	<div class="form-group">
