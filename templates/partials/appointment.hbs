@@ -82,6 +82,7 @@
 				<option value="Yes">Yes, I have my own professional interpreter</option>
 			</select>
 		</div>
+		<p class="help-block">* If you do not have a professional interpreter for Spanish or Portuguese, Dr. Vermilyea works with Mrs. Tanya Pineda-Lehnert as his preferred translator. Please contact her at 617-669-3419.</p>
 	</div>
 	<div class="form-group">
 		<label for="comment" class="control-label col-sm-3">Comment</label>
@@ -89,10 +90,23 @@
 			<textarea class="form-control" rows="3" name="Comment"></textarea>
 		</div>
 	</div>
+
+	<p class="help-block">Please note that you MUST be in Massachusetts at the time of your appointment.</p>
+	<div class="form-group">
+		<label for="presentInMA" class="control-label col-sm-3">Do you swear that you are or will be in Massachusetts for your appointment with Dr. Jim Vermilyea?</label>
+		<div class="col-sm-8">
+			<select id="petition" class="form-control" name="Will the client be physically present in MA during the appointment?">
+				<option value="Yes, I will be in Massachusetts">Yes, I will be in Massachusetts</option>
+				<option value="NO, I cannot say I will be in Massachusetts for the appointment">NO I cannot say I will be in Massachusetts for the appointment</option>
+			</select>
+		</div>
+	</div>
+	
 	{{!-- <input type="hidden" id="therapist-input" name="therapist" value=""/> --}}
 	{{!-- <input type="hidden" id="therapist-email" name="therapist-email" value=""/> --}}
-	<p class="help-block">* Please note that your appointment is NOT booked until you receive a confirmation from us.</p>
-	<p class="help-block">* If you do not have a professional interpreter for Spanish or Portuguese, Dr. Vermilyea works with Mrs. Tanya Pineda-Lehnert as his preferred translator. Please contact her at 617-669-3419.</p>
+	<p class="help-block">* Your appointment is NOT booked until you receive a confirmation from us.</p>
+	<p class="help-block">* You meeting will be on Microsoft Teams. Install the app on your phone. If you are using a computer, you will not need to do this. Set this up the day BEFORE your appointment.</p>
+
 	<div class="form-group">
 		<div class="col-sm-9">
 			<div class="checkbox disclaimer">
