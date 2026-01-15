@@ -47,11 +47,13 @@
 		<label for="petition" class="control-label col-sm-3">Petition Type</label>
 		<div class="col-sm-8">
 			<select id="petitionType" class="form-control" name="Petition Type">
+				<option value="" disabled selected>Please select one</option>
 				<option value="Hardship Waver or Forgiveness">Hardship Waiver or Forgiveness</option>
 				<option value="VAWA Domestic Violence">VAWA Domestic Violence</option>
 				<option value="Asylum">Asylum</option>
 				<option value="U-visa as a Victim of a Violent Crime">U-Visa as a Victim of a Violent Crime</option>
 				<option value="Other">Other - Please Add Details in Comment</option>
+				<option value="I don't known">I don't know.</option>
 			</select>
 		</div>
 	</div>
@@ -74,16 +76,16 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="interpreter" class="control-label col-sm-3">If you are not fluent in English, do you have your own professional interpreter?</label>
+		<label for="interpreter" class="control-label col-sm-3">If the person being evaluated is not fluent in English, do they have their own professional interpreter?</label>
 		<div class="col-sm-8">
-			<select id="petition" class="form-control" name="Does the Petitioner have an Interpreter">
-				<option value="No, because fluent in English">No, because I am fluent in English</option>
-				<option value="No, but not flient in English">No, but I am not fluent in English</option>
-				<option value="Yes">Yes, I have my own professional interpreter</option>
+			<select id="petition" class="form-control" name="Does the Petitioner have an Professional Interpreter">
+				<option value="No interpreter, but not flient in English">No interpreter, the petitioner is also not fluent in English</option>
+				<option value="No interpreter, because fluent in English">No interpreter needed, because the petitioner is fluent in English</option>
+				<option value="Yes the petitioner has their own professional interpreter">Yes the petitioner have their own professional interpreter</option>
 			</select>
 		</div>
-		<p class="help-block">* If you do not have a professional interpreter for Spanish or Portuguese, Dr. Vermilyea works with Mrs. Tanya Pineda-Lehnert as his preferred translator. Please contact her at 617-669-3419.</p>
 	</div>
+	<p class="help-block">* If you do not have a professional interpreter for Spanish or Portuguese, Dr. Vermilyea works with Mrs. Tanya Pineda-Lehnert as his preferred translator. Please contact her at 617-669-3419.</p>
 	<div class="form-group">
 		<label for="comment" class="control-label col-sm-3">Comment</label>
 		<div class="col-sm-8">
@@ -97,7 +99,7 @@
 		<div class="col-sm-8">
 			<select id="petition" class="form-control" name="Will the client be physically present in MA during the appointment?">
 				<option value="Yes, I will be in Massachusetts">Yes, I will be in Massachusetts</option>
-				<option value="NO, I cannot say I will be in Massachusetts for the appointment">NO I cannot say I will be in Massachusetts for the appointment</option>
+				<option value="NO, I cannot say I will be in Massachusetts for the appointment">NO, I cannot say I will be in Massachusetts for the appointment</option>
 			</select>
 		</div>
 	</div>

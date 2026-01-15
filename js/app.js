@@ -127,14 +127,10 @@ var app = {
 				googleCalendarId: 'cep1ta6rnrasr0h68a9f3qir80@group.calendar.google.com',
 				id: 'jvermilyea',
 				color: '#f4511e', // international-orange
-			}, {
-				googleCalendarId: 'cbtallc.com_6fob72tp6i9vs6t72hdng0bn38@group.calendar.google.com',
-				id: 'arubin',
-				color: '#8e24aa', // dark-orchid
 			}],
 			height: 'auto',
-			minTime: '05:00:00',
-			maxTime: '21:00:00',
+			minTime: '06:00:00',
+			maxTime: '18:00:00',
 			eventClick: function ({event, el, jsEvent, view}) {
 				jsEvent.preventDefault();
 				const $form = $('.appointment-form');
