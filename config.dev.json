@@ -2,8 +2,8 @@
 	"site-name": "CBTA",
 	"site-url": "http://localhost:3000",
 	"forms": {
-		"url": "https://hookb.in/v9ra83eo",
-		"contact": "",
-		"appointment-request": ""
+		"url": "https://lists.dev.cloud.tridnguyen.com/forms/",
+		"contact": "cbta-contact",
+		"appointment-request": "cbta-calendar"
 	}
 }
